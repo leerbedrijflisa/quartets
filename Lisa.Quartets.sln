@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisa.Quartets.iOS", "Lisa.Quartets\Lisa.Quartets.iOS\Lisa.Quartets.iOS.csproj", "{653219AB-EF3B-4D02-BA67-85B1F0EEFBD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisa.Quartets.Droid", "Lisa.Quartets\Lisa.Quartets.Droid\Lisa.Quartets.Droid.csproj", "{2D36C03F-460D-4791-8EB1-F8C8074716BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisa.Quartets.Mobile", "Lisa.Quartets\Lisa.Quartets.Mobile\Lisa.Quartets.Mobile.csproj", "{781C4586-1501-443A-B821-D483C3BE886B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Android Debug|Any CPU = Android Debug|Any CPU
+		iOS Debug|iPhone = iOS Debug|iPhone
+		Android Release|Any CPU = Android Release|Any CPU
+		iOS Release|iPhone = iOS Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D36C03F-460D-4791-8EB1-F8C8074716BD}.Android Debug|Any CPU.ActiveCfg = Android Debug|Any CPU
+		{2D36C03F-460D-4791-8EB1-F8C8074716BD}.Android Debug|Any CPU.Build.0 = Android Debug|Any CPU
+		{2D36C03F-460D-4791-8EB1-F8C8074716BD}.Android Debug|Any CPU.Deploy.0 = Android Debug|Any CPU
+		{2D36C03F-460D-4791-8EB1-F8C8074716BD}.Android Release|Any CPU.ActiveCfg = Android Release|Any CPU
+		{2D36C03F-460D-4791-8EB1-F8C8074716BD}.Android Release|Any CPU.Build.0 = Android Release|Any CPU
+		{2D36C03F-460D-4791-8EB1-F8C8074716BD}.Android Release|Any CPU.Deploy.0 = Android Release|Any CPU
+		{2D36C03F-460D-4791-8EB1-F8C8074716BD}.iOS Debug|iPhone.ActiveCfg = Android Debug|Any CPU
+		{2D36C03F-460D-4791-8EB1-F8C8074716BD}.iOS Debug|iPhone.Deploy.0 = Android Debug|Any CPU
+		{2D36C03F-460D-4791-8EB1-F8C8074716BD}.iOS Release|iPhone.ActiveCfg = Android Release|Any CPU
+		{2D36C03F-460D-4791-8EB1-F8C8074716BD}.iOS Release|iPhone.Deploy.0 = Android Release|Any CPU
+		{653219AB-EF3B-4D02-BA67-85B1F0EEFBD8}.Android Debug|Any CPU.ActiveCfg = iOS Debug|iPhone
+		{653219AB-EF3B-4D02-BA67-85B1F0EEFBD8}.Android Release|Any CPU.ActiveCfg = iOS Release|iPhone
+		{653219AB-EF3B-4D02-BA67-85B1F0EEFBD8}.iOS Debug|iPhone.ActiveCfg = iOS Debug|iPhone
+		{653219AB-EF3B-4D02-BA67-85B1F0EEFBD8}.iOS Debug|iPhone.Build.0 = iOS Debug|iPhone
+		{653219AB-EF3B-4D02-BA67-85B1F0EEFBD8}.iOS Release|iPhone.ActiveCfg = iOS Release|iPhone
+		{653219AB-EF3B-4D02-BA67-85B1F0EEFBD8}.iOS Release|iPhone.Build.0 = iOS Release|iPhone
+		{781C4586-1501-443A-B821-D483C3BE886B}.Android Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{781C4586-1501-443A-B821-D483C3BE886B}.Android Debug|Any CPU.Build.0 = Debug|Any CPU
+		{781C4586-1501-443A-B821-D483C3BE886B}.Android Release|Any CPU.ActiveCfg = Release|Any CPU
+		{781C4586-1501-443A-B821-D483C3BE886B}.Android Release|Any CPU.Build.0 = Release|Any CPU
+		{781C4586-1501-443A-B821-D483C3BE886B}.iOS Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{781C4586-1501-443A-B821-D483C3BE886B}.iOS Debug|iPhone.Build.0 = Debug|Any CPU
+		{781C4586-1501-443A-B821-D483C3BE886B}.iOS Release|iPhone.ActiveCfg = Release|Any CPU
+		{781C4586-1501-443A-B821-D483C3BE886B}.iOS Release|iPhone.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
