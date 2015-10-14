@@ -10,7 +10,7 @@ namespace Lisa.Quartets.Mobile
     {
         public App()
         {
-			MainPage = new NavigationPage(new YesNoScreen());
+			MainPage = new NavigationPage(new YesNoView());
         }
     }
 }

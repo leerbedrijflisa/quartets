@@ -37,14 +37,14 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\StartPage.xaml.cs">
-      <DependentUpon>StartPage.xaml</DependentUpon>
+    <Compile Include="Views\LockView.xaml.cs">
+      <DependentUpon>LockView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\YesNoScreen.xaml.cs">
-      <DependentUpon>YesNoScreen.xaml</DependentUpon>
+    <Compile Include="Views\StartView.xaml.cs">
+      <DependentUpon>StartView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\LockScreen.xaml.cs">
-      <DependentUpon>LockScreen.xaml</DependentUpon>
+    <Compile Include="Views\YesNoView.xaml.cs">
+      <DependentUpon>YesNoView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -77,13 +77,13 @@
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\StartPage.xaml">
+    <EmbeddedResource Include="Views\LockView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\YesNoScreen.xaml">
+    <EmbeddedResource Include="Views\StartView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\LockScreen.xaml">
+    <EmbeddedResource Include="Views\YesNoView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

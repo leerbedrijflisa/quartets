@@ -4,9 +4,9 @@ using Xamarin.Forms;
 
 namespace Lisa.Quartets.Mobile
 {
-	public partial class LockScreen : ContentPage
+	public partial class LockView : ContentPage
 	{
-		public LockScreen ()
+		public LockView()
 		{
 			InitializeComponent();
 			NavigationPage.SetHasNavigationBar(this, false);
