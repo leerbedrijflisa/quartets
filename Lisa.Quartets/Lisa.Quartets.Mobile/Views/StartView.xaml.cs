@@ -10,5 +10,15 @@ namespace Lisa.Quartets.Mobile
 		{
 			InitializeComponent();
 		}
+
+		private void SelectCardsClicked(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new CardView());
+		}
+
+		private void EndOfTurnClicked(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new YesNoView());
+		}
 	}
 }

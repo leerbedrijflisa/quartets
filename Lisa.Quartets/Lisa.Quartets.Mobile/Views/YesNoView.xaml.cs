@@ -14,7 +14,7 @@ namespace Lisa.Quartets.Mobile
 
 		public async void YesClicked(object sender, EventArgs args)
 		{
-			await Navigation.PushAsync(new StartView());
+			await Navigation.PopAsync();
 		}
 
 		public async void NoClicked(object sender, EventArgs args)

@@ -66,11 +66,24 @@
     <Reference Include="Xamarin.Forms.Xaml, Version=1.3.3.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Forms.1.3.3.6323\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net">
+      <HintPath>..\..\packages\SQLite.Net-PCL.3.0.5\lib\MonoAndroid\SQLite.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Platform.XamarinAndroid">
+      <HintPath>..\..\packages\SQLite.Net-PCL.3.0.5\lib\MonoAndroid\SQLite.Net.Platform.XamarinAndroid.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLiteNetExtensions">
+      <HintPath>..\..\packages\SQLiteNetExtensions.1.3.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\SQLiteNetExtensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLite_Android.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -83,6 +96,22 @@
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable\card.png" />
+    <AndroidResource Include="Resources\drawable\card1.jpg" />
+    <AndroidResource Include="Resources\drawable\card10.jpg" />
+    <AndroidResource Include="Resources\drawable\card9.jpg" />
+    <AndroidResource Include="Resources\drawable\card8.jpg" />
+    <AndroidResource Include="Resources\drawable\card6.jpg" />
+    <AndroidResource Include="Resources\drawable\card5.jpg" />
+    <AndroidResource Include="Resources\drawable\card4.jpg" />
+    <AndroidResource Include="Resources\drawable\card3.jpg" />
+    <AndroidResource Include="Resources\drawable\card2.jpg" />
+    <AndroidResource Include="Resources\drawable\card16.jpg" />
+    <AndroidResource Include="Resources\drawable\card15.jpg" />
+    <AndroidResource Include="Resources\drawable\card14.jpg" />
+    <AndroidResource Include="Resources\drawable\card13.jpg" />
+    <AndroidResource Include="Resources\drawable\card12.jpg" />
+    <AndroidResource Include="Resources\drawable\card11.jpg" />
+    <AndroidResource Include="Resources\drawable\card7.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />

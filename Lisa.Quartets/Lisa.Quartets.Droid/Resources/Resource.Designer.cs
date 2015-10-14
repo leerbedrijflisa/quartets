@@ -26,6 +26,8 @@ namespace Lisa.Quartets.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::Lisa.Quartets.Droid.Resource.String.ApplicationName;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::Lisa.Quartets.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -48,7 +50,55 @@ namespace Lisa.Quartets.Droid
 			public const int card = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int icon = 2130837505;
+			public const int card1 = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int card10 = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int card11 = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int card12 = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int card13 = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int card14 = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int card15 = 2130837511;
+			
+			// aapt resource value: 0x7f020008
+			public const int card16 = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int card2 = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int card3 = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int card4 = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int card5 = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int card6 = 2130837517;
+			
+			// aapt resource value: 0x7f02000e
+			public const int card7 = 2130837518;
+			
+			// aapt resource value: 0x7f02000f
+			public const int card8 = 2130837519;
+			
+			// aapt resource value: 0x7f020010
+			public const int card9 = 2130837520;
+			
+			// aapt resource value: 0x7f020011
+			public const int icon = 2130837521;
 			
 			static Drawable()
 			{
@@ -56,6 +106,25 @@ namespace Lisa.Quartets.Droid
 			}
 			
 			private Drawable()
+			{
+			}
+		}
+		
+		public partial class String
+		{
+			
+			// aapt resource value: 0x7f030001
+			public const int ApplicationName = 2130903041;
+			
+			// aapt resource value: 0x7f030000
+			public const int Hello = 2130903040;
+			
+			static String()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private String()
 			{
 			}
 		}
