@@ -21,7 +21,7 @@
     <JavaMaximumHeapSize>
     </JavaMaximumHeapSize>
     <JavaOptions />
-    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -83,6 +83,50 @@
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable\card.png" />
+    <AndroidResource Include="Resources\drawable\card1.jpg" />
+    <AndroidResource Include="Resources\drawable\card2.jpg" />
+    <AndroidResource Include="Resources\drawable\card3.jpg" />
+    <AndroidResource Include="Resources\drawable\card4.jpg" />
+    <AndroidResource Include="Resources\drawable\card5.jpg" />
+    <AndroidResource Include="Resources\drawable\card6.jpg" />
+    <AndroidResource Include="Resources\drawable\card7.jpg" />
+    <AndroidResource Include="Resources\drawable\card8.jpg" />
+    <AndroidResource Include="Resources\drawable\card9.jpg" />
+    <AndroidResource Include="Resources\drawable\card10.jpg" />
+    <AndroidResource Include="Resources\drawable\card11.jpg" />
+    <AndroidResource Include="Resources\drawable\card12.jpg" />
+    <AndroidResource Include="Resources\drawable\card13.jpg" />
+    <AndroidResource Include="Resources\drawable\card14.jpg" />
+    <AndroidResource Include="Resources\drawable\card15.jpg" />
+    <AndroidResource Include="Resources\drawable\card16.jpg" />
+    <AndroidResource Include="Resources\drawable\card17.jpg" />
+    <AndroidResource Include="Resources\drawable\card18.jpg" />
+    <AndroidResource Include="Resources\drawable\card19.jpg" />
+    <AndroidResource Include="Resources\drawable\card20.jpg" />
+    <AndroidResource Include="Resources\drawable\card21.jpg" />
+    <AndroidResource Include="Resources\drawable\card22.jpg" />
+    <AndroidResource Include="Resources\drawable\card23.jpg" />
+    <AndroidResource Include="Resources\drawable\card24.jpg" />
+    <AndroidResource Include="Resources\drawable\card25.jpg" />
+    <AndroidResource Include="Resources\drawable\card26.jpg" />
+    <AndroidResource Include="Resources\drawable\card27.jpg" />
+    <AndroidResource Include="Resources\drawable\card28.jpg" />
+    <AndroidResource Include="Resources\drawable\card29.jpg" />
+    <AndroidResource Include="Resources\drawable\card30.jpg" />
+    <AndroidResource Include="Resources\drawable\card31.jpg" />
+    <AndroidResource Include="Resources\drawable\card32.jpg" />
+    <AndroidResource Include="Resources\drawable\card33.jpg" />
+    <AndroidResource Include="Resources\drawable\card34.jpg" />
+    <AndroidResource Include="Resources\drawable\card35.jpg" />
+    <AndroidResource Include="Resources\drawable\card36.jpg" />
+    <AndroidResource Include="Resources\drawable\card37.jpg" />
+    <AndroidResource Include="Resources\drawable\card38.jpg" />
+    <AndroidResource Include="Resources\drawable\card39.jpg" />
+    <AndroidResource Include="Resources\drawable\card40.jpg" />
+    <AndroidResource Include="Resources\drawable\card41.jpg" />
+    <AndroidResource Include="Resources\drawable\card42.jpg" />
+    <AndroidResource Include="Resources\drawable\card43.jpg" />
+    <AndroidResource Include="Resources\drawable\card44.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
