@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-
-using Xamarin.Forms;
 using System.Linq;
+using Xamarin.Forms;
 
 namespace Lisa.Quartets.Mobile
 {
-	public partial class CardPage : ContentPage
+	public partial class CardView : ContentPage
 	{
-		public CardPage()
+		public CardView()
 		{
 			InitializeComponent();
 			EnsureCardsExist();

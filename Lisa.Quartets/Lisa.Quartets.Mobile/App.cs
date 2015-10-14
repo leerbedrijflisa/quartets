@@ -11,7 +11,7 @@ namespace Lisa.Quartets.Mobile
     {
         public App()
         {
-			MainPage = new NavigationPage(new StartPage());
+			MainPage = new NavigationPage(new StartView());
         }
     }
 }
