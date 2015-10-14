@@ -3,7 +3,7 @@
 
   <StackLayout>
     <Label Text="Dit wordt het Lock-Screen" TextColor="White" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Start" />
-    <Button x:Name="backbutton1" Text="Ga terug" TextColor="Black" BackgroundColor="White" FontSize="Large" HorizontalOptions="Center" Clicked="BackButtonClicked" />
+    <Button x:Name="backbutton1" Text="Ga terug" TextColor="Black" BackgroundColor="White" FontSize="Large" HorizontalOptions="Center" Clicked="BackClicked" />
   </StackLayout>
 
 </ContentPage>

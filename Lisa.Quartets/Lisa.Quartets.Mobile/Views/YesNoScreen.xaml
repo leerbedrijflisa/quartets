@@ -17,9 +17,9 @@
   </Grid.ColumnDefinitions>
     
 
-    <Button x:Name="button1" BackgroundColor="White" Text="JA" TextColor="Black" FontSize="Large" Grid.Row="0" Grid.Column="0" Clicked="JaButtonClicked" />
+    <Button x:Name="button1" BackgroundColor="White" Text="JA" TextColor="Black" FontSize="Large" Grid.Row="0" Grid.Column="0" Clicked="YesClicked" />
 
-    <Button x:Name="button2" BackgroundColor="White" Text="NEE" TextColor="Black" FontSize="Large" Grid.Row="0" Grid.Column="1" Clicked="NeeButtonClicked" />
+    <Button x:Name="button2" BackgroundColor="White" Text="NEE" TextColor="Black" FontSize="Large" Grid.Row="0" Grid.Column="1" Clicked="NoClicked" />
     
 
   </Grid>
