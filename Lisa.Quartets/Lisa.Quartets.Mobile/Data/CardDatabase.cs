@@ -11,64 +11,64 @@ namespace Lisa.Quartets.Mobile
 {
 	public class CardDatabase
 	{
-		SQLiteConnection database;
-
 		public CardDatabase()
 		{
-			database = DependencyService.Get<ISQLite>().GetConnection();
-			database.CreateTable<Card>();
+			_database = DependencyService.Get<ISQLite>().GetConnection();
+			_database.CreateTable<Card>();
 		}
 
-		public void RemoveCards()
+		public void DeleteCards()
 		{
-			database.DeleteAll<Card>();
+			_database.DeleteAll<Card>();
 		}
 
-		public List<Card> GetCards()
+		public List<Card> RetrieveCards()
 		{
-			return database.GetAllWithChildren<Card>();
-			//return (from i in database.Table<Die>() select i).ToList();
+			return _database.GetAllWithChildren<Card>();
 		}
 
-		public int SaveCard(Card card)
+		public int CreateOrUpdateCard(Card card)
 		{
-			if(card.Id != 0)
+			if (card.Id != 0)
 			{
-				database.InsertOrReplaceWithChildren(card);
+				_database.InsertOrReplaceWithChildren(card);
 				return card.Id;
 			}
 			else
 			{
-				return database.Insert(card);
+				return _database.Insert(card);
 			}
 		}
 
 		public int DeleteCard(int id)
 		{
-			return database.Delete<Card>(id);
+			return _database.Delete<Card>(id);
 		}
 
-		public void InsertCard(Card card)
+		public void CreateCard(Card card)
 		{
-			database.InsertWithChildren(card);
+			_database.InsertWithChildren(card);
 		}
 
-		public Card GetCard(int cardId)
+		public Card RetrieveCard(int cardId)
 		{
-			return database.GetWithChildren<Card>(cardId);
+			return _database.GetWithChildren<Card>(cardId);
 		}
 
-		public void createDefaultCards()			
+		public void CreateDefaultCards()			
 		{
-			for (int i = 0; i < 16; i++) {
-				var card = new Card ();
-				card.Name = "card" + i.ToString();
+			for (int i = 0; i < 16; i++)
+			{
+				var card = new Card();
+				card.Name = string.Format("card{0}", i);
 				card.Category = "test";
-				card.FileName = "card" + i.ToString() + ".jpg";
-				card.InHand = 0;
+				card.FileName = string.Format("card{0}.jpg", i);
+				card.IsInHand = false;
 
-				InsertCard (card);
+				CreateCard(card);
 			}
 		}
+
+		private SQLiteConnection _database;
 	}
 }

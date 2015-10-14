@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SQLite.Net.Attributes;
-using SQLiteNetExtensions.Attributes;
+﻿using SQLite.Net.Attributes;
 
 namespace Lisa.Quartets.Mobile
 {
@@ -15,7 +9,6 @@ namespace Lisa.Quartets.Mobile
 		public string Name { get; set; }
 		public string Category { get; set; }
 		public string FileName { get; set; }
-		public int InHand { get; set;}
+		public bool IsInHand { get; set;}
 	}
 }
-

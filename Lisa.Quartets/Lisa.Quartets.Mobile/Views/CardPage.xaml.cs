@@ -8,43 +8,45 @@ namespace Lisa.Quartets.Mobile
 {
 	public partial class CardPage : ContentPage
 	{
-		public List<string> selectedImages = new List<string>();
-		private CardDatabase database;
-
-		public CardPage ()
+		public CardPage()
 		{
-			database = new CardDatabase();
-			var cards = database.GetCards();
-			if (cards.Count() == 0)
-			{
-				database.createDefaultCards ();
-			}
-
-			SetImages ();
-			InitializeComponent ();
+			InitializeComponent();
+			EnsureCardsExist();
+			SetImages();
 		}
 
-		void OnImageClick(object sender, EventArgs args) {	
-			var imageSender = (Image)sender;
+		private void EnsureCardsExist()
+		{
+			var cards = _database.RetrieveCards();
+			if (cards.Count() == 0)
+			{
+				_database.CreateDefaultCards();
+			}
+		}
 
-			string imageId = imageSender.ClassId.ToString ();
+		private void OnImageClick(object sender, EventArgs args)
+		{	
+			var image = (Image) sender;
 
-			if (selectedImages.Contains(imageId)) {
-				selectedImages.Remove(imageId);
-				imageSender.Opacity = 1;
-			} else {
-				selectedImages.Add (imageId);
-				imageSender.Opacity = 0.5;
+			if (_selectedImages.Contains(image.ClassId))
+			{
+				_selectedImages.Remove(image.ClassId);
+				image.Opacity = 1;
+			}
+			else
+			{
+				_selectedImages.Add(image.ClassId);
+				image.Opacity = 0.5;
 			}
 		}
 
 		private void SetImages()
 		{
-			var cards = database.GetCards ();
+			var cards = _database.RetrieveCards();
 
 			foreach (var card in cards) 
 			{
-				System.Diagnostics.Debug.WriteLine (card.FileName);
+				System.Diagnostics.Debug.WriteLine(card.FileName);
 			}
 
 //			var count = 1;
@@ -60,5 +62,8 @@ namespace Lisa.Quartets.Mobile
 //				count++;
 //			}
 		}
+
+		private CardDatabase _database = new CardDatabase();
+		private List<string> _selectedImages = new List<string>();
 	}
 }
