@@ -4,6 +4,7 @@
 		<StackLayout VerticalOptions="Center">
 			<Label XAlign="Center">Wanna play Quartets?</Label>
 			<Button Text="Selecteer kaarten" Clicked="SelectCardsClicked" />
+			<Button Text="Selecteer kaarten (Border)" Clicked="SelectCardsClickedBorder" />
 			<Button Text="Speelbeurt" Clicked="EndOfTurnClicked" />
 		</StackLayout>
 	</ContentPage.Content>
