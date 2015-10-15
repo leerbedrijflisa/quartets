@@ -1,0 +1,11 @@
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Mobile\obj\Debug\Lisa.Quartets.Mobile.csprojResolveAssemblyReference.cache
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Mobile\obj\Debug\StartPage.xaml.g.cs
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Mobile\bin\Debug\Lisa.Quartets.dll
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Mobile\bin\Debug\Lisa.Quartets.pdb
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Mobile\bin\Debug\Xamarin.Forms.Core.dll
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Mobile\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Mobile\bin\Debug\Xamarin.Forms.Core.xml
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Mobile\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Mobile\obj\Debug\Lisa.Quartets.dll
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Mobile\obj\Debug\Lisa.Quartets.pdb
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Mobile\obj\Debug\AudioView.xaml.g.cs

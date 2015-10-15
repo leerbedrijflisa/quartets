@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="Lisa.Quartets\Lisa.Quartets.Droid\Lisa.Quartets.Droid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Android Debug" PreferredExecutionTarget="Android.Xamarin_Android_API_15" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Lisa.Quartets\Lisa.Quartets.Mobile\App.cs">
+    <Files>
+      <File FileName="Lisa.Quartets\Lisa.Quartets.Mobile\App.cs" Line="17" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

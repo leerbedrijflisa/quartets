@@ -1,0 +1,25 @@
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\obj\Android Debug\Lisa.Quartets.Droid.csprojResolveAssemblyReference.cache
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\bin\Debug\Lisa.Quartets.Droid.dll
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\bin\Debug\Lisa.Quartets.Droid.pdb
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\bin\Debug\Lisa.Quartets.Droid.apk
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\bin\Debug\Lisa.Quartets.Droid-Signed.apk
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\bin\Debug\FormsViewGroup.dll
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\bin\Debug\Lisa.Quartets.dll
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\bin\Debug\Xamarin.Forms.Core.dll
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\bin\Debug\Lisa.Quartets.pdb
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\bin\Debug\Xamarin.Forms.Core.xml
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\obj\Android Debug\Lisa.Quartets.Droid.dll
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\obj\Android Debug\Lisa.Quartets.Droid.pdb
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\obj\Android Debug\android\bin\Lisa.Quartets.Droid.apk
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\obj\Android Debug\res\drawable\icon.png
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\obj\Android Debug\res\drawable-hdpi\icon.png
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\obj\Android Debug\res\drawable-xhdpi\icon.png
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\obj\Android Debug\res\drawable-xxhdpi\icon.png
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\obj\Android Debug\res\drawable\card.png
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\obj\Android Debug\res\raw\test.mp3
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\obj\Android Debug\R.cs.flag
+D:\LISA\quartets\Lisa.Quartets\Lisa.Quartets.Droid\obj\Android Debug\uploadflags.txt
