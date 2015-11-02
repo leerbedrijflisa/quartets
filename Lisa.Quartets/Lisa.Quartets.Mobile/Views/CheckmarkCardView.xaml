@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Lisa.Quartets.Mobile.CheckmarkCardView">
+	<ContentPage.Content>
+		<Grid x:Name="cardGrid">
+			<!--1st row-->
+			<AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0">
+	        	<Image ClassId="card1" Source="card.png">
+		   			<Image.GestureRecognizers>
+	    				<TapGestureRecognizer Tapped="OnImageClick" />
+	 				</Image.GestureRecognizers>
+		   		</Image>
+	        </AbsoluteLayout>
+
+	        <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="0" Grid.Column="1">
+	        	<Image ClassId="card2" Source="card.png">
+		   			<Image.GestureRecognizers>
+	    				<TapGestureRecognizer Tapped="OnImageClick" />
+	 				</Image.GestureRecognizers>
+		   		</Image>
+	        </AbsoluteLayout>
+
+	        <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="0" Grid.Column="2">
+	        	<Image ClassId="card3" Source="card.png">
+		   			<Image.GestureRecognizers>
+	    				<TapGestureRecognizer Tapped="OnImageClick" />
+	 				</Image.GestureRecognizers>
+		   		</Image>
+	        </AbsoluteLayout>
+
+	        <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3">
+	        	<Image ClassId="card4" Source="card.png">
+		   			<Image.GestureRecognizers>
+	    				<TapGestureRecognizer Tapped="OnImageClick" />
+	 				</Image.GestureRecognizers>
+		   		</Image>
+	        </AbsoluteLayout>
+            <!--2nd row-->
+            <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="1" Grid.Column="0">
+                <Image ClassId="card5" Source="card.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageClick" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="1" Grid.Column="1">
+                <Image ClassId="card6" Source="card.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageClick" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="1" Grid.Column="2">
+                <Image ClassId="card7" Source="card.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageClick" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="1" Grid.Column="3">
+                <Image ClassId="card8" Source="card.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageClick" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </AbsoluteLayout>
+            <!--3rd row-->
+            <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="2" Grid.Column="0">
+                <Image ClassId="card9" Source="card.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageClick" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="2" Grid.Column="1">
+                <Image ClassId="card10" Source="card.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageClick" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="2" Grid.Column="2">
+                <Image ClassId="card11" Source="card.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageClick" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="2" Grid.Column="3">
+                <Image ClassId="card12" Source="card.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageClick" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </AbsoluteLayout>
+            <!--4th row-->
+            <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="3" Grid.Column="0">
+                <Image ClassId="card13" Source="card.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageClick" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="3" Grid.Column="1">
+                <Image ClassId="card14" Source="card.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageClick" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="3" Grid.Column="2">
+                <Image ClassId="card15" Source="card.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageClick" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout ClassId="1" HorizontalOptions="Center" Grid.Row="3" Grid.Column="3">
+                <Image ClassId="card16" Source="card.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageClick" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </AbsoluteLayout>
+        </Grid>
+	</ContentPage.Content>
+</ContentPage>

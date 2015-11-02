@@ -98,7 +98,10 @@ namespace Lisa.Quartets.Droid
 			public const int card9 = 2130837520;
 			
 			// aapt resource value: 0x7f020011
-			public const int icon = 2130837521;
+			public const int check = 2130837521;
+			
+			// aapt resource value: 0x7f020012
+			public const int icon = 2130837522;
 			
 			static Drawable()
 			{
