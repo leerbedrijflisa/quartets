@@ -47,19 +47,6 @@ namespace Lisa.Quartets.Mobile
 			{
 				System.Diagnostics.Debug.WriteLine(card.FileName);
 			}
-
-//			var count = 1;
-//			foreach (var layoutImage in cardGrid.Children.OfType<Image>()) 
-//			{
-//				var cardImage = (Image)layoutImage;
-//				var card = database.GetCard (count);
-//
-//				System.Diagnostics.Debug.WriteLine (card.FileName);
-//
-//				layoutImage.Source = card.FileName;
-//
-//				count++;
-//			}
 		}
 
 		private CardDatabase _database = new CardDatabase();
