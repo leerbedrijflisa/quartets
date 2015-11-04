@@ -48,12 +48,12 @@ namespace Lisa.Quartets.Mobile
 
 		private void DeselectImage(Image image)
 		{
-			_selectedImages.Add(image.ClassId);
+			_selectedImages.Remove(image.ClassId);
 		}
 
 		private void SelectImage(Image image)
 		{
-			_selectedImages.Remove(image.ClassId);
+			_selectedImages.Add(image.ClassId);
 		}
 
 		private void AddCheckmark(Image image)
