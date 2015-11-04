@@ -29,7 +29,6 @@ namespace Lisa.Quartets.Mobile
 			var image = (Image) sender;
             var parent = (AbsoluteLayout) image.Parent;
 
-
 			if (_selectedImages.Contains(image.ClassId))
 			{
                 parent.Children.Remove(_checkmarks[image.ClassId]);
