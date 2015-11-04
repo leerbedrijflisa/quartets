@@ -27,16 +27,31 @@ namespace Lisa.Quartets.Mobile
 		{	
 			var image = (Image) sender;
 
-			if (_selectedImages.Contains(image.ClassId))
+			if (IsSelected(image))
 			{
-				_selectedImages.Remove(image.ClassId);
+				Deselect(image);
 				image.Opacity = 0.5;
 			}
 			else
 			{
-				_selectedImages.Add(image.ClassId);
+				Select(image);
 				image.Opacity = 1;
 			}
+		}
+
+		private bool IsSelected(Image image)
+		{
+			return _selectedImages.Contains(image.ClassId);
+		}
+
+		private void Select(Image image)
+		{
+			_selectedImages.Add(image.ClassId);
+		}
+
+		private void Deselect(Image image)
+		{
+			_selectedImages.Remove(image.ClassId);
 		}
 
 		private void SetImages()
