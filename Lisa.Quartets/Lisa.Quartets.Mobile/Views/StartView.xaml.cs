@@ -25,5 +25,10 @@ namespace Lisa.Quartets.Mobile
 		{
 			Navigation.PushAsync(new CheckmarkCardView());
 		}
+
+		private void SelectCardsInvertedClicked(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new InvertedCardView());
+		}
 	}
 }

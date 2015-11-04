@@ -5,7 +5,9 @@
 			<Label XAlign="Center">Wanna play Quartets?</Label>
 			<Button Text="Selecteer kaarten" Clicked="SelectCardsClicked" />
 			<Button Text="Selecteer kaarten (vink)" Clicked="SelectCardsCheckmarkClicked" />
+			<Button Text="Selecteer kaarten (helderheid omgedraaid)" Clicked="SelectCardsInvertedClicked" />
 			<Button Text="Speelbeurt" Clicked="EndOfTurnClicked" />
-		</StackLayout>
+            <Label Text="Lisa.Quartets v2" FontSize="10" HorizontalOptions="End" VerticalOptions="End" />
+        </StackLayout>
 	</ContentPage.Content>
 </ContentPage>
