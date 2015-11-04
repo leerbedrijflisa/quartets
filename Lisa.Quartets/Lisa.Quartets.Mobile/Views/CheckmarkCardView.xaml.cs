@@ -29,16 +29,43 @@ namespace Lisa.Quartets.Mobile
 			var image = (Image) sender;
             var parent = (AbsoluteLayout) image.Parent;
 
-			if (_selectedImages.Contains(image.ClassId))
+			if (IsSelected(image))
 			{
-                parent.Children.Remove(_checkmarks[image.ClassId]);
-                _selectedImages.Remove(image.ClassId);
+				DeselectImage(image);
+				RemoveCheckmark(image);
 			}
 			else
 			{
-                parent.Children.Add(_checkmarks[image.ClassId]);
-                _selectedImages.Add(image.ClassId);               
+				SelectImage(image);
+				AddCheckmark(image);
 			}
+		}
+
+		private bool IsSelected(Image image)
+		{
+			return _selectedImages.Contains(image.ClassId);
+		}
+
+		private void DeselectImage(Image image)
+		{
+			_selectedImages.Add(image.ClassId);
+		}
+
+		private void SelectImage(Image image)
+		{
+			_selectedImages.Remove(image.ClassId);
+		}
+
+		private void AddCheckmark(Image image)
+		{
+			var parent = (AbsoluteLayout) image.Parent;
+			parent.Children.Add(_checkmarks[image.ClassId]);
+		}
+
+		private void RemoveCheckmark(Image image)
+		{
+			var parent = (AbsoluteLayout) image.Parent;
+			parent.Children.Remove(_checkmarks[image.ClassId]);
 		}
 
 		private void SetImages()
