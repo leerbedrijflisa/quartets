@@ -58,6 +58,8 @@
     <Compile Include="Views\InvertedCardView.cs">
       <DependentUpon>InvertedCardView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UnlockSlider.cs" />
+    <Compile Include="UnlockSliderBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=1.3.3.0, Culture=neutral, PublicKeyToken=null">

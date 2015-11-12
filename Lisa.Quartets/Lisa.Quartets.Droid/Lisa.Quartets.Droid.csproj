@@ -84,6 +84,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLite_Android.cs" />
+    <Compile Include="UnlockSliderRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -113,6 +114,7 @@
     <AndroidResource Include="Resources\drawable\card11.jpg" />
     <AndroidResource Include="Resources\drawable\card7.jpg" />
     <AndroidResource Include="Resources\drawable\check.png" />
+    <AndroidResource Include="Resources\drawable\slide.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
