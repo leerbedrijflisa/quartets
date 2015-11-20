@@ -20,11 +20,9 @@ namespace Lisa.Quartets
 
         void OnSliderValueChanged(object sender, EventArgs args)
         {
-            var slider = (Slider)sender;
-
+            var slider = (UnlockSlider)sender;
 
             double newValue = slider.Value;
-            ​
             if (newValue - _oldValue < 10)
             {
                 _oldValue = newValue;

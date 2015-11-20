@@ -5,6 +5,6 @@ namespace Lisa.Quartets
 {
     public class UnlockSlider : Slider
     {
-        
+       
     }
 }
