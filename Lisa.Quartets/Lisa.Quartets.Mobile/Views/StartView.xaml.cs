@@ -30,5 +30,10 @@ namespace Lisa.Quartets.Mobile
 		{
 			Navigation.PushAsync(new InvertedCardView());
 		}
+
+		private void SelectCardsEnlargeClicked(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new CardEnlargeView());
+		}
 	}
 }
