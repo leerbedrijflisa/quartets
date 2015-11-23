@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+
 using Xamarin.Forms;
+using System.Linq;
 
 namespace Lisa.Quartets.Mobile
 {
@@ -26,18 +27,45 @@ namespace Lisa.Quartets.Mobile
 		private void OnImageClick(object sender, EventArgs args)
 		{	
 			var image = (Image) sender;
+			var parent = (AbsoluteLayout) image.Parent;
 
-			if (_selectedImages.Contains(image.ClassId))
+			if (IsSelected(image))
 			{
-				_selectedImages.Remove(image.ClassId);
-				image.BackgroundColor = Color.Transparent;
-
+				DeselectImage(image);
+				RemoveBorder(image);
 			}
 			else
 			{
-				_selectedImages.Add(image.ClassId);
-				image.BackgroundColor = Color.Red;
+				SelectImage(image);
+				AddBorder(image);
 			}
+		}
+
+		private bool IsSelected(Image image)
+		{
+			return _selectedImages.Contains(image.ClassId);
+		}
+
+		private void DeselectImage(Image image)
+		{
+			_selectedImages.Remove(image.ClassId);
+		}
+
+		private void SelectImage(Image image)
+		{
+			_selectedImages.Add(image.ClassId);
+		}
+
+		private void AddBorder(Image image)
+		{
+			var parent = (AbsoluteLayout) image.Parent;
+			parent.Children.Add(_checkmarks[image.ClassId]);
+		}
+
+		private void RemoveBorder(Image image)
+		{
+			var parent = (AbsoluteLayout) image.Parent;
+			parent.Children.Remove(_checkmarks[image.ClassId]);
 		}
 
 		private void SetImages()
@@ -46,25 +74,12 @@ namespace Lisa.Quartets.Mobile
 
 			foreach (var card in cards) 
 			{
-				System.Diagnostics.Debug.WriteLine(card.FileName);
+				_checkmarks.Add(card.Name, new Image { Source = ImageSource.FromFile("border.png")});
 			}
-
-			//			var count = 1;
-			//			foreach (var layoutImage in cardGrid.Children.OfType<Image>()) 
-			//			{
-			//				var cardImage = (Image)layoutImage;
-			//				var card = database.GetCard (count);
-			//
-			//				System.Diagnostics.Debug.WriteLine (card.FileName);
-			//
-			//				layoutImage.Source = card.FileName;
-			//
-			//				count++;
-			//			}
 		}
 
 		private CardDatabase _database = new CardDatabase();
 		private List<string> _selectedImages = new List<string>();
+		private Dictionary<string, Image> _checkmarks = new Dictionary<string, Image>();
 	}
 }
-

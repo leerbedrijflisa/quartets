@@ -112,6 +112,8 @@
     <AndroidResource Include="Resources\drawable\card12.jpg" />
     <AndroidResource Include="Resources\drawable\card11.jpg" />
     <AndroidResource Include="Resources\drawable\card7.jpg" />
+    <AndroidResource Include="Resources\drawable\border.png" />
+    <AndroidResource Include="Resources\drawable\kaart1.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
