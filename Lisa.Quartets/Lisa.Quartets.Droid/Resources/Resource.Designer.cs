@@ -103,6 +103,9 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f020012
 			public const int icon = 2130837522;
 			
+			// aapt resource value: 0x7f020013
+			public const int slide = 2130837523;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

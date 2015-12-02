@@ -30,5 +30,11 @@ namespace Lisa.Quartets.Mobile
 		{
 			Navigation.PushAsync(new InvertedCardView());
 		}
+
+        private void SliderUnlocked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LockView());
+        }
+
 	}
 }
