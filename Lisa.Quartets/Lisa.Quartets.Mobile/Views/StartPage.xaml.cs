@@ -2,48 +2,47 @@
 using System.Collections.Generic;
 using Xamarin.Forms;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Lisa.Quartets.Mobile
 {
 	public partial class StartPage : ContentPage
 	{
+		private bool stop;
+	
 		public StartPage()
 		{
 			InitializeComponent();
-			RegisterTapRecognizer();
-			ShowImageCarrousel();
-		}
+			int id = 0;
 
-		private async void ShowImageCarrousel()
-		{	
-			for (int i = 1; i <= 44; i++)
-			{
-				if (stop == false)
-				{				
-					await Task.Delay(500);
-					var card = new Image { Aspect = Aspect.AspectFit };
-					card.Source = ImageSource.FromFile("card" + i + ".jpg");
-					card.IsVisible = true;	
-					cardimage.Source = card.Source;
-				}
-			}
-		}
-
-		private void RegisterTapRecognizer()
-		{
 			var tapGestureRecognizer = new TapGestureRecognizer();
-			var stop = false;
+			cardimage.GestureRecognizers.Add(tapGestureRecognizer);
 
-			// Als er op de kaart gedrukt word // 
+
 			tapGestureRecognizer.Tapped += (s, e) =>
 			{
-				stop = true;			
 				System.Diagnostics.Debug.WriteLine("Clicked");
-				var imageSender = (Image) s;
-				imageSender.ScaleTo(2);
+				stop = true;
 			};
 
-			cardimage.GestureRecognizers.Add(tapGestureRecognizer);
+			Device.StartTimer (new TimeSpan (0, 0, 0,0,300), () => {
+
+				if(stop == true)
+				{
+					System.Diagnostics.Debug.WriteLine("false");
+					cardimage.Scale = 1.6;
+					return false;	
+				}
+
+				var card = new Image { Aspect = Aspect.AspectFit };
+				card.Source = ImageSource.FromFile("card" + id + ".jpg");
+				card.IsVisible = true;  
+				cardimage.Source = card.Source;
+				id++;
+				return true;
+			});
+
+
 		}
 	}
 }
