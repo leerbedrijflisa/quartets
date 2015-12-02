@@ -31,6 +31,11 @@ namespace Lisa.Quartets.Mobile
 			Navigation.PushAsync(new CheckmarkCardView());
 		}
 
+		private void SelectCardsCheckmarkOpacity(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new CardCheckmarkOpacityView());
+		}
+
 		private void SelectCardsInvertedClicked(object sender, EventArgs e)
 		{
 			Navigation.PushAsync(new InvertedCardView());

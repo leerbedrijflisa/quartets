@@ -10,6 +10,7 @@
 			<Button Text="Selecteer kaarten (vink)" Clicked="SelectCardsCheckmarkClicked" />
 			<Button Text="Selecteer kaarten (helderheid omgedraaid)" Clicked="SelectCardsInvertedClicked" />
 			<Button Text="Selecteer kaarten (Border)" Clicked="SelectCardsClickedBorder" />
+			<Button Text="Selecteer kaarten (vink + helderheid)" Clicked="SelectCardsCheckmarkOpacity" />
 			<Button Text="Speelbeurt" Clicked="EndOfTurnClicked" />
             <local:UnlockSlider x:Name="slider" OnUnlock="SliderUnlocked"/>
             <Label Text="Lisa.Quartets v2" FontSize="10" HorizontalOptions="End" VerticalOptions="End" />
