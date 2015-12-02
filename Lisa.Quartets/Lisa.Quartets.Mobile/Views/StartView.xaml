@@ -6,6 +6,7 @@
 			<Button Text="Selecteer kaarten" Clicked="SelectCardsClicked" />
 			<Button Text="Selecteer kaarten (vink)" Clicked="SelectCardsCheckmarkClicked" />
 			<Button Text="Selecteer kaarten (helderheid omgedraaid)" Clicked="SelectCardsInvertedClicked" />
+			<Button Text="Selecteer kaarten (Border)" Clicked="SelectCardsClickedBorder" />
 			<Button Text="Speelbeurt" Clicked="EndOfTurnClicked" />
             <Label Text="Lisa.Quartets v2" FontSize="10" HorizontalOptions="End" VerticalOptions="End" />
         </StackLayout>

@@ -57,6 +57,8 @@
     </Compile>
     <Compile Include="Views\InvertedCardView.cs">
       <DependentUpon>InvertedCardView.xaml</DependentUpon>
+    <Compile Include="Views\CardBorderView.xaml.cs">
+      <DependentUpon>CardBorderView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -111,10 +113,14 @@
     <EmbeddedResource Include="Views\CardView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Views\CheckmarkCardView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\InvertedCardView.xaml">
+=======
+    <EmbeddedResource Include="Views\CardBorderView.xaml">
+>>>>>>> feature/11-card-border
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
