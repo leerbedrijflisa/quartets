@@ -60,6 +60,7 @@
     <Compile Include="Views\CardBorderView.xaml.cs">
       <DependentUpon>CardBorderView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UnlockSlider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=1.3.3.0, Culture=neutral, PublicKeyToken=null">
