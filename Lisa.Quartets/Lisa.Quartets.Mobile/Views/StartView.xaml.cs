@@ -45,5 +45,11 @@ namespace Lisa.Quartets.Mobile
         {
             Navigation.PushAsync(new LockView());
         }
+
+		private void SelectCardsEnlargeClicked(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new CardEnlargeView());
+		}
+
 	}
 }
