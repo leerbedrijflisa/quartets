@@ -6,13 +6,12 @@ using System.Threading;
 
 namespace Lisa.Quartets.Mobile
 {
-	public partial class StartPage : ContentPage
+	public partial class AskCard : ContentPage
 	{
 		private bool stop;
 	
-		public StartPage()
+		public AskCard()
 		{
-			InitializeComponent();
 			int id = 0;
 
 			var tapGestureRecognizer = new TapGestureRecognizer();
