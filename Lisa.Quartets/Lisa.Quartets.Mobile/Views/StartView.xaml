@@ -12,6 +12,7 @@
 			<Button Text="Selecteer kaarten (Border)" Clicked="SelectCardsClickedBorder" />
 			<Button Text="Selecteer kaarten (vink + helderheid)" Clicked="SelectCardsCheckmarkOpacity" />
 			<Button Text="Speelbeurt" Clicked="EndOfTurnClicked" />
+			<Button Text="Speelbeurt Kiezen" Clicked="AskCard" />
             <local:UnlockSlider x:Name="slider" OnUnlock="SliderUnlocked"/>
 			<Button Text="Selecteer kaarten (vergroten)" Clicked="SelectCardsEnlargeClicked" />
             <Label Text="Lisa.Quartets v2" FontSize="10" HorizontalOptions="End" VerticalOptions="End" />

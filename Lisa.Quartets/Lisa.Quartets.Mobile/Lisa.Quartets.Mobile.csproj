@@ -68,8 +68,8 @@
     <Compile Include="Views\CardEnlargeView.xaml.cs">
       <DependentUpon>CardEnlargeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\AskCard.xaml.cs">
-      <DependentUpon>AskCard.xaml</DependentUpon>
+    <Compile Include="Views\AskCardView.xaml.cs">
+      <DependentUpon>AskCardView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -117,42 +117,32 @@
     <EmbeddedResource Include="Views\LockView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Views\StartView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-
-    <EmbeddedResource Include="Views\YesNoView.xaml" >
+    <EmbeddedResource Include="Views\YesNoView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Views\CardView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Views\CheckmarkCardView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Views\InvertedCardView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Views\CardBorderView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Views\CardCheckmarkOpacityView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Views\CardEnlargeView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-
-    <EmbeddedResource Include="Views\AskCard.xaml">
+    <EmbeddedResource Include="Views\AskCardView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-
   </ItemGroup>
 </Project>

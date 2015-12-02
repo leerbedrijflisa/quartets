@@ -21,6 +21,11 @@ namespace Lisa.Quartets.Mobile
 			Navigation.PushAsync(new CardBorderView());
 		}
 
+		private void AskCard(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new AskCardView());
+		}
+
 		private void EndOfTurnClicked(object sender, EventArgs e)
 		{
 			Navigation.PushAsync(new YesNoView());
