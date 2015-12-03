@@ -6,14 +6,8 @@
 	<ContentPage.Content>
 		<StackLayout VerticalOptions="Center">
             <Button Text="Speelbeurt" Clicked="EndOfTurnClicked" />
-            <Button Text="Kaart Vragen" Clicked="AskCard" />
-			<Button Text="Selecteer kaarten" Clicked="SelectCardsClicked" />
-			<Button Text="Selecteer kaarten (vink)" Clicked="SelectCardsCheckmarkClicked" />
-            <Button Text="Selecteer kaarten (Border)" Clicked="SelectCardsClickedBorder" />
-            <Button Text="Selecteer kaarten (vergroten)" Clicked="SelectCardsEnlargeClicked" />
-            <Button Text="Selecteer kaarten (vink + helderheid)" Clicked="SelectCardsCheckmarkOpacity" />
-			<Button Text="Selecteer kaarten (helderheid omgedraaid)" Clicked="SelectCardsInvertedClicked" />
-            <local:UnlockSlider x:Name="slider" OnUnlock="SliderUnlocked"/>
+            <Button Text="Kaart Vragen" Clicked="AskCard" />			  
+            <Button Text="Selecteer kaarten" Clicked="SelectCardsEnlargeClicked" />
             <Label Text="Lisa.Quartets v3" FontSize="10" HorizontalOptions="End" VerticalOptions="End" />
         </StackLayout>
 	</ContentPage.Content>
