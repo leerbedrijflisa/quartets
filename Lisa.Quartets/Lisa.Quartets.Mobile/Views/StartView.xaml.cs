@@ -56,5 +56,10 @@ namespace Lisa.Quartets.Mobile
 			Navigation.PushAsync(new CardEnlargeView());
 		}
 
+		private void SelectCardsEnlargeAnimationClicked(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new CardEnlargeAnimationView());
+		}
+
 	}
 }
