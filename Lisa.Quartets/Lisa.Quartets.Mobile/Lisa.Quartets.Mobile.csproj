@@ -71,6 +71,7 @@
     <Compile Include="Views\AskCardView.xaml.cs">
       <DependentUpon>AskCardView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CardImage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=1.3.3.0, Culture=neutral, PublicKeyToken=null">

@@ -12,6 +12,7 @@ namespace Lisa.Quartets.Mobile
 			InitializeComponent();
 			EnsureCardsExist();
 			SetImages();
+            
 		}
 
 		private void EnsureCardsExist()
@@ -25,7 +26,7 @@ namespace Lisa.Quartets.Mobile
 
 		private void OnImageClick(object sender, EventArgs args)
 		{	
-			var image = (Image) sender;
+            var image = (CardImage) sender;
 
 			if (IsSelected(image))
 			{
@@ -41,33 +42,61 @@ namespace Lisa.Quartets.Mobile
 			}
 		}
 
-		private bool IsSelected(Image image)
+        private bool IsSelected(CardImage image)
 		{
-			return _selectedImages.Contains(image.ClassId);
+            return _selectedImages.Contains(image.Id);
 		}
 
-		private void Select(Image image)
+        private void Select(CardImage image)
 		{
-			_selectedImages.Add(image.ClassId);
+            _selectedImages.Add(image.Id);
 		}
 
-		private void Deselect(Image image)
+		private void Deselect(CardImage image)
 		{
-			_selectedImages.Remove(image.ClassId);
+            _selectedImages.Remove(image.Id);
 		}
 
 		private void SetImages()
-		{
-			var cards = _database.RetrieveCards();
+        {
+            var cards = _database.RetrieveCards();
+            int column = 0;
+            int row = 0;
 
-			foreach (var card in cards) 
-			{
-				System.Diagnostics.Debug.WriteLine(card.FileName);
-			}
-		}
+            foreach (var card in cards)
+            {
+                CardImage image = LoadImage(card);
+                cardGrid.Children.Add(image, column, row);
+
+                if (column < 3)
+                {
+                    column++;
+                }
+                else
+                {
+                    column = 0;
+                    row++;
+                }
+            }
+        }	
+
+        private CardImage LoadImage(Card card)
+        {
+            var image = new CardImage();
+
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += OnImageClick;
+            image.GestureRecognizers.Add(tapGestureRecognizer);
+
+            image.Source = card.FileName;
+            image.Opacity = 0.5;
+            image.Scale = 0.8;
+            image.Id = card.Id;
+
+            return image;
+        }
 
 		private CardDatabase _database = new CardDatabase();
-		private List<string> _selectedImages = new List<string>();
+		private List<int> _selectedImages = new List<int>();
 	}
 }
-
