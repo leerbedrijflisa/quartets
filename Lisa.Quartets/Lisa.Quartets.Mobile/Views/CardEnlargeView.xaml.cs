@@ -8,12 +8,11 @@ namespace Lisa.Quartets.Mobile
 	public partial class CardEnlargeView : ContentPage
 	{
 		public CardEnlargeView()
-		{
-			InitializeComponent();
-			EnsureCardsExist();
-			SetImages();
-            
-		}
+        {
+            InitializeComponent();
+            EnsureCardsExist();
+            SetImages();
+        }
 
 		private void EnsureCardsExist()
 		{
@@ -23,6 +22,11 @@ namespace Lisa.Quartets.Mobile
 				_database.CreateDefaultCards();
 			}
 		}
+
+        private void SaveSelectedCards(object sender, EventArgs e)
+        {
+            _database.UpdateSelectedCards(_selectedImages);
+        }
 
 		private void OnImageClick(object sender, EventArgs args)
 		{	
@@ -44,17 +48,17 @@ namespace Lisa.Quartets.Mobile
 
         private bool IsSelected(CardImage image)
 		{
-            return _selectedImages.Contains(image.Id);
+            return _selectedImages.Contains(image.CardId);
 		}
 
         private void Select(CardImage image)
 		{
-            _selectedImages.Add(image.Id);
+            _selectedImages.Add(image.CardId);
 		}
 
 		private void Deselect(CardImage image)
 		{
-            _selectedImages.Remove(image.Id);
+            _selectedImages.Remove(image.CardId);
 		}
 
 		private void SetImages()
@@ -91,7 +95,7 @@ namespace Lisa.Quartets.Mobile
             image.Source = card.FileName;
             image.Opacity = 0.5;
             image.Scale = 0.8;
-            image.Id = card.Id;
+            image.CardId = card.Id;
 
             return image;
         }

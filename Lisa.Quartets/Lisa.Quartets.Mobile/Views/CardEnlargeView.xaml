@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Lisa.Quartets.Mobile.CardEnlargeView">
 	<ContentPage.Content>
         <ScrollView>
+            <Button Text="execute" Clicked="SaveSelectedCards" />
             <Grid x:Name="cardGrid" RowSpacing="1" />
         </ScrollView>
 	</ContentPage.Content>
