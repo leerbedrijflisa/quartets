@@ -78,7 +78,7 @@ namespace Lisa.Quartets.iOS
         {
             var slider = (UnlockSlider)Element;
             slider.OnStopDragging();
-            ResetSlider()
+			ResetSlider();
         }
 
         private void ResetSlider()
@@ -89,7 +89,7 @@ namespace Lisa.Quartets.iOS
 
         private bool DidUserDragSlider()
         {
-            return Control.Value - _lastProgress < 900
+			return Control.Value - _lastProgress < 900;
         }
 
 		private float _lastProgress;
