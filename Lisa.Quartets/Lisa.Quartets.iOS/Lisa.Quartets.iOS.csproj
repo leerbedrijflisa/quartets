@@ -51,7 +51,7 @@
     <None Include="packages.config" />
     <ITunesArtwork Include="iTunesArtwork%402x" />
     <Compile Include="SQLite_iOS.cs" />
-    <Compile Include="UnlockSliderRendererIos.cs" />
+    <Compile Include="UnlockSliderRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
