@@ -57,7 +57,13 @@ namespace Lisa.Quartets.Mobile
 
         public void UpdateSelectedCards(List<int> ids)
         {
-            _database.Execute("UPDATE Card SET IsInHand = true WHERE Id in ?", ids);
+            _database.Execute("UPDATE Card SET IsInHAnd = 0");
+
+            string idString = string.Join(",", ids.Select(n => n.ToString()).ToArray());
+            string query = string.Format("UPDATE 'Card' SET IsInHand = 1 WHERE Id in (" + idString + ")");
+
+
+            _database.Execute(query);
         }
 
 		public void CreateDefaultCards()			
@@ -68,7 +74,7 @@ namespace Lisa.Quartets.Mobile
 				card.Name = string.Format("card{0}", i);
 				card.Category = "test";
 				card.FileName = string.Format("card{0}.jpg", i);
-				card.IsInHand = false;
+				card.IsInHand = 0;
 
 				CreateCard(card);
 			}

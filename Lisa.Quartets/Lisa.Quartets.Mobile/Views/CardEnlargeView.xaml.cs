@@ -23,9 +23,10 @@ namespace Lisa.Quartets.Mobile
 			}
 		}
 
-        private void SaveSelectedCards(object sender, EventArgs e)
+        private void SaveSelectedCards(object sender, EventArgs args)
         {
             _database.UpdateSelectedCards(_selectedImages);
+            Navigation.PopAsync();
         }
 
 		private void OnImageClick(object sender, EventArgs args)
@@ -44,6 +45,8 @@ namespace Lisa.Quartets.Mobile
 				image.Opacity = 1;
 				image.Scale = 1;
 			}
+
+            saveButton.IsEnabled = true;
 		}
 
         private bool IsSelected(CardImage image)
@@ -90,12 +93,23 @@ namespace Lisa.Quartets.Mobile
 
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += OnImageClick;
+
+
             image.GestureRecognizers.Add(tapGestureRecognizer);
 
             image.Source = card.FileName;
-            image.Opacity = 0.5;
-            image.Scale = 0.8;
             image.CardId = card.Id;
+
+            //If card is selected
+            if (card.IsInHand == 1)
+            {
+                _selectedImages.Add(card.Id);
+            }
+            else
+            {
+                image.Opacity = 0.5;
+                image.Scale = 0.8;
+            }
 
             return image;
         }
