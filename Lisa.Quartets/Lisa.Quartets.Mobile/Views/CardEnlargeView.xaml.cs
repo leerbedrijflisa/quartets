@@ -26,7 +26,7 @@ namespace Lisa.Quartets.Mobile
         private void SaveSelectedCards(object sender, EventArgs args)
         {
             _database.UpdateSelectedCards(_selectedImages);
-            Navigation.PopAsync();
+            Navigation.PopToRootAsync();
         }
 
 		private void OnImageClick(object sender, EventArgs args)

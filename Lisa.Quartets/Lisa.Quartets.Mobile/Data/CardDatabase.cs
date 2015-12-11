@@ -62,8 +62,17 @@ namespace Lisa.Quartets.Mobile
             string idString = string.Join(",", ids.Select(n => n.ToString()).ToArray());
             string query = string.Format("UPDATE 'Card' SET IsInHand = 1 WHERE Id in (" + idString + ")");
 
-
             _database.Execute(query);
+        }
+
+        public void GiveCardAway(int id)
+        {
+            _database.Execute("UPDATE Card SET IsInHand = 0 WHERE Id = ?", id);
+        }
+
+        public List<Card> RetrieveCardsInHand()
+        {
+            return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 1");
         }
 
 		public void CreateDefaultCards()			
