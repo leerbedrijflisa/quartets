@@ -72,7 +72,7 @@ namespace Lisa.Quartets.Mobile
 
         private void SetImages()
         {
-            var cards = _database.RetrieveCardsInHand();
+            var cards = _database.RetrieveCardsInHand(1);
             if (cards.Count < 1)
             {
                 

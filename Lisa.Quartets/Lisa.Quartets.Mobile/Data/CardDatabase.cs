@@ -70,9 +70,9 @@ namespace Lisa.Quartets.Mobile
             _database.Execute("UPDATE Card SET IsInHand = 0 WHERE Id = ?", id);
         }
 
-        public List<Card> RetrieveCardsInHand()
+		public List<Card> RetrieveCardsInHand(int inHand)
         {
-            return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 1");
+			return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand =" + inHand);
         }
 
 		public void CreateDefaultCards()			
