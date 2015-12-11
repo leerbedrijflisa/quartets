@@ -56,5 +56,9 @@ namespace Lisa.Quartets.Mobile
 			Navigation.PushAsync(new CardEnlargeView());
 		}
 
+        private void GiveCardClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GiveCardView());
+        }
 	}
 }

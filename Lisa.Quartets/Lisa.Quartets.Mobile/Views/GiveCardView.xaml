@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Lisa.Quartets.Mobile.GiveCardView">
+    <ContentPage.Content>
+        <StackLayout x:Name="parentLayout" VerticalOptions="Center">
+            <Button x:Name="saveButton" Text="Geef weg"  Clicked="SaveSelectedCards" IsEnabled="false"/>            
+            <ScrollView>
+                <Grid x:Name="cardGrid" RowSpacing="1" />
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
