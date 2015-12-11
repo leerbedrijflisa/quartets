@@ -98,6 +98,7 @@
     <None Include="Resources\card42.jpg" />
     <None Include="Resources\card43.jpg" />
     <None Include="Resources\card44.jpg" />
+    <None Include="Resources\shadow.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
