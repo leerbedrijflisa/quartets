@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Lisa.Quartets.Mobile.LockView" BackgroundColor="Black" Padding="0, 20, 0, 0" >
+
+  <StackLayout>
+    <Label Text="Dit wordt het Lock-Screen" TextColor="White" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Start" />
+    <Button x:Name="backbutton1" Text="Ga terug" TextColor="Black" BackgroundColor="White" FontSize="Large" HorizontalOptions="Center" Clicked="BackClicked" />
+  </StackLayout>
+
+</ContentPage>

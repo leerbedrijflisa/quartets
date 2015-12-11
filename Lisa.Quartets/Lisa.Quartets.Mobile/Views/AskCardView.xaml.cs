@@ -6,9 +6,9 @@ using System.Threading;
 
 namespace Lisa.Quartets.Mobile
 {
-	public partial class AskCard : ContentPage
+	public partial class AskCardView : ContentPage
 	{
-		public AskCard()
+		public AskCardView()
 		{
 			InitializeComponent();
 			InitializeFirstImage();

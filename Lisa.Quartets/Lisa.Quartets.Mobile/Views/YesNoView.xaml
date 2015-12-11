@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Lisa.Quartets.Mobile.YesNoView" BackgroundColor="Black" Padding="0, 20, 0, 0" >
+
+<StackLayout>
+  <Label Text="Heb ik de kaart gekregen?" TextColor="White" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Start" />
+  
+  <Grid VerticalOptions="Fill" HorizontalOptions="FillAndExpand" RowSpacing="0" ColumnSpacing="6" Padding="20">
+  <Grid.RowDefinitions>
+    <RowDefinition Height="*"></RowDefinition>
+  </Grid.RowDefinitions>
+
+  <Grid.ColumnDefinitions>
+      <ColumnDefinitionCollection>
+        <ColumnDefinition Width="50*"/>
+        <ColumnDefinition Width="50*"/>
+      </ColumnDefinitionCollection>
+  </Grid.ColumnDefinitions>
+    
+
+    <Button x:Name="button1" BackgroundColor="White" Text="JA" TextColor="Black" FontSize="Large" Grid.Row="0" Grid.Column="0" Clicked="YesClicked" />
+
+    <Button x:Name="button2" BackgroundColor="White" Text="NEE" TextColor="Black" FontSize="Large" Grid.Row="0" Grid.Column="1" Clicked="NoClicked" />
+    
+
+  </Grid>
+  
+  <Label x:Name="label1" TextColor="White" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Start" Text="Maak een keuze" />
+  
+</StackLayout>
+
+</ContentPage>

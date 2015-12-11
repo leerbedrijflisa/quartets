@@ -26,6 +26,8 @@ namespace Lisa.Quartets.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::Lisa.Quartets.Droid.Resource.String.ApplicationName;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::Lisa.Quartets.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -45,142 +47,154 @@ namespace Lisa.Quartets.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int card = 2130837504;
+			public const int border = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int card1 = 2130837505;
+			public const int card = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int card10 = 2130837506;
+			public const int card1 = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int card11 = 2130837507;
+			public const int card10 = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int card12 = 2130837508;
+			public const int card11 = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int card13 = 2130837509;
+			public const int card12 = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int card14 = 2130837510;
+			public const int card13 = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int card15 = 2130837511;
+			public const int card14 = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int card16 = 2130837512;
+			public const int card15 = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int card17 = 2130837513;
+			public const int card16 = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int card18 = 2130837514;
+			public const int card17 = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int card19 = 2130837515;
+			public const int card18 = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int card2 = 2130837516;
+			public const int card19 = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int card20 = 2130837517;
+			public const int card2 = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int card21 = 2130837518;
+			public const int card20 = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int card22 = 2130837519;
+			public const int card21 = 2130837519;
 			
 			// aapt resource value: 0x7f020010
-			public const int card23 = 2130837520;
+			public const int card22 = 2130837520;
 			
 			// aapt resource value: 0x7f020011
-			public const int card24 = 2130837521;
+			public const int card23 = 2130837521;
 			
 			// aapt resource value: 0x7f020012
-			public const int card25 = 2130837522;
+			public const int card24 = 2130837522;
 			
 			// aapt resource value: 0x7f020013
-			public const int card26 = 2130837523;
+			public const int card25 = 2130837523;
 			
 			// aapt resource value: 0x7f020014
-			public const int card27 = 2130837524;
+			public const int card26 = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int card28 = 2130837525;
+			public const int card27 = 2130837525;
 			
 			// aapt resource value: 0x7f020016
-			public const int card29 = 2130837526;
+			public const int card28 = 2130837526;
 			
 			// aapt resource value: 0x7f020017
-			public const int card3 = 2130837527;
+			public const int card29 = 2130837527;
 			
 			// aapt resource value: 0x7f020018
-			public const int card30 = 2130837528;
+			public const int card3 = 2130837528;
 			
 			// aapt resource value: 0x7f020019
-			public const int card31 = 2130837529;
+			public const int card30 = 2130837529;
 			
 			// aapt resource value: 0x7f02001a
-			public const int card32 = 2130837530;
+			public const int card31 = 2130837530;
 			
 			// aapt resource value: 0x7f02001b
-			public const int card33 = 2130837531;
+			public const int card32 = 2130837531;
 			
 			// aapt resource value: 0x7f02001c
-			public const int card34 = 2130837532;
+			public const int card33 = 2130837532;
 			
 			// aapt resource value: 0x7f02001d
-			public const int card35 = 2130837533;
+			public const int card34 = 2130837533;
 			
 			// aapt resource value: 0x7f02001e
-			public const int card36 = 2130837534;
+			public const int card35 = 2130837534;
 			
 			// aapt resource value: 0x7f02001f
-			public const int card37 = 2130837535;
+			public const int card36 = 2130837535;
 			
 			// aapt resource value: 0x7f020020
-			public const int card38 = 2130837536;
+			public const int card37 = 2130837536;
 			
 			// aapt resource value: 0x7f020021
-			public const int card39 = 2130837537;
+			public const int card38 = 2130837537;
 			
 			// aapt resource value: 0x7f020022
-			public const int card4 = 2130837538;
+			public const int card39 = 2130837538;
 			
 			// aapt resource value: 0x7f020023
-			public const int card40 = 2130837539;
+			public const int card4 = 2130837539;
 			
 			// aapt resource value: 0x7f020024
-			public const int card41 = 2130837540;
+			public const int card40 = 2130837540;
 			
 			// aapt resource value: 0x7f020025
-			public const int card42 = 2130837541;
+			public const int card41 = 2130837541;
 			
 			// aapt resource value: 0x7f020026
-			public const int card43 = 2130837542;
+			public const int card42 = 2130837542;
 			
 			// aapt resource value: 0x7f020027
-			public const int card44 = 2130837543;
+			public const int card43 = 2130837543;
 			
 			// aapt resource value: 0x7f020028
-			public const int card5 = 2130837544;
+			public const int card44 = 2130837544;
 			
 			// aapt resource value: 0x7f020029
-			public const int card6 = 2130837545;
+			public const int card5 = 2130837545;
 			
 			// aapt resource value: 0x7f02002a
-			public const int card7 = 2130837546;
+			public const int card6 = 2130837546;
 			
 			// aapt resource value: 0x7f02002b
-			public const int card8 = 2130837547;
+			public const int card7 = 2130837547;
 			
 			// aapt resource value: 0x7f02002c
-			public const int card9 = 2130837548;
+			public const int card8 = 2130837548;
 			
 			// aapt resource value: 0x7f02002d
-			public const int icon = 2130837549;
+			public const int card9 = 2130837549;
+			
+			// aapt resource value: 0x7f02002e
+			public const int check = 2130837550;
+			
+			// aapt resource value: 0x7f02002f
+			public const int icon = 2130837551;
+			
+			// aapt resource value: 0x7f020030
+			public const int kaart1 = 2130837552;
+			
+			// aapt resource value: 0x7f020031
+			public const int slide = 2130837553;
 			
 			static Drawable()
 			{
@@ -188,6 +202,25 @@ namespace Lisa.Quartets.Droid
 			}
 			
 			private Drawable()
+			{
+			}
+		}
+		
+		public partial class String
+		{
+			
+			// aapt resource value: 0x7f030001
+			public const int ApplicationName = 2130903041;
+			
+			// aapt resource value: 0x7f030000
+			public const int Hello = 2130903040;
+			
+			static String()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private String()
 			{
 			}
 		}

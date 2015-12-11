@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Xamarin.Forms;
 
 namespace Lisa.Quartets.Mobile
@@ -11,7 +10,7 @@ namespace Lisa.Quartets.Mobile
     {
         public App()
         {
-			MainPage = new AskCard();
+			MainPage = new NavigationPage(new StartView());
         }
     }
 }

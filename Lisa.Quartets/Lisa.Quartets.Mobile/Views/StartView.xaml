@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Lisa.Quartets.Mobile.StartView"
+             xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="Center">
+            <Button Text="Speelbeurt" Clicked="EndOfTurnClicked" />
+            <Button Text="Kaart Vragen" Clicked="AskCard" />			  
+            <Button Text="Selecteer kaarten" Clicked="SelectCardsEnlargeClicked" />
+            <Label Text="Lisa.Quartets v3" FontSize="10" HorizontalOptions="End" VerticalOptions="End" />
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
