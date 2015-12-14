@@ -4,10 +4,10 @@ using Xamarin.Forms;
 using Lisa.Quartets;
 using Lisa.Quartets.iOS;
 
-[assembly: ExportRenderer (typeof(UnlockSlider), typeof(UnlockSliderRendererIos))]
+[assembly: ExportRenderer (typeof(UnlockSlider), typeof(UnlockSliderRenderer))]
 namespace Lisa.Quartets.iOS
 {
-	public class UnlockSliderRendererIos : SliderRenderer
+	public class UnlockSliderRenderer : SliderRenderer
 	{
 		protected override void OnElementChanged (ElementChangedEventArgs<Slider> e)
 		{
@@ -59,26 +59,38 @@ namespace Lisa.Quartets.iOS
 
 		private void CheckProgress(object sender, System.EventArgs e)
 		{
-			System.Diagnostics.Debug.WriteLine(Control.Value);
-
-			if (Control.Value - _lastProgress < 900)
+            if (DidUserDragSlider())
 			{
-				_lastProgress = Control.Value;
-
 				if (Control.Value >= 900)
 				{
-					var slider = (UnlockSlider)Element;
-					slider.OnStopDragging();
-					Control.Value = 0;
-					_lastProgress = 0;
+                    Unlock();
 				}
 			}
 			else
 			{
-				Control.Value = 0;
-				_lastProgress = 0;
+                ResetSlider();
 			}
+
+            _lastProgress = Control.Value;
 		}
+
+        private void Unlock()
+        {
+            var slider = (UnlockSlider)Element;
+            slider.OnStopDragging();
+			ResetSlider();
+        }
+
+        private void ResetSlider()
+        {
+            Control.Value = 0;
+            _lastProgress = 0;
+        }
+
+        private bool DidUserDragSlider()
+        {
+			return Control.Value - _lastProgress < 900;
+        }
 
 		private float _lastProgress;
 	}
