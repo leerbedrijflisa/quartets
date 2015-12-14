@@ -12,14 +12,14 @@ namespace Lisa.Quartets.Mobile
 			NavigationPage.SetHasNavigationBar(this, false);
 		}
 
-		public async void YesClicked(object sender, EventArgs args)
+		public void YesClicked(object sender, EventArgs args)
 		{
-			await Navigation.PopAsync();
+           DisplayAlert("Test", "Ja", "OK");
 		}
 
-		public async void NoClicked(object sender, EventArgs args)
+		public void NoClicked(object sender, EventArgs args)
 		{
-			await Navigation.PushAsync(new LockView());
-		}
+            DisplayAlert("Test", "Nee", "OK");
+        }
 	}
 }
