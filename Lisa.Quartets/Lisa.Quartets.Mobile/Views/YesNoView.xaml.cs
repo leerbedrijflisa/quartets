@@ -19,7 +19,7 @@ namespace Lisa.Quartets.Mobile
 
 		public void NoClicked(object sender, EventArgs args)
 		{
-            DisplayAlert("Test", "Nee", "OK");
+			Navigation.PushAsync(new LockView());
         }
 	}
 }
