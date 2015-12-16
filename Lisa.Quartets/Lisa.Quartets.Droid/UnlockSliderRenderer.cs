@@ -21,8 +21,8 @@ namespace Lisa.Quartets.Droid
                 SetBackground(Control);
                 SetPogressbar(Control);
                 SetThumbImage(Control);
-                ​
-                Control.SetPadding(75, 0, 75, 0);
+
+                Control.SetPadding(35, 0, 35, 0);
                 Control.StopTrackingTouch += StoppedDragging;
                 Control.ProgressChanged += CheckProgress;
             }
