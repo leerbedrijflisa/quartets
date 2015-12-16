@@ -46,8 +46,8 @@ namespace Lisa.Quartets.Mobile
 				Select(image);
 				image.FadeTo(1, 100);
 				image.ScaleTo(1, 100);
-				_shadows[image.CardId].ScaleTo(1.05, 100);
-				_shadows[image.CardId].FadeTo(1, 100);
+				_shadows[image.CardId].ScaleTo(0.95, 100);
+				_shadows[image.CardId].FadeTo(0.8, 100);
 
 			}
 
@@ -111,8 +111,8 @@ namespace Lisa.Quartets.Mobile
             if (card.IsInHand == 1)
             {
                 _selectedImages.Add(card.Id);
-                _shadows[card.Id].Scale = 1.05;
-                _shadows[card.Id].Opacity = 1;
+                _shadows[card.Id].Scale = 0.95;
+                _shadows[card.Id].Opacity = 0.8;
             }
             else
             {
