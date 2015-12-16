@@ -55,15 +55,35 @@ namespace Lisa.Quartets.Mobile
 			return _database.GetWithChildren<Card>(cardId);
 		}
 
+        public void UpdateSelectedCards(List<int> ids)
+        {
+            _database.Execute("UPDATE Card SET IsInHAnd = 0");
+
+            string idString = string.Join(",", ids.Select(n => n.ToString()).ToArray());
+            string query = string.Format("UPDATE 'Card' SET IsInHand = 1 WHERE Id in (" + idString + ")");
+
+            _database.Execute(query);
+        }
+
+        public void GiveCardAway(int id)
+        {
+            _database.Execute("UPDATE Card SET IsInHand = 0 WHERE Id = ?", id);
+        }
+
+		public List<Card> RetrieveCardsInHand(int inHand)
+        {
+			return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand =" + inHand);
+        }
+
 		public void CreateDefaultCards()			
 		{
-			for (int i = 0; i < 16; i++)
+			for (int i = 1; i <= 44; i++)
 			{
 				var card = new Card();
 				card.Name = string.Format("card{0}", i);
 				card.Category = "test";
 				card.FileName = string.Format("card{0}.jpg", i);
-				card.IsInHand = false;
+				card.IsInHand = 0;
 
 				CreateCard(card);
 			}

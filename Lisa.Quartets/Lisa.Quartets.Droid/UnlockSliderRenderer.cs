@@ -6,7 +6,7 @@ using Lisa.Quartets.Droid;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Android.Graphics.Drawables;
-
+​
 [assembly: ExportRenderer (typeof(UnlockSlider), typeof(UnlockSliderRenderer))]
 namespace Lisa.Quartets.Droid
 {
@@ -15,19 +15,19 @@ namespace Lisa.Quartets.Droid
         protected override void OnElementChanged(ElementChangedEventArgs<Slider> e)
         {
             base.OnElementChanged(e);
-
+            ​
             if (Control != null)
             {
                 SetBackground(Control);
                 SetPogressbar(Control);
                 SetThumbImage(Control);
 
-                Control.SetPadding(75, 0, 75, 0);
+                Control.SetPadding(35, 0, 35, 0);
                 Control.StopTrackingTouch += StoppedDragging;
                 Control.ProgressChanged += CheckProgress;
             }
         }
-
+        ​
         private void SetBackground(SeekBar element)
         {
             GradientDrawable background = new GradientDrawable();
@@ -35,56 +35,63 @@ namespace Lisa.Quartets.Droid
             background.SetCornerRadius(10);
             element.SetBackgroundDrawable(background);
         }
-
+        ​
         private void SetPogressbar(SeekBar element)
         {
             element.ProgressDrawable.SetColorFilter(Android.Graphics.Color.LightGray, PorterDuff.Mode.SrcIn);   
         }
-
+        ​
         private void SetThumbImage(SeekBar element)
         {
             element.SetThumb(this.Resources.GetDrawable(Resource.Drawable.slide));
         }
-
+        ​
         private void StoppedDragging(object sender, SeekBar.StopTrackingTouchEventArgs e)
         {
-            var slider = (UnlockSlider)Element;
-            if(Control.Progress >= 900)
+            var slider = (UnlockSlider) Element;
+            if (Control.Progress >= 900)
             {
                 slider.OnStopDragging();
-                Control.Progress = 0;
             }
-            else
-            {
-                Control.Progress = 0;
-            }
-
+            ​
+            Control.Progress = 0;
         }
-
+        ​
         private void CheckProgress(object sender, SeekBar.ProgressChangedEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine(_lastProgress);
-            if((int)Control.Progress - _lastProgress < 900)
+            if (DidUserDragSlider())
             {
-                _lastProgress = Control.Progress;
-
                 if (Control.Progress >= 900)
                 {
-                    var slider = (UnlockSlider)Element;
-                    slider.OnStopDragging();
-                    Control.Progress = 0;
-                    _lastProgress = 0;
+                    Unlock();
                 }
             }
             else
             {
-                System.Diagnostics.Debug.WriteLine("kom ik hier?");
-                Control.Progress = 0;
-                _lastProgress = 0;
+                ResetSlider();
             }
-
+            ​
+            _lastProgress = Control.Progress;
         }
-
+        ​
+        private void Unlock()
+        {
+            var slider = (UnlockSlider) Element;
+            slider.OnStopDragging();
+            ResetSlider();
+        }
+        ​
+        private void ResetSlider()
+        {
+            Control.Progress = 0;
+            _lastProgress = 0;
+        }
+        ​
+        private bool DidUserDragSlider()
+        {
+            return (int) Control.Progress - _lastProgress < 900;
+        }
+        ​
         private int _lastProgress;
     }
 }

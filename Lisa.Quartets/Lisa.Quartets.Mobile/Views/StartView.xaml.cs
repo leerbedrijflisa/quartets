@@ -16,6 +16,16 @@ namespace Lisa.Quartets.Mobile
 			Navigation.PushAsync(new CardView());
 		}
 
+		private void SelectCardsClickedBorder(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new CardBorderView());
+		}
+
+		private void AskCard(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new AskCardView());
+		}
+
 		private void EndOfTurnClicked(object sender, EventArgs e)
 		{
 			Navigation.PushAsync(new YesNoView());
@@ -24,6 +34,11 @@ namespace Lisa.Quartets.Mobile
 		private void SelectCardsCheckmarkClicked(object sender, EventArgs e)
 		{
 			Navigation.PushAsync(new CheckmarkCardView());
+		}
+
+		private void SelectCardsCheckmarkOpacity(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new CardCheckmarkOpacityView());
 		}
 
 		private void SelectCardsInvertedClicked(object sender, EventArgs e)
@@ -36,5 +51,14 @@ namespace Lisa.Quartets.Mobile
             Navigation.PushAsync(new LockView());
         }
 
+		private void SelectCardsEnlargeClicked(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new CardEnlargeView());
+		}
+
+        private void GiveCardClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GiveCardView());
+        }
 	}
 }

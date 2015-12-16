@@ -8,9 +8,9 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Lisa.Quartets.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>LisaQuartetsiOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <AssemblyName>LisaQuartetsiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'iOS Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,10 +24,11 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchI18n>
     </MtouchI18n>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IpaPackageName>
+    </IpaPackageName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'iOS Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -50,6 +51,54 @@
     <None Include="packages.config" />
     <ITunesArtwork Include="iTunesArtwork%402x" />
     <Compile Include="SQLite_iOS.cs" />
+    <None Include="Resources\border.png" />
+    <None Include="Resources\kaart1.png" />
+    <None Include="Resources\card1.jpg" />
+    <None Include="Resources\card2.jpg" />
+    <None Include="Resources\card3.jpg" />
+    <None Include="Resources\card4.jpg" />
+    <None Include="Resources\card5.jpg" />
+    <None Include="Resources\card6.jpg" />
+    <None Include="Resources\card7.jpg" />
+    <None Include="Resources\card8.jpg" />
+    <None Include="Resources\card9.jpg" />
+    <None Include="Resources\card10.jpg" />
+    <None Include="Resources\card11.jpg" />
+    <None Include="Resources\card12.jpg" />
+    <None Include="Resources\card13.jpg" />
+    <None Include="Resources\card14.jpg" />
+    <None Include="Resources\card15.jpg" />
+    <None Include="Resources\card16.jpg" />
+    <None Include="Resources\card17.jpg" />
+    <None Include="Resources\card18.jpg" />
+    <None Include="Resources\card19.jpg" />
+    <None Include="Resources\card20.jpg" />
+    <None Include="Resources\card21.jpg" />
+    <None Include="Resources\card22.jpg" />
+    <None Include="Resources\card23.jpg" />
+    <None Include="Resources\card24.jpg" />
+    <None Include="Resources\card25.jpg" />
+    <None Include="Resources\card26.jpg" />
+    <None Include="Resources\card27.jpg" />
+    <None Include="Resources\card28.jpg" />
+    <None Include="Resources\card29.jpg" />
+    <None Include="Resources\card30.jpg" />
+    <None Include="Resources\card31.jpg" />
+    <None Include="Resources\card32.jpg" />
+    <None Include="Resources\card33.jpg" />
+    <None Include="Resources\card34.jpg" />
+    <None Include="Resources\card35.jpg" />
+    <None Include="Resources\card36.jpg" />
+    <None Include="Resources\card37.jpg" />
+    <None Include="Resources\card38.jpg" />
+    <None Include="Resources\card39.jpg" />
+    <None Include="Resources\card40.jpg" />
+    <None Include="Resources\card41.jpg" />
+    <None Include="Resources\card42.jpg" />
+    <None Include="Resources\card43.jpg" />
+    <None Include="Resources\card44.jpg" />
+    <Compile Include="UnlockSliderRenderer.cs" />
+    <None Include="Resources\shadow.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -70,6 +119,7 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <BundleResource Include="Resources\card.png" />
     <BundleResource Include="Resources\check.png" />
+    <BundleResource Include="Resources\slide.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
