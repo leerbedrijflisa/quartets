@@ -77,10 +77,7 @@ namespace Lisa.Quartets.Mobile
 
             foreach (var card in cards)
             {
-				
-
 				_shadows.Add(card.Id, new Image { Source = ImageSource.FromFile("shadow.png"), Opacity=0, Scale=0.8 });
-				//Image shadow = new Image{ Source = "shadow.png" };
 				CardImage image = LoadImage(card);
 				var parent = new AbsoluteLayout{ Children = { _shadows[card.Id], image } };
 				cardGrid.Children.Add(parent, column, row);
@@ -105,7 +102,6 @@ namespace Lisa.Quartets.Mobile
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += OnImageClick;
 
-
             image.GestureRecognizers.Add(tapGestureRecognizer);
 
             image.Source = card.FileName;
@@ -115,6 +111,8 @@ namespace Lisa.Quartets.Mobile
             if (card.IsInHand == 1)
             {
                 _selectedImages.Add(card.Id);
+                _shadows[card.Id].Scale = 1.05;
+                _shadows[card.Id].Opacity = 1;
             }
             else
             {

@@ -110,8 +110,6 @@
     <AndroidResource Include="Resources\drawable\card5.jpg" />
     <AndroidResource Include="Resources\drawable\card6.jpg" />
     <AndroidResource Include="Resources\drawable\card7.jpg" />
-    <AndroidResource Include="Resources\drawable\check.png" />
-    <AndroidResource Include="Resources\drawable\slide.png" />
     <AndroidResource Include="Resources\drawable\card8.jpg" />
     <AndroidResource Include="Resources\drawable\card9.jpg" />
     <AndroidResource Include="Resources\drawable\card10.jpg" />
