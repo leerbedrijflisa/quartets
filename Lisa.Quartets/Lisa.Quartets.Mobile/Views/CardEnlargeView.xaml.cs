@@ -36,14 +36,19 @@ namespace Lisa.Quartets.Mobile
 			if (IsSelected(image))
 			{
 				Deselect(image);
-				image.Opacity = 0.5;
-				image.Scale = 0.8;
+				image.FadeTo(0.5, 100);
+				image.ScaleTo(0.8, 100);
+				_shadows[image.CardId].ScaleTo(0.8, 100);
+				_shadows[image.CardId].FadeTo(0, 100);
 			}
 			else
 			{
 				Select(image);
-				image.Opacity = 1;
-				image.Scale = 1;
+				image.FadeTo(1, 100);
+				image.ScaleTo(1, 100);
+				_shadows[image.CardId].ScaleTo(1.05, 100);
+				_shadows[image.CardId].FadeTo(1, 100);
+
 			}
 
             saveButton.IsEnabled = true;
@@ -72,8 +77,14 @@ namespace Lisa.Quartets.Mobile
 
             foreach (var card in cards)
             {
-                CardImage image = LoadImage(card);
-                cardGrid.Children.Add(image, column, row);
+				
+
+				_shadows.Add(card.Id, new Image { Source = ImageSource.FromFile("shadow.png"), Opacity=0, Scale=0.8 });
+				//Image shadow = new Image{ Source = "shadow.png" };
+				CardImage image = LoadImage(card);
+				var parent = new AbsoluteLayout{ Children = { _shadows[card.Id], image } };
+				cardGrid.Children.Add(parent, column, row);
+
 
                 if (column < 3)
                 {
@@ -116,5 +127,6 @@ namespace Lisa.Quartets.Mobile
 
 		private CardDatabase _database = new CardDatabase();
 		private List<int> _selectedImages = new List<int>();
+		private Dictionary<int, Image> _shadows = new Dictionary<int, Image>();
 	}
 }
