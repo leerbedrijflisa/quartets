@@ -65,6 +65,11 @@ namespace Lisa.Quartets.Mobile
             _database.Execute(query);
         }
 
+        public void RecieveCard(int id)
+        {
+            _database.Execute("UPDATE Card SET IsInHand = 1 WHERE Id = ?", id);
+        }
+
         public void GiveCardAway(int id)
         {
             _database.Execute("UPDATE Card SET IsInHand = 0 WHERE Id = ?", id);

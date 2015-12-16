@@ -23,12 +23,12 @@ namespace Lisa.Quartets.Mobile
 
 		private void AskCard(object sender, EventArgs e)
 		{
-			Navigation.PushAsync(new AskCardView());
+            Navigation.PushAsync(new AskCardView());
 		}
 
 		private void EndOfTurnClicked(object sender, EventArgs e)
 		{
-			Navigation.PushAsync(new YesNoView());
+//			Navigation.PushAsync(new YesNoView());
 		}
 			
 		private void SelectCardsCheckmarkClicked(object sender, EventArgs e)

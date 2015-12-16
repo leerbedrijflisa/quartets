@@ -14,7 +14,7 @@ namespace Lisa.Quartets.Mobile
 
 		public void BackClicked(object sender, EventArgs args)
 		{
-			Navigation.PopAsync();
+            Navigation.PopToRootAsync();
 		}
 	}
 }

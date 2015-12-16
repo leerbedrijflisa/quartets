@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Lisa.Quartets.Mobile.YesNoView" BackgroundColor="Black" Padding="0, 20, 0, 0" xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets" >
 
 <StackLayout>
-  <Label Text="Heb ik de kaart gekregen?" TextColor="White" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Start" />
+  <Label Text="Heb ik deze kaart gekregen?" TextColor="White" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Start" />
     
    <Grid>
      
@@ -27,6 +27,7 @@
    </Grid>
    
   <Label x:Name="label1" TextColor="White" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Start" Text="Maak een keuze" />
+  <local:CardImage x:Name="selectedImage" />
   
 </StackLayout>
 

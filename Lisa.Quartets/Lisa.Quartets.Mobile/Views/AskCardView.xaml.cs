@@ -12,18 +12,19 @@ namespace Lisa.Quartets.Mobile
 		public AskCardView()
 		{
 			InitializeComponent();
-			_cards = _database.RetrieveCardsInHand(0);
-			InitializeFirstImage();
+            NavigationPage.SetHasNavigationBar(this, false);
+            _cards = _database.RetrieveCardsInHand(0);
+            InitializeFirstImage();
 			Timer();
 		}
 
-		public void InitializeFirstImage()
+        private void InitializeFirstImage()
 		{
 			var tapGestureRecognizer = new TapGestureRecognizer();
-			cardimage.GestureRecognizers.Add(tapGestureRecognizer);
+			cardImage.GestureRecognizers.Add(tapGestureRecognizer);
 			tapGestureRecognizer.Tapped += OnCardClick;
 
-			cardimage.Source = _cards[0].FileName;
+            SetImage(0);
 		}
 
 		private void OnCardClick(object sender, EventArgs args)
@@ -31,33 +32,47 @@ namespace Lisa.Quartets.Mobile
 			_stop = true;
 		}
 
-		public void Timer(){
+        private void Timer(){
 			Device.StartTimer (new TimeSpan (0, 0, 0,2,0), () => {
 				if(_stop == true)
 				{
-					System.Diagnostics.Debug.WriteLine("false");
-					cardimage.ScaleTo(1.6);
+                    AskSelectedCard(_cards[_id -1]);
 					return false;	
 				}
+
 				FadeCard(_id);
 				_id++;
+
 				if (_id >= _cards.Count)
 				{
 					_id = 0;
 				}
+
 				return true;
 			});
 		}
-		public async void FadeCard(int id){
-			
-			await cardimage.FadeTo(0,500);
-			cardimage.Source = _cards[id].FileName;
-			await cardimage.FadeTo(1,500);
+
+        private void AskSelectedCard(Card card)
+        {
+            Navigation.PushAsync(new YesNoView(card));
+        }
+
+        private async void FadeCard(int id){			
+			await cardImage.FadeTo(0,500);
+            SetImage(id);
+			await cardImage.FadeTo(1,500);
 		}
+
+        private void SetImage(int id)
+        {
+            cardImage.Source = _cards[id].FileName;
+            cardImage.CardId = _cards[id].Id;
+        }
+
 		private CardDatabase _database = new CardDatabase();
-		private bool _stop;
-		private List<Card> _cards = new List<Card>();
-		private int _id = 1;
+        private List<Card> _cards = new List<Card>();
+        private int _id = 1;
+        private bool _stop;
 	}
 
 }
