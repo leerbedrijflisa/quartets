@@ -55,9 +55,14 @@ namespace Lisa.Quartets.Mobile
 			return _database.GetWithChildren<Card>(cardId);
 		}
 
-        public void UpdateSelectedCards(List<int> ids)
+        public void ResetCards()
         {
             _database.Execute("UPDATE Card SET IsInHAnd = 0");
+        }
+
+        public void UpdateSelectedCards(List<int> ids)
+        {
+            ResetCards();
 
             string idString = string.Join(",", ids.Select(n => n.ToString()).ToArray());
             string query = string.Format("UPDATE 'Card' SET IsInHand = 1 WHERE Id in (" + idString + ")");

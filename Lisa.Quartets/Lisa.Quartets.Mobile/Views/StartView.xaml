@@ -7,7 +7,7 @@
 		<StackLayout VerticalOptions="Center">
             <Button Text="Speelbeurt" Clicked="EndOfTurnClicked" />
             <Button Text="Kaart Vragen" Clicked="AskCard" />			  
-            <Button Text="Selecteer kaarten" Clicked="SelectCardsEnlargeClicked" />
+            <Button Text="Selecteer kaarten" Clicked="SelectCardsClicked" />
             <Button Text="Geef een kaart weg" Clicked="GiveCardClicked" />
             <Label Text="Lisa.Quartets v3" FontSize="10" HorizontalOptions="End" VerticalOptions="End" />
         </StackLayout>

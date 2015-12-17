@@ -49,22 +49,7 @@
     <Compile Include="Interfaces\ISQLite.cs" />
     <Compile Include="Models\Card.cs" />
     <Compile Include="Data\CardDatabase.cs" />
-    <Compile Include="Views\CardView.xaml.cs">
-      <DependentUpon>CardView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\CheckmarkCardView.xaml.cs">
-      <DependentUpon>CheckmarkCardView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\InvertedCardView.cs">
-      <DependentUpon>InvertedCardView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\CardCheckmarkOpacityView.xaml.cs">
-      <DependentUpon>CardCheckmarkOpacityView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UnlockSlider.cs" />
-    <Compile Include="Views\CardBorderView.xaml.cs">
-      <DependentUpon>CardBorderView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\CardEnlargeView.xaml.cs">
       <DependentUpon>CardEnlargeView.xaml</DependentUpon>
     </Compile>
@@ -125,21 +110,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\YesNoView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\CardView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\CheckmarkCardView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\InvertedCardView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\CardBorderView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\CardCheckmarkOpacityView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CardEnlargeView.xaml">
