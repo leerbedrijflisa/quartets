@@ -6,7 +6,7 @@ using Lisa.Quartets.Droid;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Android.Graphics.Drawables;
-​
+
 [assembly: ExportRenderer (typeof(UnlockSlider), typeof(UnlockSliderRenderer))]
 namespace Lisa.Quartets.Droid
 {
@@ -15,7 +15,7 @@ namespace Lisa.Quartets.Droid
         protected override void OnElementChanged(ElementChangedEventArgs<Slider> e)
         {
             base.OnElementChanged(e);
-            ​
+
             if (Control != null)
             {
                 SetBackground(Control);
@@ -27,7 +27,7 @@ namespace Lisa.Quartets.Droid
                 Control.ProgressChanged += CheckProgress;
             }
         }
-        ​
+
         private void SetBackground(SeekBar element)
         {
             GradientDrawable background = new GradientDrawable();
@@ -35,17 +35,17 @@ namespace Lisa.Quartets.Droid
             background.SetCornerRadius(10);
             element.SetBackgroundDrawable(background);
         }
-        ​
+
         private void SetPogressbar(SeekBar element)
         {
             element.ProgressDrawable.SetColorFilter(Android.Graphics.Color.LightGray, PorterDuff.Mode.SrcIn);   
         }
-        ​
+
         private void SetThumbImage(SeekBar element)
         {
             element.SetThumb(this.Resources.GetDrawable(Resource.Drawable.slide));
         }
-        ​
+
         private void StoppedDragging(object sender, SeekBar.StopTrackingTouchEventArgs e)
         {
             var slider = (UnlockSlider) Element;
@@ -53,10 +53,10 @@ namespace Lisa.Quartets.Droid
             {
                 slider.OnStopDragging();
             }
-            ​
+
             Control.Progress = 0;
         }
-        ​
+
         private void CheckProgress(object sender, SeekBar.ProgressChangedEventArgs e)
         {
             if (DidUserDragSlider())
@@ -70,28 +70,28 @@ namespace Lisa.Quartets.Droid
             {
                 ResetSlider();
             }
-            ​
+
             _lastProgress = Control.Progress;
         }
-        ​
+
         private void Unlock()
         {
             var slider = (UnlockSlider) Element;
             slider.OnStopDragging();
             ResetSlider();
         }
-        ​
+
         private void ResetSlider()
         {
             Control.Progress = 0;
             _lastProgress = 0;
         }
-        ​
+
         private bool DidUserDragSlider()
         {
             return (int) Control.Progress - _lastProgress < 900;
         }
-        ​
+
         private int _lastProgress;
     }
 }

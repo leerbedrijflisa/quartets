@@ -60,6 +60,7 @@
     <Compile Include="Views\GiveCardView.xaml.cs">
       <DependentUpon>GiveCardView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CardImageHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=1.3.3.0, Culture=neutral, PublicKeyToken=null">

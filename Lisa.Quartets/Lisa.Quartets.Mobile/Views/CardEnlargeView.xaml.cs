@@ -7,21 +7,14 @@ namespace Lisa.Quartets.Mobile
 {
 	public partial class CardEnlargeView : ContentPage
 	{
-		public CardEnlargeView()
+        public CardEnlargeView(CardImageHolder cardImageHolder)
         {
             InitializeComponent();
-            EnsureCardsExist();
+            _cardImageHolder = cardImageHolder;
             SetImages();
         }
 
-		private void EnsureCardsExist()
-		{
-			var cards = _database.RetrieveCards();
-			if (cards.Count() == 0)
-			{
-				_database.CreateDefaultCards();
-			}
-		}
+		
 
         private void SaveSelectedCards(object sender, EventArgs args)
         {
@@ -71,15 +64,16 @@ namespace Lisa.Quartets.Mobile
 
 		private void SetImages()
         {
-            var cards = _database.RetrieveCards();
             int column = 0;
             int row = 0;
 
-            foreach (var card in cards)
+//            Image shadow = new Image { Source = ImageSource.FromFile("shadow.png"), Opacity = 0, Scale = 0.8 };
+
+            foreach (var image in _cardImageHolder.CardImages)
             {
-				_shadows.Add(card.Id, new Image { Source = ImageSource.FromFile("shadow.png"), Opacity=0, Scale=0.8 });
-				CardImage image = LoadImage(card);
-				var parent = new AbsoluteLayout{ Children = { _shadows[card.Id], image } };
+//				_shadows.Add(card.Id, shadow);
+//				CardImage image = LoadImage(card);
+				var parent = new AbsoluteLayout{ Children = { image } };
 				cardGrid.Children.Add(parent, column, row);
 
 
@@ -125,6 +119,8 @@ namespace Lisa.Quartets.Mobile
 
 		private CardDatabase _database = new CardDatabase();
 		private List<int> _selectedImages = new List<int>();
+        private IEnumerable<Card> _cards;
 		private Dictionary<int, Image> _shadows = new Dictionary<int, Image>();
+        private CardImageHolder _cardImageHolder;
 	}
 }
