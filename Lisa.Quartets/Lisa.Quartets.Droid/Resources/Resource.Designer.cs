@@ -194,10 +194,13 @@ namespace Lisa.Quartets.Droid
 			public const int kaart1 = 2130837552;
 			
 			// aapt resource value: 0x7f020031
-			public const int shadow = 2130837553;
+			public const int opacity = 2130837553;
 			
 			// aapt resource value: 0x7f020032
-			public const int slide = 2130837554;
+			public const int shadow = 2130837554;
+			
+			// aapt resource value: 0x7f020033
+			public const int slide = 2130837555;
 			
 			static Drawable()
 			{

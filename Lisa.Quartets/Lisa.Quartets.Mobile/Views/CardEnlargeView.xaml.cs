@@ -11,10 +11,17 @@ namespace Lisa.Quartets.Mobile
         {
             InitializeComponent();
             _cardImageHolder = cardImageHolder;
-            SetImages();
+            SetPreviousSelectedCards();
         }
 
-		
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            SetImages();
+
+            indicator.IsRunning = false;
+        }
 
         private void SaveSelectedCards(object sender, EventArgs args)
         {
@@ -29,53 +36,46 @@ namespace Lisa.Quartets.Mobile
 			if (IsSelected(image))
 			{
 				Deselect(image);
-				image.FadeTo(0.5, 100);
 				image.ScaleTo(0.8, 100);
-				_shadows[image.CardId].ScaleTo(0.8, 100);
-				_shadows[image.CardId].FadeTo(0, 100);
+                _opacity[image.CardId].FadeTo(1, 100);
 			}
 			else
 			{
 				Select(image);
-				image.FadeTo(1, 100);
 				image.ScaleTo(1, 100);
-				_shadows[image.CardId].ScaleTo(0.95, 100);
-				_shadows[image.CardId].FadeTo(0.8, 100);
-
+                _opacity[image.CardId].FadeTo(0, 100);
 			}
 
             saveButton.IsEnabled = true;
 		}
 
-        private bool IsSelected(CardImage image)
-		{
-            return _selectedImages.Contains(image.CardId);
-		}
-
-        private void Select(CardImage image)
-		{
-            _selectedImages.Add(image.CardId);
-		}
-
-		private void Deselect(CardImage image)
-		{
-            _selectedImages.Remove(image.CardId);
-		}
-
-		private void SetImages()
+        private void SetImages()
         {
+            Grid cardGrid = new Grid();
             int column = 0;
             int row = 0;
 
-//            Image shadow = new Image { Source = ImageSource.FromFile("shadow.png"), Opacity = 0, Scale = 0.8 };
-
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += OnImageClick;
+            FileImageSource opacitySource = new FileImageSource { File = "opacity.png" };
+             
             foreach (var image in _cardImageHolder.CardImages)
             {
-//				_shadows.Add(card.Id, shadow);
-//				CardImage image = LoadImage(card);
-				var parent = new AbsoluteLayout{ Children = { image } };
-				cardGrid.Children.Add(parent, column, row);
+                image.Scale = 0.8;
+                image.GestureRecognizers.Add(tapGestureRecognizer);
 
+                Image opacity = new Image { Source = opacitySource, Scale = 0.8 };
+
+                if (IsSelected(image))
+                {
+                    opacity.Opacity = 0;
+                    image.Scale = 1;
+                }
+
+                _opacity.Add(image.CardId, opacity);
+                var parent = new AbsoluteLayout{ Children = { image, _opacity[image.CardId] } };
+
+                cardGrid.Children.Add(parent, column, row);
 
                 if (column < 3)
                 {
@@ -87,40 +87,36 @@ namespace Lisa.Quartets.Mobile
                     row++;
                 }
             }
-        }	
 
-        private CardImage LoadImage(Card card)
+            scrollView.Content = cardGrid;
+        }
+
+        private bool IsSelected(CardImage image)
+        { 
+            return _selectedImages.Contains(image.CardId);
+        }
+
+        private void Select(CardImage image)
         {
-            var image = new CardImage();
+            _selectedImages.Add(image.CardId);
+        }
 
-            var tapGestureRecognizer = new TapGestureRecognizer();
-            tapGestureRecognizer.Tapped += OnImageClick;
+        private void Deselect(CardImage image)
+        {
+            _selectedImages.Remove(image.CardId);
+        }
 
-            image.GestureRecognizers.Add(tapGestureRecognizer);
-
-            image.Source = card.FileName;
-            image.CardId = card.Id;
-
-            //If card is selected
-            if (card.IsInHand == 1)
+        private void SetPreviousSelectedCards()
+        {
+            foreach (Card card in _database.RetrieveCardsInHand(1))
             {
                 _selectedImages.Add(card.Id);
-                _shadows[card.Id].Scale = 0.95;
-                _shadows[card.Id].Opacity = 0.8;
             }
-            else
-            {
-                image.Opacity = 0.5;
-                image.Scale = 0.8;
-            }
-
-            return image;
         }
 
 		private CardDatabase _database = new CardDatabase();
-		private List<int> _selectedImages = new List<int>();
-        private IEnumerable<Card> _cards;
-		private Dictionary<int, Image> _shadows = new Dictionary<int, Image>();
+        private List<int> _selectedImages = new List<int>();
+		private Dictionary<int, Image> _opacity = new Dictionary<int, Image>();
         private CardImageHolder _cardImageHolder;
 	}
 }

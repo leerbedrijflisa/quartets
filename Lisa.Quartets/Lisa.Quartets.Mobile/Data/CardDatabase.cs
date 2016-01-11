@@ -57,7 +57,7 @@ namespace Lisa.Quartets.Mobile
 
         public void ResetCards()
         {
-            _database.Execute("UPDATE Card SET IsInHAnd = 0");
+            _database.Execute("UPDATE Card SET IsInHand = 0");
         }
 
         public void UpdateSelectedCards(List<int> ids)

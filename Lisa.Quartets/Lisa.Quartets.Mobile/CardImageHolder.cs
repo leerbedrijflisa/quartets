@@ -12,7 +12,6 @@ namespace Lisa.Quartets.Mobile
         public CardImageHolder()
         {
             CardImages = new List<CardImage>();
-//            Cards = _database.RetrieveCards();
             EnsureCardsExist();
             foreach (Card card in Cards)
             {

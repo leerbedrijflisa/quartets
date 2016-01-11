@@ -150,6 +150,7 @@
     <AndroidResource Include="Resources\drawable\card43.jpg" />
     <AndroidResource Include="Resources\drawable\card44.jpg" />
     <AndroidResource Include="Resources\drawable\shadow.png" />
+    <AndroidResource Include="Resources\drawable\opacity.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
