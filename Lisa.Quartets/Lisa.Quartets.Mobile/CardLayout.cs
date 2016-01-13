@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Linq;
 using Xamarin.Forms;
+using System;
+using System.Linq;
+using Xamarin.Forms;
 ​
 namespace Lisa.Quartets.Mobile
 {

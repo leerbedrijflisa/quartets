@@ -27,15 +27,27 @@ namespace Lisa.Quartets.Mobile
 
 			if (IsSelected(image))
 			{
-				Deselect(image);
-				image.ScaleTo(0.8, 100);
-                _opacity[image.CardId].FadeTo(1, 100);
+                Deselect(image);
+                image.ScaleTo(0.8, 100);
+
+                #if __IOS__
+                    image.FadeTo(0.5, 100);   
+                #else
+                    _opacity[image.CardId].FadeTo(1, 100);
+                #endif
+
 			}
 			else
 			{
-				Select(image);
-				image.ScaleTo(1, 100);
-                _opacity[image.CardId].FadeTo(0, 100);
+                Select(image);
+                image.ScaleTo(1, 100);
+
+                #if __IOS__
+                    image.FadeTo(1, 100);   
+                #else
+                    _opacity[image.CardId].FadeTo(0, 100);
+                #endif
+
 			}
 
             saveButton.IsEnabled = true;
@@ -50,24 +62,40 @@ namespace Lisa.Quartets.Mobile
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += OnImageClick;
             FileImageSource opacitySource = new FileImageSource { File = "opacity.png" };
-             
+
             foreach (var image in _cardImageHolder.CardImages)
             {
                 image.Scale = 0.8;
                 image.GestureRecognizers.Add(tapGestureRecognizer);
 
-                Image opacity = new Image { Source = opacitySource, Scale = 0.8 };
+                #if __IOS__
+                    if (IsSelected(image))
+                    {
+                        image.Opacity = 1;
+                        image.Scale = 1;
+                    }
+                    else
+                    {
+                        image.Opacity = 0.5;
+                        image.Scale = 0.8;
+                    }
 
-                if (IsSelected(image))
-                {
-                    opacity.Opacity = 0;
-                    image.Scale = 1;
-                }
+                    cardGrid.Children.Add(image);
+                #else
+                    Image opacity = new Image { Source = opacitySource, Scale = 0.8 };
 
-                _opacity.Add(image.CardId, opacity);
-                var parent = new AbsoluteLayout{ Children = { image, _opacity[image.CardId] } };
+                    if (IsSelected(image))
+                    {
+                        opacity.Opacity = 0;
+                        image.Scale = 1;
+                    }
 
-                cardGrid.Children.Add(parent);
+                    _opacity.Add(image.CardId, opacity);
+
+                    var parent = new AbsoluteLayout{ Children = { image, _opacity[image.CardId] } };
+
+                    cardGrid.Children.Add(parent);
+                #endif
 
                 if (column < 3)
                 {
