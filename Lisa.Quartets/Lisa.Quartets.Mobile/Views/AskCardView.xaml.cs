@@ -13,6 +13,7 @@ namespace Lisa.Quartets.Mobile
 		{
 			InitializeComponent();
 			_cards = _database.RetrieveCardsInHand(0);
+			Shuffle(_cards);
 			InitializeFirstImage();
 			Timer();
 		}
@@ -24,6 +25,18 @@ namespace Lisa.Quartets.Mobile
 			tapGestureRecognizer.Tapped += OnCardClick;
 
 			cardimage.Source = _cards[0].FileName;
+		}
+		public IList<T> Shuffle<T>(IList<T> list) {
+			int n = list.Count;
+			Random rnd = new Random();
+			while (n > 1) {
+				int k = (rnd.Next(0, n) % n);
+				n--;
+				T value = list[k];
+				list[k] = list[n];
+				list[n] = value;
+			}
+			return list;
 		}
 
 		private void OnCardClick(object sender, EventArgs args)
@@ -38,14 +51,17 @@ namespace Lisa.Quartets.Mobile
 					cardimage.ScaleTo(1.6);
 					return false;	
 				}
-
-				FadeCard(_id);
 				_id++;
-
 				if (_id >= _cards.Count)
 				{
 					_id = 0;
 				}
+
+
+				FadeCard(_id);
+		
+
+
 
 				return true;
 			});
