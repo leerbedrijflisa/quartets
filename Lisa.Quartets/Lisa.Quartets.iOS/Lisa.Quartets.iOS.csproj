@@ -53,52 +53,53 @@
     <Compile Include="SQLite_iOS.cs" />
     <None Include="Resources\border.png" />
     <None Include="Resources\kaart1.png" />
-    <None Include="Resources\card1.jpg" />
-    <None Include="Resources\card2.jpg" />
-    <None Include="Resources\card3.jpg" />
-    <None Include="Resources\card4.jpg" />
-    <None Include="Resources\card5.jpg" />
-    <None Include="Resources\card6.jpg" />
-    <None Include="Resources\card7.jpg" />
-    <None Include="Resources\card8.jpg" />
-    <None Include="Resources\card9.jpg" />
-    <None Include="Resources\card10.jpg" />
-    <None Include="Resources\card11.jpg" />
-    <None Include="Resources\card12.jpg" />
-    <None Include="Resources\card13.jpg" />
-    <None Include="Resources\card14.jpg" />
-    <None Include="Resources\card15.jpg" />
-    <None Include="Resources\card16.jpg" />
-    <None Include="Resources\card17.jpg" />
-    <None Include="Resources\card18.jpg" />
-    <None Include="Resources\card19.jpg" />
-    <None Include="Resources\card20.jpg" />
-    <None Include="Resources\card21.jpg" />
-    <None Include="Resources\card22.jpg" />
-    <None Include="Resources\card23.jpg" />
-    <None Include="Resources\card24.jpg" />
-    <None Include="Resources\card25.jpg" />
-    <None Include="Resources\card26.jpg" />
-    <None Include="Resources\card27.jpg" />
-    <None Include="Resources\card28.jpg" />
-    <None Include="Resources\card29.jpg" />
-    <None Include="Resources\card30.jpg" />
-    <None Include="Resources\card31.jpg" />
-    <None Include="Resources\card32.jpg" />
-    <None Include="Resources\card33.jpg" />
-    <None Include="Resources\card34.jpg" />
-    <None Include="Resources\card35.jpg" />
-    <None Include="Resources\card36.jpg" />
-    <None Include="Resources\card37.jpg" />
-    <None Include="Resources\card38.jpg" />
-    <None Include="Resources\card39.jpg" />
-    <None Include="Resources\card40.jpg" />
-    <None Include="Resources\card41.jpg" />
-    <None Include="Resources\card42.jpg" />
-    <None Include="Resources\card43.jpg" />
-    <None Include="Resources\card44.jpg" />
     <Compile Include="UnlockSliderRenderer.cs" />
     <None Include="Resources\shadow.png" />
+    <None Include="Resources\card1.png" />
+    <None Include="Resources\card2.png" />
+    <None Include="Resources\card3.png" />
+    <None Include="Resources\card4.png" />
+    <None Include="Resources\card5.png" />
+    <None Include="Resources\card6.png" />
+    <None Include="Resources\card7.png" />
+    <None Include="Resources\card8.png" />
+    <None Include="Resources\card9.png" />
+    <None Include="Resources\card10.png" />
+    <None Include="Resources\card11.png" />
+    <None Include="Resources\card12.png" />
+    <None Include="Resources\card13.png" />
+    <None Include="Resources\card14.png" />
+    <None Include="Resources\card15.png" />
+    <None Include="Resources\card16.png" />
+    <None Include="Resources\card17.png" />
+    <None Include="Resources\card18.png" />
+    <None Include="Resources\card19.png" />
+    <None Include="Resources\card20.png" />
+    <None Include="Resources\card21.png" />
+    <None Include="Resources\card22.png" />
+    <None Include="Resources\card23.png" />
+    <None Include="Resources\card24.png" />
+    <None Include="Resources\card25.png" />
+    <None Include="Resources\card26.png" />
+    <None Include="Resources\card27.png" />
+    <None Include="Resources\card28.png" />
+    <None Include="Resources\card29.png" />
+    <None Include="Resources\card30.png" />
+    <None Include="Resources\card31.png" />
+    <None Include="Resources\card32.png" />
+    <None Include="Resources\card33.png" />
+    <None Include="Resources\card34.png" />
+    <None Include="Resources\card35.png" />
+    <None Include="Resources\card36.png" />
+    <None Include="Resources\card37.png" />
+    <None Include="Resources\card38.png" />
+    <None Include="Resources\card39.png" />
+    <None Include="Resources\card40.png" />
+    <None Include="Resources\card41.png" />
+    <None Include="Resources\card42.png" />
+    <None Include="Resources\card43.png" />
+    <None Include="Resources\card44.png" />
+    <None Include="Resources\card.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -117,7 +118,6 @@
     <BundleResource Include="Resources\Icon-Small%402x.png" />
     <BundleResource Include="Resources\Icon-Small%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <BundleResource Include="Resources\card.png" />
     <BundleResource Include="Resources\check.png" />
     <BundleResource Include="Resources\slide.png" />
   </ItemGroup>
@@ -155,5 +155,8 @@
       <Project>{781C4586-1501-443A-B821-D483C3BE886B}</Project>
       <Name>Lisa.Quartets.Mobile</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\opacity.png" />
   </ItemGroup>
 </Project>

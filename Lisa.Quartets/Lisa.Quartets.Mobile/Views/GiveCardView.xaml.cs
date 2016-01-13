@@ -74,8 +74,7 @@ namespace Lisa.Quartets.Mobile
         {
             var cards = _database.RetrieveCardsInHand(1);
             if (cards.Count < 1)
-            {
-                
+            {                
                 DisplayErrorMessage("Je hebt geen kaarten in je hand om weg te geven");
             }
                 

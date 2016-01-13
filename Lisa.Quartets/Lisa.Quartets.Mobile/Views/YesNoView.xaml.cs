@@ -9,7 +9,6 @@ namespace Lisa.Quartets.Mobile
 		public YesNoView()
 		{
 			InitializeComponent();
-			NavigationPage.SetHasNavigationBar(this, false);
 		}
 
 		public void YesClicked(object sender, EventArgs args)

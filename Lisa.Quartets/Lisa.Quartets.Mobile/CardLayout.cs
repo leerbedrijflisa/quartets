@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Linq;
 using Xamarin.Forms;
-using System;
-using System.Linq;
-using Xamarin.Forms;
 
 namespace Lisa.Quartets.Mobile
 {
@@ -28,7 +25,7 @@ namespace Lisa.Quartets.Mobile
             int row = 0;
 
             double cardWidth = width / 4.0;
-            double cardHeight = 245 * (cardWidth / 162);
+            double cardHeight = 265 * (cardWidth / 182);
 
             foreach (View child in Children.Where(c => c.IsVisible))
             {
@@ -47,7 +44,7 @@ namespace Lisa.Quartets.Mobile
         private Size CalculateCardSize(double layoutWidth, double layoutHeight)
         {
             double width = layoutWidth / 4.0;
-            double height = 245 * (width / 162);
+            double height = 265 * (width / 182);
 
             return new Size(width, height);
         }

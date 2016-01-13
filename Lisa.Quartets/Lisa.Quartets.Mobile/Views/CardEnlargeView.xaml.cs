@@ -30,21 +30,24 @@ namespace Lisa.Quartets.Mobile
                 Deselect(image);
                 image.ScaleTo(0.8, 100);
 
-				if (Device.OS == TargetPlatform.iOS) {
+                if (IsIos()) {
 					image.FadeTo(0.5, 100);   
-				} else {					
+				}
+                else
+                {					
 					_opacity[image.CardId].FadeTo(1, 100);
 				}
-
 			}
 			else
 			{
                 Select(image);
                 image.ScaleTo(1, 100);
 
-				if (Device.OS == TargetPlatform.iOS) {
+                if (IsIos()) {
 					image.FadeTo(1, 100);   
-				} else {
+				}
+                else
+                {
 					_opacity[image.CardId].FadeTo(0, 100);
 				}
 
@@ -56,19 +59,20 @@ namespace Lisa.Quartets.Mobile
         private void SetImages()
         {
             CardLayout cardGrid = new CardLayout();
-            int column = 0;
-            int row = 0;
 
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += OnImageClick;
             FileImageSource opacitySource = new FileImageSource { File = "opacity.png" };
+            FileImageSource shawdowSource = new FileImageSource { File = "shadow.png" };
 
             foreach (var image in _cardImageHolder.CardImages)
             {
                 image.Scale = 0.8;
                 image.GestureRecognizers.Add(tapGestureRecognizer);
+                Image shadow = new Image { Source = shawdowSource, Scale = 0.8 };
 
-				if (Device.OS == TargetPlatform.iOS) {
+
+                if (IsIos()) {
 					if (IsSelected(image)) {
 						image.Opacity = 1;
 						image.Scale = 1;
@@ -89,20 +93,10 @@ namespace Lisa.Quartets.Mobile
 
 					_opacity.Add(image.CardId, opacity);
 
-					var parent = new AbsoluteLayout{ Children = { image, _opacity[image.CardId] } };
+                    var parent = new AbsoluteLayout{ Children = { image, _opacity[image.CardId] } };
 
 					cardGrid.Children.Add(parent);
 				}
-
-                if (column < 3)
-                {
-                    column++;
-                }
-                else
-                {
-                    column = 0;
-                    row++;
-                }
             }
 
             scrollView.Content = cardGrid;
@@ -111,6 +105,11 @@ namespace Lisa.Quartets.Mobile
         private bool IsSelected(CardImage image)
         { 
             return _selectedImages.Contains(image.CardId);
+        }
+
+        private bool IsIos()
+        {
+            return Device.OS == TargetPlatform.iOS;
         }
 
         private void Select(CardImage image)
