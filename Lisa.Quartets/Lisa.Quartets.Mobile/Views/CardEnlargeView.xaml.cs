@@ -30,11 +30,11 @@ namespace Lisa.Quartets.Mobile
                 Deselect(image);
                 image.ScaleTo(0.8, 100);
 
-                #if __IOS__
-                    image.FadeTo(0.5, 100);   
-                #else
-                    _opacity[image.CardId].FadeTo(1, 100);
-                #endif
+				if (Device.OS == TargetPlatform.iOS) {
+					image.FadeTo(0.5, 100);   
+				} else {					
+					_opacity[image.CardId].FadeTo(1, 100);
+				}
 
 			}
 			else
@@ -42,11 +42,11 @@ namespace Lisa.Quartets.Mobile
                 Select(image);
                 image.ScaleTo(1, 100);
 
-                #if __IOS__
-                    image.FadeTo(1, 100);   
-                #else
-                    _opacity[image.CardId].FadeTo(0, 100);
-                #endif
+				if (Device.OS == TargetPlatform.iOS) {
+					image.FadeTo(1, 100);   
+				} else {
+					_opacity[image.CardId].FadeTo(0, 100);
+				}
 
 			}
 
@@ -68,34 +68,31 @@ namespace Lisa.Quartets.Mobile
                 image.Scale = 0.8;
                 image.GestureRecognizers.Add(tapGestureRecognizer);
 
-                #if __IOS__
-                    if (IsSelected(image))
-                    {
-                        image.Opacity = 1;
-                        image.Scale = 1;
-                    }
-                    else
-                    {
-                        image.Opacity = 0.5;
-                        image.Scale = 0.8;
-                    }
+				if (Device.OS == TargetPlatform.iOS) {
+					if (IsSelected(image)) {
+						image.Opacity = 1;
+						image.Scale = 1;
+					} else {
+						image.Opacity = 0.5;
+						image.Scale = 0.8;
+					}
+					
+					cardGrid.Children.Add(image);				
+				} else {
+					Image opacity = new Image { Source = opacitySource, Scale = 0.8 };
 
-                    cardGrid.Children.Add(image);
-                #else
-                    Image opacity = new Image { Source = opacitySource, Scale = 0.8 };
+					if (IsSelected(image))
+					{
+						opacity.Opacity = 0;
+						image.Scale = 1;
+					}
 
-                    if (IsSelected(image))
-                    {
-                        opacity.Opacity = 0;
-                        image.Scale = 1;
-                    }
+					_opacity.Add(image.CardId, opacity);
 
-                    _opacity.Add(image.CardId, opacity);
+					var parent = new AbsoluteLayout{ Children = { image, _opacity[image.CardId] } };
 
-                    var parent = new AbsoluteLayout{ Children = { image, _opacity[image.CardId] } };
-
-                    cardGrid.Children.Add(parent);
-                #endif
+					cardGrid.Children.Add(parent);
+				}
 
                 if (column < 3)
                 {
