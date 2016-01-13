@@ -87,7 +87,7 @@ namespace Lisa.Quartets.Mobile
 				var card = new Card();
 				card.Name = string.Format("card{0}", i);
 				card.Category = "test";
-				card.FileName = string.Format("card{0}.jpg", i);
+				card.FileName = string.Format("card{0}.png", i);
 				card.IsInHand = 0;
 
 				CreateCard(card);

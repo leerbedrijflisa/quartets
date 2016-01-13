@@ -25,6 +25,7 @@ namespace Lisa.Quartets.Mobile
 
         private void EnsureCardsExist()
         {
+			_database.DeleteCards();
             Cards = _database.RetrieveCards();
             if (Cards.Count == 0)
             {
