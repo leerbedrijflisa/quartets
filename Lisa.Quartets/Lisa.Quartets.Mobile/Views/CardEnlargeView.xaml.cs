@@ -12,15 +12,7 @@ namespace Lisa.Quartets.Mobile
             InitializeComponent();
             _cardImageHolder = cardImageHolder;
             SetPreviousSelectedCards();
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
             SetImages();
-
-            indicator.IsRunning = false;
         }
 
         private void SaveSelectedCards(object sender, EventArgs args)
@@ -30,7 +22,7 @@ namespace Lisa.Quartets.Mobile
         }
 
 		private void OnImageClick(object sender, EventArgs args)
-		{	
+        {
             var image = (CardImage) sender;
 
 			if (IsSelected(image))
@@ -51,7 +43,7 @@ namespace Lisa.Quartets.Mobile
 
         private void SetImages()
         {
-            Grid cardGrid = new Grid();
+            CardLayout cardGrid = new CardLayout();
             int column = 0;
             int row = 0;
 
@@ -75,7 +67,7 @@ namespace Lisa.Quartets.Mobile
                 _opacity.Add(image.CardId, opacity);
                 var parent = new AbsoluteLayout{ Children = { image, _opacity[image.CardId] } };
 
-                cardGrid.Children.Add(parent, column, row);
+                cardGrid.Children.Add(parent);
 
                 if (column < 3)
                 {
@@ -103,6 +95,7 @@ namespace Lisa.Quartets.Mobile
 
         private void Deselect(CardImage image)
         {
+            
             _selectedImages.Remove(image.CardId);
         }
 

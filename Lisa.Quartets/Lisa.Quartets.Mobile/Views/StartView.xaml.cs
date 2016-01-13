@@ -12,7 +12,7 @@ namespace Lisa.Quartets.Mobile
 		}
 
 		private void AskCard(object sender, EventArgs e)
-		{
+        {            
 			Navigation.PushAsync(new AskCardView());
 		}
 
@@ -23,7 +23,6 @@ namespace Lisa.Quartets.Mobile
 
         private void SelectCardsClicked(object sender, EventArgs e)
 		{
-//            indicator.IsRunning = true;
             Navigation.PushAsync(new CardEnlargeView(_cardImageHolder));
 		}
 
@@ -31,6 +30,7 @@ namespace Lisa.Quartets.Mobile
         {
             Navigation.PushAsync(new GiveCardView());
         }
+
 
         private CardImageHolder _cardImageHolder = new CardImageHolder();
 	}
