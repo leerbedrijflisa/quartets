@@ -45,7 +45,7 @@ namespace Lisa.Quartets.Mobile
 		}
 
 		public void Timer(){
-			Device.StartTimer (new TimeSpan (0, 0, 0,2,0), () => {
+			Device.StartTimer (new TimeSpan (0, 0, 0,3,0), () => {
 				if(_stop == true)
 				{
 					cardimage.ScaleTo(1.6);
