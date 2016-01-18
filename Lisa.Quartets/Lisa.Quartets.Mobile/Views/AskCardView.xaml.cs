@@ -26,29 +26,17 @@ namespace Lisa.Quartets.Mobile
 
 			cardimage.Source = _cards[0].FileName;
 		}
-		public IList<T> Shuffle<T>(IList<T> list) {
-			int n = list.Count;
-			Random rnd = new Random();
-			while (n > 1) {
-				int k = (rnd.Next(0, n) % n);
-				n--;
-				T value = list[k];
-				list[k] = list[n];
-				list[n] = value;
-			}
-			return list;
-		}
 
 		private void OnCardClick(object sender, EventArgs args)
 		{
 			_stop = true;
+            ConinueToNextView(_cards[_id]);
 		}
 
 		public void Timer(){
 			Device.StartTimer (new TimeSpan (0, 0, 0,3,0), () => {
 				if(_stop == true)
 				{
-					cardimage.ScaleTo(1.6);
 					return false;	
 				}
 				_id++;
@@ -57,11 +45,7 @@ namespace Lisa.Quartets.Mobile
 					_id = 0;
 				}
 
-
 				FadeCard(_id);
-		
-
-
 
 				return true;
 			});
@@ -73,10 +57,29 @@ namespace Lisa.Quartets.Mobile
 			await cardimage.FadeTo(1,500);
 		}
 
+        private async void ConinueToNextView(Card card)
+        {
+            await cardimage.ScaleTo(1.6);
+            await Navigation.PushAsync(new YesNoView(card), false);
+            Navigation.RemovePage(this);
+        }
+
+        public IList<T> Shuffle<T>(IList<T> list) {
+            int n = list.Count;
+            Random random = new Random();
+            while (n > 1) {
+                int k = (random.Next(0, n) % n);
+                n--;
+                T value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
+            return list;
+        }
+
 		private CardDatabase _database = new CardDatabase();
 		private bool _stop;
 		private List<Card> _cards = new List<Card>();
-		private int _id = 1;
+		private int _id = 0;
 	}
-
 }

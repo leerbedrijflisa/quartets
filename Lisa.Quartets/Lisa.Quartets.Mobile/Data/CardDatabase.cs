@@ -82,15 +82,26 @@ namespace Lisa.Quartets.Mobile
 
 		public void CreateDefaultCards()			
 		{
+            int category = 1;
+            int j = 0;
+
 			for (int i = 1; i <= 44; i++)
 			{
 				var card = new Card();
 				card.Name = string.Format("card{0}", i);
-				card.Category = "test";
+                card.Category = category;
 				card.FileName = string.Format("card{0}.png", i);
 				card.IsInHand = 0;
 
 				CreateCard(card);
+
+                j++;
+                if (j >= 4)
+                {
+                    j = 0;
+                    category++;
+
+                }
 			}
 		}
 

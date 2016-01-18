@@ -6,19 +6,33 @@ namespace Lisa.Quartets.Mobile
 {
 	public partial class YesNoView : ContentPage
 	{
-		public YesNoView()
+        public YesNoView(Card card)
 		{
 			InitializeComponent();
+            _selectedCard = card;
 		}
 
-		public void YesClicked(object sender, EventArgs args)
+		public async void YesClicked(object sender, EventArgs args)
 		{
-           DisplayAlert("Test", "Ja", "OK");
+           SaveCard();
+           await Navigation.PushAsync(new AskCardView());
+           Navigation.RemovePage(this);
 		}
 
 		public void NoClicked(object sender, EventArgs args)
 		{
 			Navigation.PushAsync(new LockView());
         }
+
+        private void SaveCard()
+        {
+            _selectedCard.IsInHand = 1;
+            _database.CreateOrUpdateCard(_selectedCard);
+            System.Diagnostics.Debug.WriteLine("saved");
+        }
+
+        private Card _selectedCard;
+        private CardDatabase _database = new CardDatabase();
+
 	}
 }
