@@ -65,6 +65,7 @@ namespace Lisa.Quartets.Mobile
             ResetCards();
 
             string idString = string.Join(",", ids.Select(n => n.ToString()).ToArray());
+			// REVIEW: Why call string.Format and then still use string concatenation?
             string query = string.Format("UPDATE 'Card' SET IsInHand = 1 WHERE Id in (" + idString + ")");
 
             _database.Execute(query);
