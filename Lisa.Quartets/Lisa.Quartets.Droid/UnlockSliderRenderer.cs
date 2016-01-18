@@ -33,6 +33,7 @@ namespace Lisa.Quartets.Droid
             GradientDrawable background = new GradientDrawable();
             background.SetColor(Android.Graphics.Color.LightGray);
             background.SetCornerRadius(10);
+			// TODO: Replace with something that isn't deprecated.
             element.SetBackgroundDrawable(background);
         }
 
@@ -43,6 +44,7 @@ namespace Lisa.Quartets.Droid
 
         private void SetThumbImage(SeekBar element)
         {
+			// TODO: Replace with something that isn't deprecated.
             element.SetThumb(this.Resources.GetDrawable(Resource.Drawable.slide));
         }
 

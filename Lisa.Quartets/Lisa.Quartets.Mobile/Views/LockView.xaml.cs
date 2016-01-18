@@ -9,6 +9,8 @@ namespace Lisa.Quartets.Mobile
 		public LockView()
 		{
 			InitializeComponent();
+
+			// REVIEW: Should we hide the navigation bar in other views as well?
 			NavigationPage.SetHasNavigationBar(this, false);
 		}
 

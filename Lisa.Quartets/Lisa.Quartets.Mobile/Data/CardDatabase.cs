@@ -75,6 +75,7 @@ namespace Lisa.Quartets.Mobile
             _database.Execute("UPDATE Card SET IsInHand = 0 WHERE Id = ?", id);
         }
 
+		// REVIEW: What's the purpose of the inHand parameter? Shouldn't RetrieveCardsInHand always return the cards in hand?
 		public List<Card> RetrieveCardsInHand(int inHand)
         {
 			return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand =" + inHand);

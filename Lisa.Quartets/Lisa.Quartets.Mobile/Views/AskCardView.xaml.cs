@@ -6,6 +6,7 @@ using System.Threading;
 
 namespace Lisa.Quartets.Mobile
 {
+	// TODO: Check all the code for adherence to Lisa's code conventions.
 	public partial class AskCardView : ContentPage
 	{
 		
@@ -26,10 +27,16 @@ namespace Lisa.Quartets.Mobile
 
 			cardimage.Source = _cards[0].FileName;
 		}
+
+		// TODO: Add URL to the source of this code.
+		// TODO: Turn Shuffle into an extension method.
 		public IList<T> Shuffle<T>(IList<T> list) {
 			int n = list.Count;
 			Random rnd = new Random();
+
+			// REVIEW: Why is this a while-loop instead of a for-loop?
 			while (n > 1) {
+				// REVIEW: What's the purpose of % n? Isn't it superfluous?
 				int k = (rnd.Next(0, n) % n);
 				n--;
 				T value = list[k];
@@ -41,13 +48,16 @@ namespace Lisa.Quartets.Mobile
 
 		private void OnCardClick(object sender, EventArgs args)
 		{
+			// REVIEW: Is it better to do the final scaling and stop the timer here instead of in the timer function? You don't need the _stop field that way.
 			_stop = true;
 		}
 
+		// TODO: Change the name of this method to something with a verb, like SetTimer or StartTimer.
 		public void Timer(){
 			Device.StartTimer (new TimeSpan (0, 0, 0,3,0), () => {
 				if(_stop == true)
 				{
+					// TODO: Disable timer.
 					cardimage.ScaleTo(1.6);
 					return false;	
 				}
@@ -67,6 +77,7 @@ namespace Lisa.Quartets.Mobile
 			});
 		}
 
+		// REVIEW: Shouldn't FadeCard return a Task, given that the method is async?
 		public async void FadeCard(int id){			
 			await cardimage.FadeTo(0,500);
 			cardimage.Source = _cards[id].FileName;

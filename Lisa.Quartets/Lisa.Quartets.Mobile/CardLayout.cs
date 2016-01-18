@@ -4,6 +4,7 @@ using Xamarin.Forms;
 
 namespace Lisa.Quartets.Mobile
 {
+	// TODO: Put magic numbers in variables.
     public class CardLayout : Layout<View>
     {
         protected override SizeRequest OnSizeRequest(double widthConstraint, double heightConstraint)

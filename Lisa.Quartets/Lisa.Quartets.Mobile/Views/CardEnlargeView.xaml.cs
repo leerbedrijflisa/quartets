@@ -10,6 +10,7 @@ namespace Lisa.Quartets.Mobile
         public CardEnlargeView(CardImageHolder cardImageHolder)
         {
             InitializeComponent();
+			// REVIEW: Is it still necessary to create the CardImage-objects when the app starts?
             _cardImageHolder = cardImageHolder;
             SetPreviousSelectedCards();
             SetImages();
@@ -18,6 +19,8 @@ namespace Lisa.Quartets.Mobile
         private void SaveSelectedCards(object sender, EventArgs args)
         {
             _database.UpdateSelectedCards(_selectedImages);
+
+			// REVIEW: Is it safe to call an async function in a method that isn't async itself?
             Navigation.PopToRootAsync();
         }
 
@@ -30,6 +33,7 @@ namespace Lisa.Quartets.Mobile
                 Deselect(image);
                 image.ScaleTo(0.8, 100);
 
+				// REVIEW: Is it possible to do this check compile-time instead of run-time?
                 if (IsIos()) {
 					image.FadeTo(0.5, 100);   
 				}
@@ -71,7 +75,7 @@ namespace Lisa.Quartets.Mobile
                 image.GestureRecognizers.Add(tapGestureRecognizer);
                 Image shadow = new Image { Source = shawdowSource, Scale = 0.8 };
 
-
+				// REVIEW: Is it possible to do this check compile-time instead of run-time?
                 if (IsIos()) {
 					if (IsSelected(image)) {
 						image.Opacity = 1;
