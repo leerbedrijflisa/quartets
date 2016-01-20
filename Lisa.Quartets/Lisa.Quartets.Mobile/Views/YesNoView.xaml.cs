@@ -9,6 +9,7 @@ namespace Lisa.Quartets.Mobile
         public YesNoView(Card card)
 		{
 			InitializeComponent();
+			NavigationPage.SetHasNavigationBar(this, false);
             _selectedCard = card;
 		}
 
