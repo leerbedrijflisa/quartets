@@ -19,6 +19,12 @@ namespace Lisa.Quartets.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
+
+		//Disables the back button.
+		public override void OnBackPressed() 
+		{
+			
+		}
     }
 }
 
