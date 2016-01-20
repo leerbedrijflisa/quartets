@@ -13,10 +13,11 @@ namespace Lisa.Quartets.Mobile
             _selectedCard = card;
 		}
 
-		public void YesClicked(object sender, EventArgs args)
+		public async void YesClicked(object sender, EventArgs args)
 		{
            SaveCard();
            Navigation.RemovePage(this);
+		   await Navigation.PushAsync(new LockView());
 		}
 
 		public void NoClicked(object sender, EventArgs args)
