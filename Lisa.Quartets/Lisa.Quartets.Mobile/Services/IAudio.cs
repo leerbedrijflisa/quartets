@@ -4,7 +4,7 @@ namespace Lisa.Quartets.Mobile
 {
 	public interface IAudio
 	{
-		bool PlayMp3File(string fileName);
+		bool PlayFile(string fileName);
 	}
 }
 

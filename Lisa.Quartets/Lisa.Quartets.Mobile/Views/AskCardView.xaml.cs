@@ -12,7 +12,7 @@ namespace Lisa.Quartets.Mobile
 		public AskCardView()
 		{
 			InitializeComponent();
-			_cards = _database.RetrieveCardsInHand(0);
+			_cards = _database.RetrieveCardsWhereInHandIs(0);
 			Shuffle(_cards);
 			InitializeFirstImage();
 			Timer();
@@ -27,18 +27,6 @@ namespace Lisa.Quartets.Mobile
 
 			cardimage.Source = _cards[0].FileName;
 		}
-		public IList<T> Shuffle<T>(IList<T> list) {
-			int n = list.Count;
-			Random rnd = new Random();
-			while (n > 1) {
-				int k = (rnd.Next(0, n) % n);
-				n--;
-				T value = list[k];
-				list[k] = list[n];
-				list[n] = value;
-			}
-			return list;
-		}
 
 
 		private async void OnCardClick(object sender, EventArgs args)
@@ -46,22 +34,28 @@ namespace Lisa.Quartets.Mobile
 			
 			_stop = true;
 
-			if (!_soundPlayed){
-				
-				DependencyService.Get<IAudio>().PlayMp3File("woah");
-				await Task.Delay(2000);
-				DependencyService.Get<IAudio>().PlayMp3File("test");
-				_soundPlayed = true;
-
+			if (!_soundPlayed)
+			{
+				PlaySound();
 			}
-				
+
+            ContinueToNextView(_cards[_id]);
+		}
+
+		private async void PlaySound() 
+		{
+
+			DependencyService.Get<IAudio>().PlayFile("vraag");
+			await Task.Delay(2000);
+			DependencyService.Get<IAudio>().PlayFile(_cards[_id].SoundFile);
+			_soundPlayed = true;
+
 		}
 
 		public void Timer(){
 			Device.StartTimer (new TimeSpan (0, 0, 0,3,0), () => {
 				if(_stop == true)
 				{
-					cardimage.ScaleTo(1.6);
 					return false;	
 				}
 				_id++;
@@ -70,11 +64,7 @@ namespace Lisa.Quartets.Mobile
 					_id = 0;
 				}
 
-
 				FadeCard(_id);
-		
-
-
 
 				return true;
 			});
@@ -86,11 +76,31 @@ namespace Lisa.Quartets.Mobile
 			await cardimage.FadeTo(1,500);
 		}
 
+        private async void ContinueToNextView(Card card)
+        {
+            await cardimage.ScaleTo(1.6);
+			await Task.Delay(4000);
+			await Navigation.PushAsync(new YesNoView(card), false);
+            Navigation.RemovePage(this);
+        }
+
+        public IList<T> Shuffle<T>(IList<T> list) {
+            int n = list.Count;
+            Random random = new Random();
+            while (n > 1) {
+                int k = (random.Next(0, n) % n);
+                n--;
+                T value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
+            return list;
+        }
+
 		private CardDatabase _database = new CardDatabase();
 		private bool _stop;
 		private bool _soundPlayed = false;
 		private List<Card> _cards = new List<Card>();
-		private int _id = 1;
+		private int _id = 0;
 	}
-
 }

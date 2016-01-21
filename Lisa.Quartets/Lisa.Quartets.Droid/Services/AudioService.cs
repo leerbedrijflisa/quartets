@@ -15,7 +15,7 @@ namespace Lisa.Quartets.Mobile.Droid
 
 		private MediaPlayer _mediaPlayer;
 
-		public bool PlayMp3File(string fileName)
+		public bool PlayFile(string fileName)
 		{
 			var resource = (int) typeof(Resource.Raw).GetField(fileName).GetValue(null);
 			_mediaPlayer = MediaPlayer.Create(global::Android.App.Application.Context, resource);

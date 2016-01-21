@@ -65,7 +65,7 @@ namespace Lisa.Quartets.Mobile
             ResetCards();
 
             string idString = string.Join(",", ids.Select(n => n.ToString()).ToArray());
-            string query = string.Format("UPDATE 'Card' SET IsInHand = 1 WHERE Id in (" + idString + ")");
+            string query = string.Format("UPDATE 'Card' SET IsInHand = 1 WHERE Id in ({0})", idString);
 
             _database.Execute(query);
         }
@@ -75,22 +75,34 @@ namespace Lisa.Quartets.Mobile
             _database.Execute("UPDATE Card SET IsInHand = 0 WHERE Id = ?", id);
         }
 
-		public List<Card> RetrieveCardsInHand(int inHand)
+		public List<Card> RetrieveCardsWhereInHandIs(int inHand)
         {
 			return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand =" + inHand);
         }
 
 		public void CreateDefaultCards()			
 		{
+            int category = 1;
+            int j = 0;
+
 			for (int i = 1; i <= 44; i++)
 			{
 				var card = new Card();
 				card.Name = string.Format("card{0}", i);
-				card.Category = "test";
+                card.Category = category;
 				card.FileName = string.Format("card{0}.png", i);
+				card.SoundFile = string.Format("sound{0}", i);
 				card.IsInHand = 0;
 
 				CreateCard(card);
+
+                j++;
+                if (j >= 4)
+                {
+                    j = 0;
+                    category++;
+
+                }
 			}
 		}
 
