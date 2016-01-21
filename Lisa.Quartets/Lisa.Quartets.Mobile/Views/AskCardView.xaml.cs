@@ -16,6 +16,7 @@ namespace Lisa.Quartets.Mobile
 			Shuffle(_cards);
 			InitializeFirstImage();
 			Timer();
+
 		}
 
 		public void InitializeFirstImage()
@@ -39,9 +40,21 @@ namespace Lisa.Quartets.Mobile
 			return list;
 		}
 
-		private void OnCardClick(object sender, EventArgs args)
+
+		private async void OnCardClick(object sender, EventArgs args)
 		{
+			
 			_stop = true;
+
+			if (!_soundPlayed){
+				
+				DependencyService.Get<IAudio>().PlayMp3File("woah");
+				await Task.Delay(2000);
+				DependencyService.Get<IAudio>().PlayMp3File("test");
+				_soundPlayed = true;
+
+			}
+				
 		}
 
 		public void Timer(){
@@ -75,6 +88,7 @@ namespace Lisa.Quartets.Mobile
 
 		private CardDatabase _database = new CardDatabase();
 		private bool _stop;
+		private bool _soundPlayed = false;
 		private List<Card> _cards = new List<Card>();
 		private int _id = 1;
 	}

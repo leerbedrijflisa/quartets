@@ -75,7 +75,6 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <BundleResource Include="Resources\check.png" />
     <BundleResource Include="Resources\slide.png" />
-    <BundleResource Include="Resources\card kopiëren.png" />
     <BundleResource Include="Resources\card.png" />
     <BundleResource Include="Resources\card1.png" />
     <BundleResource Include="Resources\card2.png" />
