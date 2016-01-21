@@ -25,7 +25,7 @@ namespace Lisa.Quartets.Mobile
             int row = 0;
 
             double cardWidth = width / 4.0;
-            double cardHeight = 265 * (cardWidth / 182);
+            double cardHeight = _cardHeight * (cardWidth / _cardWidth);
 
             foreach (View child in Children.Where(c => c.IsVisible))
             {
@@ -44,9 +44,12 @@ namespace Lisa.Quartets.Mobile
         private Size CalculateCardSize(double layoutWidth, double layoutHeight)
         {
             double width = layoutWidth / 4.0;
-            double height = 265 * (width / 182);
+            double height = _cardHeight * (width / _cardWidth);
 
             return new Size(width, height);
         }
+
+        private int _cardWidth = 182;
+        private int _cardHeight = 265;
     }
 }

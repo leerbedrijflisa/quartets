@@ -33,7 +33,7 @@ namespace Lisa.Quartets.Droid
             GradientDrawable background = new GradientDrawable();
             background.SetColor(Android.Graphics.Color.LightGray);
             background.SetCornerRadius(10);
-            element.SetBackgroundDrawable(background);
+            element.Background = background;
         }
 
         private void SetPogressbar(SeekBar element)
@@ -41,8 +41,9 @@ namespace Lisa.Quartets.Droid
             element.ProgressDrawable.SetColorFilter(Android.Graphics.Color.LightGray, PorterDuff.Mode.SrcIn);   
         }
 
-        private void SetThumbImage(SeekBar element)
+        private void SetThumbImage(SeekBar element) 
         {
+			// TODO: Replace with something that isn't deprecated.
             element.SetThumb(this.Resources.GetDrawable(Resource.Drawable.slide));
         }
 

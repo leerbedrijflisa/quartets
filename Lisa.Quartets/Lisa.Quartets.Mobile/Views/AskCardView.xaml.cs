@@ -12,7 +12,7 @@ namespace Lisa.Quartets.Mobile
 		public AskCardView()
 		{
 			InitializeComponent();
-			_cards = _database.RetrieveCardsInHand(0);
+			_cards = _database.RetrieveCardsWhereInHandIs(0);
 			Shuffle(_cards);
 			InitializeFirstImage();
 			Timer();
@@ -30,7 +30,7 @@ namespace Lisa.Quartets.Mobile
 		private void OnCardClick(object sender, EventArgs args)
 		{
 			_stop = true;
-            ConinueToNextView(_cards[_id]);
+            ContinueToNextView(_cards[_id]);
 		}
 
 		public void Timer(){
@@ -57,7 +57,7 @@ namespace Lisa.Quartets.Mobile
 			await cardimage.FadeTo(1,500);
 		}
 
-        private async void ConinueToNextView(Card card)
+        private async void ContinueToNextView(Card card)
         {
             await cardimage.ScaleTo(1.6);
             await Navigation.PushAsync(new YesNoView(card), false);

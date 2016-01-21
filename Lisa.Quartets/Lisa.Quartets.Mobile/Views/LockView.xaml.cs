@@ -9,8 +9,10 @@ namespace Lisa.Quartets.Mobile
 		public LockView()
 		{
 			InitializeComponent();
+
+			// REVIEW: Should we hide the navigation bar in other views as well?
 			NavigationPage.SetHasNavigationBar(this, false);
-            _cards = _database.RetrieveCardsInHand(1);
+            _cards = _database.RetrieveCardsWhereInHandIs(1);
 
             SetImages();
 
