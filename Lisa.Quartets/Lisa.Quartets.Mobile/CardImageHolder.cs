@@ -34,6 +34,5 @@ namespace Lisa.Quartets.Mobile
         }
 
         private CardDatabase _database = new CardDatabase();
-
     }
 }

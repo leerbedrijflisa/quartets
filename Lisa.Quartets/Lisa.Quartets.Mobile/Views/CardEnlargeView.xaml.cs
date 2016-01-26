@@ -7,11 +7,9 @@ namespace Lisa.Quartets.Mobile
 {
 	public partial class CardEnlargeView : ContentPage
 	{
-        public CardEnlargeView(CardImageHolder cardImageHolder)
+        public CardEnlargeView()
         {
             InitializeComponent();
-			// REVIEW: Is it still necessary to create the CardImage-objects when the app starts?
-            _cardImageHolder = cardImageHolder;
             SetPreviousSelectedCards();
             SetImages();
         }
@@ -33,7 +31,6 @@ namespace Lisa.Quartets.Mobile
                 Deselect(image);
                 image.ScaleTo(0.8, 100);
 
-                // REVIEW: Is it possible to do this check compile-time instead of run-time?
                 if (IsIos()) {
 					image.FadeTo(0.5, 100);   
 				}
@@ -63,19 +60,22 @@ namespace Lisa.Quartets.Mobile
         private void SetImages()
         {
             CardLayout cardGrid = new CardLayout();
+            List<Card> cards = _database.RetrieveCards();
 
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += OnImageClick;
             FileImageSource opacitySource = new FileImageSource { File = "opacity.png" };
-            FileImageSource shawdowSource = new FileImageSource { File = "shadow.png" };
 
-            foreach (var image in _cardImageHolder.CardImages)
+            foreach (var card in cards)
             {
+                CardImage image = new CardImage();
+                image.Source = card.FileName;
+                image.CardId = card.Id;
+
                 image.Scale = 0.8;
                 image.GestureRecognizers.Add(tapGestureRecognizer);
                 Image shadow = new Image { Source = shawdowSource, Scale = 0.8 };
 
-				// REVIEW: Is it possible to do this check compile-time instead of run-time?
                 if (IsIos()) {
 					if (IsSelected(image)) {
 						image.Opacity = 1;
@@ -138,6 +138,6 @@ namespace Lisa.Quartets.Mobile
 		private CardDatabase _database = new CardDatabase();
         private List<int> _selectedImages = new List<int>();
 		private Dictionary<int, Image> _opacity = new Dictionary<int, Image>();
-        private CardImageHolder _cardImageHolder;
+//        private CardImageHolder _cardImageHolder;
 	}
 }

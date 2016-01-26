@@ -23,7 +23,7 @@ namespace Lisa.Quartets.Mobile
 
         private void SelectCardsClicked(object sender, EventArgs e)
 		{
-            Navigation.PushAsync(new CardEnlargeView(_cardImageHolder));
+            Navigation.PushAsync(new CardEnlargeView());
 		}
 
         private void GiveCardClicked(object sender, EventArgs e)

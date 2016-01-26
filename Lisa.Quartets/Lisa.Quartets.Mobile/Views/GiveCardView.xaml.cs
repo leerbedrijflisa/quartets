@@ -120,8 +120,7 @@ namespace Lisa.Quartets.Mobile
 
         private async void DisplayErrorMessage(string message)
         {
-            await DisplayAlert("Fout", message, "Oké");
-			// TODO: Resolve the await warning.
+           await DisplayAlert("Fout", message, "Oké");
            await Navigation.PopToRootAsync();
         }
 
