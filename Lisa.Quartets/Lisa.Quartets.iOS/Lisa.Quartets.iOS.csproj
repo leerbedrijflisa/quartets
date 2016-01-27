@@ -56,6 +56,7 @@
     <None Include="Resources\kaart1.png" />
     <Compile Include="UnlockSliderRenderer.cs" />
     <None Include="Resources\shadow.png" />
+    <Compile Include="Services\AudioService.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -121,6 +122,51 @@
     <BundleResource Include="Resources\card42.png" />
     <BundleResource Include="Resources\card43.png" />
     <BundleResource Include="Resources\card44.png" />
+    <BundleResource Include="Resources\raw\sound1.wav" />
+    <BundleResource Include="Resources\raw\sound10.wav" />
+    <BundleResource Include="Resources\raw\sound11.wav" />
+    <BundleResource Include="Resources\raw\sound12.wav" />
+    <BundleResource Include="Resources\raw\sound13.wav" />
+    <BundleResource Include="Resources\raw\sound14.wav" />
+    <BundleResource Include="Resources\raw\sound15.wav" />
+    <BundleResource Include="Resources\raw\sound16.wav" />
+    <BundleResource Include="Resources\raw\sound17.wav" />
+    <BundleResource Include="Resources\raw\sound18.wav" />
+    <BundleResource Include="Resources\raw\sound19.wav" />
+    <BundleResource Include="Resources\raw\sound2.wav" />
+    <BundleResource Include="Resources\raw\sound20.wav" />
+    <BundleResource Include="Resources\raw\sound21.wav" />
+    <BundleResource Include="Resources\raw\sound22.wav" />
+    <BundleResource Include="Resources\raw\sound23.wav" />
+    <BundleResource Include="Resources\raw\sound24.wav" />
+    <BundleResource Include="Resources\raw\sound25.wav" />
+    <BundleResource Include="Resources\raw\sound26.wav" />
+    <BundleResource Include="Resources\raw\sound27.wav" />
+    <BundleResource Include="Resources\raw\sound28.wav" />
+    <BundleResource Include="Resources\raw\sound29.wav" />
+    <BundleResource Include="Resources\raw\sound3.wav" />
+    <BundleResource Include="Resources\raw\sound30.wav" />
+    <BundleResource Include="Resources\raw\sound31.wav" />
+    <BundleResource Include="Resources\raw\sound32.wav" />
+    <BundleResource Include="Resources\raw\sound33.wav" />
+    <BundleResource Include="Resources\raw\sound34.wav" />
+    <BundleResource Include="Resources\raw\sound35.wav" />
+    <BundleResource Include="Resources\raw\sound36.wav" />
+    <BundleResource Include="Resources\raw\sound37.wav" />
+    <BundleResource Include="Resources\raw\sound38.wav" />
+    <BundleResource Include="Resources\raw\sound39.wav" />
+    <BundleResource Include="Resources\raw\sound4.wav" />
+    <BundleResource Include="Resources\raw\sound40.wav" />
+    <BundleResource Include="Resources\raw\sound41.wav" />
+    <BundleResource Include="Resources\raw\sound42.wav" />
+    <BundleResource Include="Resources\raw\sound43.wav" />
+    <BundleResource Include="Resources\raw\sound44.wav" />
+    <BundleResource Include="Resources\raw\sound5.wav" />
+    <BundleResource Include="Resources\raw\sound6.wav" />
+    <BundleResource Include="Resources\raw\sound7.wav" />
+    <BundleResource Include="Resources\raw\sound8.wav" />
+    <BundleResource Include="Resources\raw\sound9.wav" />
+    <BundleResource Include="Resources\raw\vraag.wav" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -159,5 +205,8 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\opacity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

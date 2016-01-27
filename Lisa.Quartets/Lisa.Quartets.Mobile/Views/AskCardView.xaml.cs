@@ -29,7 +29,7 @@ namespace Lisa.Quartets.Mobile
 		}
 
 
-		private async void OnCardClick(object sender, EventArgs args)
+		private void OnCardClick(object sender, EventArgs args)
 		{
 			
 			_stop = true;
@@ -38,7 +38,7 @@ namespace Lisa.Quartets.Mobile
 			{
 				PlaySound();
 			}
-
+			_soundPlayed = true;
             ContinueToNextView(_cards[_id]);
 		}
 
@@ -48,7 +48,6 @@ namespace Lisa.Quartets.Mobile
 			DependencyService.Get<IAudio>().PlayFile("vraag");
 			await Task.Delay(2000);
 			DependencyService.Get<IAudio>().PlayFile(_cards[_id].SoundFile);
-			_soundPlayed = true;
 
 		}
 
