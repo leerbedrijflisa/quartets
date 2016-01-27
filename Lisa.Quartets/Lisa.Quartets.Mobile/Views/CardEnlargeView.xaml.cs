@@ -74,7 +74,7 @@ namespace Lisa.Quartets.Mobile
 
                 image.Scale = 0.8;
                 image.GestureRecognizers.Add(tapGestureRecognizer);
-                Image shadow = new Image { Source = shawdowSource, Scale = 0.8 };
+                //Image shadow = new Image { Source = shawdowSource, Scale = 0.8 };
 
                 if (IsIos()) {
 					if (IsSelected(image)) {

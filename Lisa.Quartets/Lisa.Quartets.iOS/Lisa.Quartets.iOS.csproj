@@ -206,7 +206,4 @@
   <ItemGroup>
     <AndroidResource Include="Resources\opacity.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
 </Project>

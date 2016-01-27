@@ -9,19 +9,21 @@ namespace Lisa.Quartets.Mobile
         public YesNoView(Card card)
 		{
 			InitializeComponent();
+			NavigationPage.SetHasNavigationBar(this, false);
             _selectedCard = card;
 		}
 
 		public async void YesClicked(object sender, EventArgs args)
 		{
            SaveCard();
-           await Navigation.PushAsync(new AskCardView());
            Navigation.RemovePage(this);
+		   await Navigation.PushAsync(new AskCardView());
 		}
 
-		public void NoClicked(object sender, EventArgs args)
+		public async void NoClicked(object sender, EventArgs args)
 		{
-			Navigation.PushAsync(new LockView());
+			Navigation.RemovePage(this);
+			await Navigation.PushAsync(new LockView());
         }
 
         private void SaveCard()
