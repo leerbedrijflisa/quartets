@@ -9,6 +9,7 @@
             <Button Text="Kaart Vragen" Clicked="AskCard" />			  
             <Button Text="Selecteer kaarten" Clicked="SelectCardsClicked" />
             <Button Text="Geef een kaart weg" Clicked="GiveCardClicked" />
+            <Button Text="QuartetView" Clicked="QuartetViewClicked" />
             <Label Text="Lisa.Quartets v5" FontSize="10" HorizontalOptions="End" VerticalOptions="End" />          
         </StackLayout>
 	</ContentPage.Content>
