@@ -20,19 +20,9 @@ namespace Lisa.Quartets.Mobile
 			DependencyService.Get<IAudio>().PlayFile("clapping");
 		}
 
-		public async void Animation()
+		public void Animation()
 		{
-			for (int i = 1; i <= 3; i++)
-			{
-				SlingersAnimation();
-
-				if (i <3)
-				{
-					await Task.Delay(500);
-				}
-			}
-
-			AdvanceToNextPage();
+			SlingersAnimation();
 		}
 
 		public async void AdvanceToNextPage()
@@ -43,17 +33,32 @@ namespace Lisa.Quartets.Mobile
 
 		public async void SlingersAnimation()
 		{
-			slingers.Rotation = 10;
-			slingers2.Rotation = -10;
-			await Task.Delay(500);
-			slingers.Rotation = 0;
-			slingers2.Rotation = 0;
-			await Task.Delay(500);
-			slingers.Rotation = -10;
-			slingers2.Rotation = 10;
-			await Task.Delay(500);
-			slingers.Rotation = 0;
-			slingers2.Rotation = 0;
+
+			for (int i = 0; i <= 3; i++)
+			{
+				slingers.Rotation = 10;
+				slingers2.Rotation = -10;
+				await Task.Delay(500);
+				slingers.Rotation = 0;
+				slingers2.Rotation = 0;
+				await Task.Delay(500);
+				slingers.Rotation = -10;
+				slingers2.Rotation = 10;
+				await Task.Delay(500);
+				slingers.Rotation = 0;
+				slingers2.Rotation = 0;
+				if (i <3)
+				{
+					await Task.Delay(500);
+				}
+
+				if (i == 3)
+				{
+					AdvanceToNextPage();
+				}
+					
+			}
+
 		}
 			
 	}
