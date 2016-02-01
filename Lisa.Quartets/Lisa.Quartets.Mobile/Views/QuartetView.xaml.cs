@@ -11,39 +11,51 @@ namespace Lisa.Quartets.Mobile
 		public QuartetView ()
 		{
 			InitializeComponent ();
-			slingersAnimation ();
-			slingers2Animation ();
+			Animation();
+			PlaySound();
+		}
+			
+		private void PlaySound() 
+		{
+			DependencyService.Get<IAudio>().PlayFile("clapping");
 		}
 
-		public async void slingersAnimation()
+		public async void Animation()
 		{
 			for (int i = 1; i <= 3; i++)
 			{
-				slingers.Rotation = 10;
-				await Task.Delay(500);
-				slingers.Rotation = 0;
-				await Task.Delay(500);
-				slingers.Rotation = -10;
-				await Task.Delay(500);
-				slingers.Rotation = 0;
-				await Task.Delay(500);
+				SlingersAnimation();
+
+				if (i <3)
+				{
+					await Task.Delay(500);
+				}
 			}
+
+			AdvanceToNextPage();
 		}
 
-		public async void slingers2Animation()
+		public async void AdvanceToNextPage()
 		{
-			for (int i = 1; i <= 3; i++)
-			{
-				slingers2.Rotation = -10;
-				await Task.Delay(500);
-				slingers2.Rotation = 0;
-				await Task.Delay(500);
-				slingers2.Rotation = 10;
-				await Task.Delay(500);
-				slingers2.Rotation = 0;
-				await Task.Delay(500);
-			}
+			Navigation.RemovePage(this);
+			await Navigation.PushAsync(new AskCardView());
 		}
+
+		public async void SlingersAnimation()
+		{
+			slingers.Rotation = 10;
+			slingers2.Rotation = -10;
+			await Task.Delay(500);
+			slingers.Rotation = 0;
+			slingers2.Rotation = 0;
+			await Task.Delay(500);
+			slingers.Rotation = -10;
+			slingers2.Rotation = 10;
+			await Task.Delay(500);
+			slingers.Rotation = 0;
+			slingers2.Rotation = 0;
+		}
+			
 	}
 }
 
