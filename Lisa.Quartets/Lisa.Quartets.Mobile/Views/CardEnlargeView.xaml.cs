@@ -138,6 +138,6 @@ namespace Lisa.Quartets.Mobile
 		private CardDatabase _database = new CardDatabase();
         private List<int> _selectedImages = new List<int>();
 		private Dictionary<int, Image> _opacity = new Dictionary<int, Image>();
-//        private CardImageHolder _cardImageHolder;
+//      private CardImageHolder _cardImageHolder;
 	}
 }

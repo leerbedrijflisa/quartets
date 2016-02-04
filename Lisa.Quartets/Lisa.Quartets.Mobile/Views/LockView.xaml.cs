@@ -15,7 +15,6 @@ namespace Lisa.Quartets.Mobile
             _cards = _database.RetrieveCardsWhereInHandIs(1);
 
 			SetImages();
-
 		}
 
 		public async void AskCardSliderUnlocked(object sender, EventArgs args)

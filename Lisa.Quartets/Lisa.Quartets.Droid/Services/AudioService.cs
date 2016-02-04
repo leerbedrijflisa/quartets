@@ -13,17 +13,15 @@ namespace Lisa.Quartets.Mobile.Droid
 	{
 		public AudioService() {}
 
-		private MediaPlayer _mediaPlayer;
+        public bool PlayFile(string fileName)
+        {
+            var resource = (int) typeof(Resource.Raw).GetField(fileName).GetValue(null);
+            _mediaPlayer = MediaPlayer.Create(global::Android.App.Application.Context, resource);
+            _mediaPlayer.Start();
 
-		public bool PlayFile(string fileName)
-		{
-			var resource = (int) typeof(Resource.Raw).GetField(fileName).GetValue(null);
-			_mediaPlayer = MediaPlayer.Create(global::Android.App.Application.Context, resource);
-			_mediaPlayer.Start();
+            return true;
+        }
 
-
-			return true;
-		}
-			
+        private MediaPlayer _mediaPlayer;
 	}
 }
