@@ -80,6 +80,11 @@ namespace Lisa.Quartets.Mobile
 			return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand =" + inHand);
         }
 
+        public List<Card> RetrieveNonQuartetCardsInHand()
+        {
+            return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 1 AND IsQuartet = 0");
+        }
+
 		public void CreateDefaultCards()			
 		{
             int category = 1;
@@ -93,6 +98,7 @@ namespace Lisa.Quartets.Mobile
 				card.FileName = string.Format("card{0}.png", i);
 				card.SoundFile = string.Format("sound{0}", i);
 				card.IsInHand = 0;
+                card.IsQuartet = 0;
 
 				CreateCard(card);
 
