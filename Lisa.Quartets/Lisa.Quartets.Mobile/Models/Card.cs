@@ -11,5 +11,6 @@ namespace Lisa.Quartets.Mobile
 		public string FileName { get; set; }
 		public string SoundFile { get; set; }
 		public int IsInHand { get; set;}
+        public int IsQuartet{ get; set;}
 	}
 }

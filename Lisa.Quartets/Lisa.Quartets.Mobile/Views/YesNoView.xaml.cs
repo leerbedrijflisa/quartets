@@ -14,10 +14,16 @@ namespace Lisa.Quartets.Mobile
 		}
 
 		public async void YesClicked(object sender, EventArgs args)
-		{
-           SaveCard();
-           Navigation.RemovePage(this);
-		   await Navigation.PushAsync(new AskCardView());
+		{ 
+            SaveCard();
+
+            if (true)
+            {
+                _database.IsQuartet(5);
+            }
+
+            Navigation.RemovePage(this);
+	        await Navigation.PushAsync(new AskCardView());
 		}
 
 		public async void NoClicked(object sender, EventArgs args)
