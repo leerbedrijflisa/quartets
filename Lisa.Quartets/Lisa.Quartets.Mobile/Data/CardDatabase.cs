@@ -85,6 +85,11 @@ namespace Lisa.Quartets.Mobile
             return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 1 AND IsQuartet = 0");
         }
 
+        public int IsQuartet(int Category)
+        {
+            return Category;
+        }
+
 		public void CreateDefaultCards()			
 		{
             int category = 1;
