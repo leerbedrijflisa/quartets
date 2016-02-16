@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Lisa.Quartets.Mobile.EndView">
+    <ContentPage.Content>
+        <StackLayout x:Name="layout">
+            <Label Text="Je hebt geen losse kaarten meer om mee door te spelen" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Start" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

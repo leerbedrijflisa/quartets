@@ -16,8 +16,17 @@ namespace Lisa.Quartets.Mobile
 			Shuffle(_cards);
 			InitializeFirstImage();
 			Timer();
-
 		}
+
+        public void CheckForNonQuartets()
+        {
+            List<Card> cards = _database.RetrieveNonQuartetCardsInHand();
+
+            if (cards.Count == 0)
+            {
+                DisplayAlert("klaar", "je hebt geen losse kaarten meer om door te spelen", "oké");
+            }
+        }
 
 		public void InitializeFirstImage()
 		{
