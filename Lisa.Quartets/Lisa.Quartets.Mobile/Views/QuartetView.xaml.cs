@@ -20,8 +20,8 @@ namespace Lisa.Quartets.Mobile
         private void SetImages(int category)
         {
             CardLayout cardGrid = new CardLayout();
-//            cardGrid.HorizontalOptions = LayoutOptions.Center;
-//            cardGrid.VerticalOptions = LayoutOptions.Center;
+            cardGrid.HorizontalOptions = LayoutOptions.CenterAndExpand;
+            cardGrid.VerticalOptions = LayoutOptions.CenterAndExpand;
             List<Card> quartet =  _database.RetrieveQuartet(category);
 
             foreach (var card in quartet)
