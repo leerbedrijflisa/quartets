@@ -57,8 +57,6 @@
     <Compile Include="UnlockSliderRenderer.cs" />
     <None Include="Resources\shadow.png" />
     <Compile Include="Services\AudioService.cs" />
-    <None Include="Resources\slingers.png" />
-    <None Include="Resources\raw\clapping.wav" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -80,6 +78,9 @@
     <BundleResource Include="Resources\check.png" />
     <BundleResource Include="Resources\slide.png" />
     <BundleResource Include="Resources\card.png" />
+    <BundleResource Include="Resources\raw\vraag.wav" />
+    <BundleResource Include="Resources\raw\clapping.wav" />
+    <BundleResource Include="Resources\slingers.png" />
     <BundleResource Include="Resources\card1.png" />
     <BundleResource Include="Resources\card2.png" />
     <BundleResource Include="Resources\card3.png" />
@@ -116,15 +117,16 @@
     <BundleResource Include="Resources\card34.png" />
     <BundleResource Include="Resources\card35.png" />
     <BundleResource Include="Resources\card36.png" />
-    <BundleResource Include="Resources\card37.png" />
-    <BundleResource Include="Resources\card38.png" />
-    <BundleResource Include="Resources\card39.png" />
-    <BundleResource Include="Resources\card40.png" />
-    <BundleResource Include="Resources\card41.png" />
-    <BundleResource Include="Resources\card42.png" />
-    <BundleResource Include="Resources\card43.png" />
-    <BundleResource Include="Resources\card44.png" />
+    <BundleResource Include="Resources\opacity.png" />
     <BundleResource Include="Resources\raw\sound1.wav" />
+    <BundleResource Include="Resources\raw\sound2.wav" />
+    <BundleResource Include="Resources\raw\sound3.wav" />
+    <BundleResource Include="Resources\raw\sound4.wav" />
+    <BundleResource Include="Resources\raw\sound5.wav" />
+    <BundleResource Include="Resources\raw\sound6.wav" />
+    <BundleResource Include="Resources\raw\sound7.wav" />
+    <BundleResource Include="Resources\raw\sound8.wav" />
+    <BundleResource Include="Resources\raw\sound9.wav" />
     <BundleResource Include="Resources\raw\sound10.wav" />
     <BundleResource Include="Resources\raw\sound11.wav" />
     <BundleResource Include="Resources\raw\sound12.wav" />
@@ -135,7 +137,6 @@
     <BundleResource Include="Resources\raw\sound17.wav" />
     <BundleResource Include="Resources\raw\sound18.wav" />
     <BundleResource Include="Resources\raw\sound19.wav" />
-    <BundleResource Include="Resources\raw\sound2.wav" />
     <BundleResource Include="Resources\raw\sound20.wav" />
     <BundleResource Include="Resources\raw\sound21.wav" />
     <BundleResource Include="Resources\raw\sound22.wav" />
@@ -146,7 +147,6 @@
     <BundleResource Include="Resources\raw\sound27.wav" />
     <BundleResource Include="Resources\raw\sound28.wav" />
     <BundleResource Include="Resources\raw\sound29.wav" />
-    <BundleResource Include="Resources\raw\sound3.wav" />
     <BundleResource Include="Resources\raw\sound30.wav" />
     <BundleResource Include="Resources\raw\sound31.wav" />
     <BundleResource Include="Resources\raw\sound32.wav" />
@@ -154,21 +154,6 @@
     <BundleResource Include="Resources\raw\sound34.wav" />
     <BundleResource Include="Resources\raw\sound35.wav" />
     <BundleResource Include="Resources\raw\sound36.wav" />
-    <BundleResource Include="Resources\raw\sound37.wav" />
-    <BundleResource Include="Resources\raw\sound38.wav" />
-    <BundleResource Include="Resources\raw\sound39.wav" />
-    <BundleResource Include="Resources\raw\sound4.wav" />
-    <BundleResource Include="Resources\raw\sound40.wav" />
-    <BundleResource Include="Resources\raw\sound41.wav" />
-    <BundleResource Include="Resources\raw\sound42.wav" />
-    <BundleResource Include="Resources\raw\sound43.wav" />
-    <BundleResource Include="Resources\raw\sound44.wav" />
-    <BundleResource Include="Resources\raw\sound5.wav" />
-    <BundleResource Include="Resources\raw\sound6.wav" />
-    <BundleResource Include="Resources\raw\sound7.wav" />
-    <BundleResource Include="Resources\raw\sound8.wav" />
-    <BundleResource Include="Resources\raw\sound9.wav" />
-    <BundleResource Include="Resources\raw\vraag.wav" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -204,8 +189,5 @@
       <Project>{781C4586-1501-443A-B821-D483C3BE886B}</Project>
       <Name>Lisa.Quartets.Mobile</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\opacity.png" />
   </ItemGroup>
 </Project>
