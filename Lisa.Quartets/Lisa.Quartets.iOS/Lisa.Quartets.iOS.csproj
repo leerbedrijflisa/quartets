@@ -57,6 +57,8 @@
     <Compile Include="UnlockSliderRenderer.cs" />
     <None Include="Resources\shadow.png" />
     <Compile Include="Services\AudioService.cs" />
+    <None Include="Resources\slingers.png" />
+    <None Include="Resources\raw\clapping.wav" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />

@@ -15,7 +15,6 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
     <MandroidI18n />
     <JavaMaximumHeapSize>
     </JavaMaximumHeapSize>
@@ -47,6 +46,7 @@
     </AndroidStoreUncompressedFileExtensions>
     <JavaOptions>
     </JavaOptions>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -106,16 +106,43 @@
     <AndroidResource Include="Resources\drawable\kaart1.png" />
     <AndroidResource Include="Resources\drawable\slide.png" />
     <AndroidResource Include="Resources\drawable\shadow.png" />
-    <AndroidResource Include="Resources\drawable\opacity.png" />
+    <AndroidResource Include="Resources\drawable\card.png" />
+    <AndroidResource Include="Resources\raw\vraag.wav" />
+    <AndroidResource Include="Resources\drawable\slingers.png" />
+    <AndroidResource Include="Resources\raw\clapping.wav" />
+    <AndroidResource Include="Resources\raw\sound1.wav" />
+    <AndroidResource Include="Resources\raw\sound10.wav" />
+    <AndroidResource Include="Resources\raw\sound11.wav" />
+    <AndroidResource Include="Resources\raw\sound12.wav" />
+    <AndroidResource Include="Resources\raw\sound13.wav" />
+    <AndroidResource Include="Resources\raw\sound14.wav" />
+    <AndroidResource Include="Resources\raw\sound15.wav" />
+    <AndroidResource Include="Resources\raw\sound16.wav" />
+    <AndroidResource Include="Resources\raw\sound17.wav" />
+    <AndroidResource Include="Resources\raw\sound18.wav" />
+    <AndroidResource Include="Resources\raw\sound19.wav" />
+    <AndroidResource Include="Resources\raw\sound2.wav" />
+    <AndroidResource Include="Resources\raw\sound20.wav" />
+    <AndroidResource Include="Resources\raw\sound21.wav" />
+    <AndroidResource Include="Resources\raw\sound22.wav" />
+    <AndroidResource Include="Resources\raw\sound23.wav" />
+    <AndroidResource Include="Resources\raw\sound24.wav" />
+    <AndroidResource Include="Resources\raw\sound29.wav" />
+    <AndroidResource Include="Resources\raw\sound3.wav" />
+    <AndroidResource Include="Resources\raw\sound30.wav" />
+    <AndroidResource Include="Resources\raw\sound31.wav" />
+    <AndroidResource Include="Resources\raw\sound32.wav" />
+    <AndroidResource Include="Resources\raw\sound33.wav" />
+    <AndroidResource Include="Resources\raw\sound34.wav" />
+    <AndroidResource Include="Resources\raw\sound35.wav" />
+    <AndroidResource Include="Resources\raw\sound36.wav" />
+    <AndroidResource Include="Resources\raw\sound4.wav" />
+    <AndroidResource Include="Resources\raw\sound5.wav" />
+    <AndroidResource Include="Resources\raw\sound6.wav" />
+    <AndroidResource Include="Resources\raw\sound7.wav" />
+    <AndroidResource Include="Resources\raw\sound8.wav" />
+    <AndroidResource Include="Resources\raw\sound9.wav" />
     <AndroidResource Include="Resources\drawable\card1.png" />
-    <AndroidResource Include="Resources\drawable\card2.png" />
-    <AndroidResource Include="Resources\drawable\card3.png" />
-    <AndroidResource Include="Resources\drawable\card4.png" />
-    <AndroidResource Include="Resources\drawable\card5.png" />
-    <AndroidResource Include="Resources\drawable\card6.png" />
-    <AndroidResource Include="Resources\drawable\card7.png" />
-    <AndroidResource Include="Resources\drawable\card8.png" />
-    <AndroidResource Include="Resources\drawable\card9.png" />
     <AndroidResource Include="Resources\drawable\card10.png" />
     <AndroidResource Include="Resources\drawable\card11.png" />
     <AndroidResource Include="Resources\drawable\card12.png" />
@@ -126,6 +153,7 @@
     <AndroidResource Include="Resources\drawable\card17.png" />
     <AndroidResource Include="Resources\drawable\card18.png" />
     <AndroidResource Include="Resources\drawable\card19.png" />
+    <AndroidResource Include="Resources\drawable\card2.png" />
     <AndroidResource Include="Resources\drawable\card20.png" />
     <AndroidResource Include="Resources\drawable\card21.png" />
     <AndroidResource Include="Resources\drawable\card22.png" />
@@ -136,6 +164,7 @@
     <AndroidResource Include="Resources\drawable\card27.png" />
     <AndroidResource Include="Resources\drawable\card28.png" />
     <AndroidResource Include="Resources\drawable\card29.png" />
+    <AndroidResource Include="Resources\drawable\card3.png" />
     <AndroidResource Include="Resources\drawable\card30.png" />
     <AndroidResource Include="Resources\drawable\card31.png" />
     <AndroidResource Include="Resources\drawable\card32.png" />
@@ -143,60 +172,17 @@
     <AndroidResource Include="Resources\drawable\card34.png" />
     <AndroidResource Include="Resources\drawable\card35.png" />
     <AndroidResource Include="Resources\drawable\card36.png" />
-    <AndroidResource Include="Resources\drawable\card37.png" />
-    <AndroidResource Include="Resources\drawable\card38.png" />
-    <AndroidResource Include="Resources\drawable\card39.png" />
-    <AndroidResource Include="Resources\drawable\card40.png" />
-    <AndroidResource Include="Resources\drawable\card41.png" />
-    <AndroidResource Include="Resources\drawable\card42.png" />
-    <AndroidResource Include="Resources\drawable\card43.png" />
-    <AndroidResource Include="Resources\drawable\card44.png" />
-    <AndroidResource Include="Resources\drawable\card.png" />
-    <AndroidResource Include="Resources\raw\vraag.wav" />
-    <AndroidResource Include="Resources\raw\sound1.wav" />
-    <AndroidResource Include="Resources\raw\sound2.wav" />
-    <AndroidResource Include="Resources\raw\sound3.wav" />
-    <AndroidResource Include="Resources\raw\sound5.wav" />
-    <AndroidResource Include="Resources\raw\sound6.wav" />
-    <AndroidResource Include="Resources\raw\sound7.wav" />
-    <AndroidResource Include="Resources\raw\sound8.wav" />
-    <AndroidResource Include="Resources\raw\sound9.wav" />
-    <AndroidResource Include="Resources\raw\sound44.wav" />
-    <AndroidResource Include="Resources\raw\sound43.wav" />
-    <AndroidResource Include="Resources\raw\sound42.wav" />
-    <AndroidResource Include="Resources\raw\sound41.wav" />
-    <AndroidResource Include="Resources\raw\sound40.wav" />
-    <AndroidResource Include="Resources\raw\sound4.wav" />
-    <AndroidResource Include="Resources\raw\sound39.wav" />
-    <AndroidResource Include="Resources\raw\sound38.wav" />
-    <AndroidResource Include="Resources\raw\sound37.wav" />
-    <AndroidResource Include="Resources\raw\sound36.wav" />
-    <AndroidResource Include="Resources\raw\sound35.wav" />
-    <AndroidResource Include="Resources\raw\sound34.wav" />
-    <AndroidResource Include="Resources\raw\sound33.wav" />
-    <AndroidResource Include="Resources\raw\sound32.wav" />
-    <AndroidResource Include="Resources\raw\sound31.wav" />
-    <AndroidResource Include="Resources\raw\sound30.wav" />
-    <AndroidResource Include="Resources\raw\sound29.wav" />
-    <AndroidResource Include="Resources\raw\sound28.wav" />
-    <AndroidResource Include="Resources\raw\sound27.wav" />
-    <AndroidResource Include="Resources\raw\sound26.wav" />
+    <AndroidResource Include="Resources\drawable\card4.png" />
+    <AndroidResource Include="Resources\drawable\card5.png" />
+    <AndroidResource Include="Resources\drawable\card6.png" />
+    <AndroidResource Include="Resources\drawable\card7.png" />
+    <AndroidResource Include="Resources\drawable\card8.png" />
+    <AndroidResource Include="Resources\drawable\card9.png" />
+    <AndroidResource Include="Resources\drawable\opacity.png" />
     <AndroidResource Include="Resources\raw\sound25.wav" />
-    <AndroidResource Include="Resources\raw\sound24.wav" />
-    <AndroidResource Include="Resources\raw\sound23.wav" />
-    <AndroidResource Include="Resources\raw\sound22.wav" />
-    <AndroidResource Include="Resources\raw\sound21.wav" />
-    <AndroidResource Include="Resources\raw\sound19.wav" />
-    <AndroidResource Include="Resources\raw\sound18.wav" />
-    <AndroidResource Include="Resources\raw\sound17.wav" />
-    <AndroidResource Include="Resources\raw\sound16.wav" />
-    <AndroidResource Include="Resources\raw\sound15.wav" />
-    <AndroidResource Include="Resources\raw\sound14.wav" />
-    <AndroidResource Include="Resources\raw\sound13.wav" />
-    <AndroidResource Include="Resources\raw\sound12.wav" />
-    <AndroidResource Include="Resources\raw\sound11.wav" />
-    <AndroidResource Include="Resources\raw\sound10.wav" />
-    <AndroidResource Include="Resources\raw\sound20.wav" />
+    <AndroidResource Include="Resources\raw\sound26.wav" />
+    <AndroidResource Include="Resources\raw\sound27.wav" />
+    <AndroidResource Include="Resources\raw\sound28.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

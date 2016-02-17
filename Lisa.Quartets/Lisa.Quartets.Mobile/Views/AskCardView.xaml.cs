@@ -13,10 +13,14 @@ namespace Lisa.Quartets.Mobile
 		{
 			InitializeComponent();
 			_cards = _database.RetrieveCardsWhereInHandIs(0);
+            if(_cards.Count == 0)
+            {
+                Navigation.PopToRootAsync();
+            }
+
 			Shuffle(_cards);
 			InitializeFirstImage();
 			Timer();
-
 		}
 
 		public void InitializeFirstImage()
@@ -45,8 +49,8 @@ namespace Lisa.Quartets.Mobile
 		private async void PlaySound() 
 		{
 
-			DependencyService.Get<IAudio>().PlayFile("vraag");
-			await Task.Delay(2000);
+//			DependencyService.Get<IAudio>().PlayFile("vraag");
+//			await Task.Delay(2000);
 			DependencyService.Get<IAudio>().PlayFile(_cards[_id].SoundFile);
 
 		}
