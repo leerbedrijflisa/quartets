@@ -12,11 +12,12 @@ namespace Lisa.Quartets.Mobile
 		public AskCardView()
 		{
 			InitializeComponent();
-			_cards = _database.RetrieveCardsWhereInHandIs(0);
+
+			_cards = _database.RetrieveAskableCards();
             if(_cards.Count == 0)
             {
                 Navigation.PopToRootAsync();
-            }
+            }            
 
 			Shuffle(_cards);
 			InitializeFirstImage();
@@ -32,10 +33,8 @@ namespace Lisa.Quartets.Mobile
 			cardimage.Source = _cards[0].FileName;
 		}
 
-
 		private void OnCardClick(object sender, EventArgs args)
-		{
-			
+		{			
 			_stop = true;
 
 			if (!_soundPlayed)

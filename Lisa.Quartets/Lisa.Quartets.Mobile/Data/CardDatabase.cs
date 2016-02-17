@@ -102,7 +102,12 @@ namespace Lisa.Quartets.Mobile
             return _database.Query<Card>("SELECt * FROM Card WHERE Category =" + category);
         }
 
-		public void CreateDefaultCards()
+        public List<Card> RetrieveAskableCards()
+        {              
+            return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 0 AND Category in (SELECT Category FROM Card WHERE IsInHand = 1 GROUP By Category)");
+        }
+
+		public void CreateDefaultCards()			
 		{
             int category = 1;
             int j = 0;
