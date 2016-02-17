@@ -249,52 +249,64 @@ namespace Lisa.Quartets.Droid
 			public const int sound24 = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int sound29 = 2130903058;
+			public const int sound25 = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int sound3 = 2130903059;
+			public const int sound26 = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int sound30 = 2130903060;
+			public const int sound27 = 2130903060;
 			
 			// aapt resource value: 0x7f030015
-			public const int sound31 = 2130903061;
+			public const int sound28 = 2130903061;
 			
 			// aapt resource value: 0x7f030016
-			public const int sound32 = 2130903062;
+			public const int sound29 = 2130903062;
 			
 			// aapt resource value: 0x7f030017
-			public const int sound33 = 2130903063;
+			public const int sound3 = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int sound34 = 2130903064;
+			public const int sound30 = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int sound35 = 2130903065;
+			public const int sound31 = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int sound36 = 2130903066;
+			public const int sound32 = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int sound4 = 2130903067;
+			public const int sound33 = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int sound5 = 2130903068;
+			public const int sound34 = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int sound6 = 2130903069;
+			public const int sound35 = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int sound7 = 2130903070;
+			public const int sound36 = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int sound8 = 2130903071;
+			public const int sound4 = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int sound9 = 2130903072;
+			public const int sound5 = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int vraag = 2130903073;
+			public const int sound6 = 2130903073;
+			
+			// aapt resource value: 0x7f030022
+			public const int sound7 = 2130903074;
+			
+			// aapt resource value: 0x7f030023
+			public const int sound8 = 2130903075;
+			
+			// aapt resource value: 0x7f030024
+			public const int sound9 = 2130903076;
+			
+			// aapt resource value: 0x7f030025
+			public const int vraag = 2130903077;
 			
 			static Raw()
 			{
