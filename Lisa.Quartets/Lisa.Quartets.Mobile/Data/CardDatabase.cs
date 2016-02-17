@@ -107,13 +107,13 @@ namespace Lisa.Quartets.Mobile
             int category = 1;
             int j = 0;
 
-			for (int i = 1; i <= 44; i++)
+			for (int i = 1; i <= 36; i++)
 			{
 				var card = new Card();
 				card.Name = string.Format("card{0}", i);
                 card.Category = category;
 				card.FileName = string.Format("card{0}.png", i);
-				card.SoundFile = string.Format("sound{0}", i);
+                card.SoundFile = string.Format("sound{0}", i);
 				card.IsInHand = 0;
                 card.IsQuartet = 0;
 

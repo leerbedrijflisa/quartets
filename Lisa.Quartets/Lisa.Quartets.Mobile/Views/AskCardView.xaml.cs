@@ -49,8 +49,8 @@ namespace Lisa.Quartets.Mobile
 		private async void PlaySound() 
 		{
 
-			DependencyService.Get<IAudio>().PlayFile("vraag");
-			await Task.Delay(2000);
+//			DependencyService.Get<IAudio>().PlayFile("vraag");
+//			await Task.Delay(2000);
 			DependencyService.Get<IAudio>().PlayFile(_cards[_id].SoundFile);
 
 		}
