@@ -8,12 +8,35 @@ namespace Lisa.Quartets.Mobile
 {
 	public partial class QuartetView : ContentPage
 	{
-		public QuartetView ()
+        public QuartetView (int category)
 		{
-			InitializeComponent ();
+			InitializeComponent();
+
+            SetImages(category);
 			Animation();
 			PlaySound();
 		}
+
+        private void SetImages(int category)
+        {
+            CardLayout cardGrid = new CardLayout();
+//            cardGrid.HorizontalOptions = LayoutOptions.Center;
+//            cardGrid.VerticalOptions = LayoutOptions.Center;
+            List<Card> quartet =  _database.RetrieveQuartet(category);
+
+            foreach (var card in quartet)
+            {
+                CardImage image = new CardImage();
+                image.Source = card.FileName;
+                image.CardId = card.Id;
+
+                image.Scale = 0.8;
+
+                cardGrid.Children.Add(image);
+            }
+
+            layout.Children.Add(cardGrid);
+        }
 			
 		private void PlaySound() 
 		{
@@ -60,6 +83,8 @@ namespace Lisa.Quartets.Mobile
 			}
 
 		}
+
+        private CardDatabase _database = new CardDatabase();
 			
 	}
 }

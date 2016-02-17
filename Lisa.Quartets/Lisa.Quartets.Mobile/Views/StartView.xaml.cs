@@ -31,10 +31,10 @@ namespace Lisa.Quartets.Mobile
             Navigation.PushAsync(new GiveCardView());
         }
 
-		private void QuartetViewClicked(object sender, EventArgs e)
-		{            
-			Navigation.PushAsync(new QuartetView());
-		}
+//		private void QuartetViewClicked(object sender, EventArgs e)
+//		{            
+//			Navigation.PushAsync(new QuartetView());
+//		}
 
         private CardImageHolder _cardImageHolder = new CardImageHolder();
 	}

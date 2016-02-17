@@ -17,13 +17,17 @@ namespace Lisa.Quartets.Mobile
 		{ 
             SaveCard();
 
-            if (true)
+            if (_database.IsQuartet(_selectedCard))
             {
-                _database.IsQuartet(5);
+                _database.SetQuartet(_selectedCard.Category);
+                Navigation.RemovePage(this);
+                await Navigation.PushAsync(new QuartetView(_selectedCard.Category));
             }
-
-            Navigation.RemovePage(this);
-	        await Navigation.PushAsync(new AskCardView());
+            else
+            {
+                Navigation.RemovePage(this);
+                await Navigation.PushAsync(new AskCardView());
+            }
 		}
 
 		public async void NoClicked(object sender, EventArgs args)
@@ -36,7 +40,6 @@ namespace Lisa.Quartets.Mobile
         {
             _selectedCard.IsInHand = 1;
             _database.CreateOrUpdateCard(_selectedCard);
-            System.Diagnostics.Debug.WriteLine("saved");
         }
 
         private Card _selectedCard;

@@ -53,157 +53,25 @@ namespace Lisa.Quartets.Droid
 			public const int card = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int card1 = 2130837506;
+			public const int check = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int card10 = 2130837507;
+			public const int icon = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int card11 = 2130837508;
+			public const int kaart1 = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int card12 = 2130837509;
+			public const int opacity = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int card13 = 2130837510;
+			public const int shadow = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int card14 = 2130837511;
+			public const int slide = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int card15 = 2130837512;
-			
-			// aapt resource value: 0x7f020009
-			public const int card16 = 2130837513;
-			
-			// aapt resource value: 0x7f02000a
-			public const int card17 = 2130837514;
-			
-			// aapt resource value: 0x7f02000b
-			public const int card18 = 2130837515;
-			
-			// aapt resource value: 0x7f02000c
-			public const int card19 = 2130837516;
-			
-			// aapt resource value: 0x7f02000d
-			public const int card2 = 2130837517;
-			
-			// aapt resource value: 0x7f02000e
-			public const int card20 = 2130837518;
-			
-			// aapt resource value: 0x7f02000f
-			public const int card21 = 2130837519;
-			
-			// aapt resource value: 0x7f020010
-			public const int card22 = 2130837520;
-			
-			// aapt resource value: 0x7f020011
-			public const int card23 = 2130837521;
-			
-			// aapt resource value: 0x7f020012
-			public const int card24 = 2130837522;
-			
-			// aapt resource value: 0x7f020013
-			public const int card25 = 2130837523;
-			
-			// aapt resource value: 0x7f020014
-			public const int card26 = 2130837524;
-			
-			// aapt resource value: 0x7f020015
-			public const int card27 = 2130837525;
-			
-			// aapt resource value: 0x7f020016
-			public const int card28 = 2130837526;
-			
-			// aapt resource value: 0x7f020017
-			public const int card29 = 2130837527;
-			
-			// aapt resource value: 0x7f020018
-			public const int card3 = 2130837528;
-			
-			// aapt resource value: 0x7f020019
-			public const int card30 = 2130837529;
-			
-			// aapt resource value: 0x7f02001a
-			public const int card31 = 2130837530;
-			
-			// aapt resource value: 0x7f02001b
-			public const int card32 = 2130837531;
-			
-			// aapt resource value: 0x7f02001c
-			public const int card33 = 2130837532;
-			
-			// aapt resource value: 0x7f02001d
-			public const int card34 = 2130837533;
-			
-			// aapt resource value: 0x7f02001e
-			public const int card35 = 2130837534;
-			
-			// aapt resource value: 0x7f02001f
-			public const int card36 = 2130837535;
-			
-			// aapt resource value: 0x7f020020
-			public const int card37 = 2130837536;
-			
-			// aapt resource value: 0x7f020021
-			public const int card38 = 2130837537;
-			
-			// aapt resource value: 0x7f020022
-			public const int card39 = 2130837538;
-			
-			// aapt resource value: 0x7f020023
-			public const int card4 = 2130837539;
-			
-			// aapt resource value: 0x7f020024
-			public const int card40 = 2130837540;
-			
-			// aapt resource value: 0x7f020025
-			public const int card41 = 2130837541;
-			
-			// aapt resource value: 0x7f020026
-			public const int card42 = 2130837542;
-			
-			// aapt resource value: 0x7f020027
-			public const int card43 = 2130837543;
-			
-			// aapt resource value: 0x7f020028
-			public const int card44 = 2130837544;
-			
-			// aapt resource value: 0x7f020029
-			public const int card5 = 2130837545;
-			
-			// aapt resource value: 0x7f02002a
-			public const int card6 = 2130837546;
-			
-			// aapt resource value: 0x7f02002b
-			public const int card7 = 2130837547;
-			
-			// aapt resource value: 0x7f02002c
-			public const int card8 = 2130837548;
-			
-			// aapt resource value: 0x7f02002d
-			public const int card9 = 2130837549;
-			
-			// aapt resource value: 0x7f02002e
-			public const int check = 2130837550;
-			
-			// aapt resource value: 0x7f02002f
-			public const int icon = 2130837551;
-			
-			// aapt resource value: 0x7f020030
-			public const int kaart1 = 2130837552;
-			
-			// aapt resource value: 0x7f020031
-			public const int opacity = 2130837553;
-			
-			// aapt resource value: 0x7f020032
-			public const int shadow = 2130837554;
-			
-			// aapt resource value: 0x7f020033
-			public const int slide = 2130837555;
-			
-			// aapt resource value: 0x7f020034
-			public const int slingers = 2130837556;
+			public const int slingers = 2130837512;
 			
 			static Drawable()
 			{
@@ -222,139 +90,7 @@ namespace Lisa.Quartets.Droid
 			public const int clapping = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int sound1 = 2130903041;
-			
-			// aapt resource value: 0x7f030002
-			public const int sound10 = 2130903042;
-			
-			// aapt resource value: 0x7f030003
-			public const int sound11 = 2130903043;
-			
-			// aapt resource value: 0x7f030004
-			public const int sound12 = 2130903044;
-			
-			// aapt resource value: 0x7f030005
-			public const int sound13 = 2130903045;
-			
-			// aapt resource value: 0x7f030006
-			public const int sound14 = 2130903046;
-			
-			// aapt resource value: 0x7f030007
-			public const int sound15 = 2130903047;
-			
-			// aapt resource value: 0x7f030008
-			public const int sound16 = 2130903048;
-			
-			// aapt resource value: 0x7f030009
-			public const int sound17 = 2130903049;
-			
-			// aapt resource value: 0x7f03000a
-			public const int sound18 = 2130903050;
-			
-			// aapt resource value: 0x7f03000b
-			public const int sound19 = 2130903051;
-			
-			// aapt resource value: 0x7f03000c
-			public const int sound2 = 2130903052;
-			
-			// aapt resource value: 0x7f03000d
-			public const int sound20 = 2130903053;
-			
-			// aapt resource value: 0x7f03000e
-			public const int sound21 = 2130903054;
-			
-			// aapt resource value: 0x7f03000f
-			public const int sound22 = 2130903055;
-			
-			// aapt resource value: 0x7f030010
-			public const int sound23 = 2130903056;
-			
-			// aapt resource value: 0x7f030011
-			public const int sound24 = 2130903057;
-			
-			// aapt resource value: 0x7f030012
-			public const int sound25 = 2130903058;
-			
-			// aapt resource value: 0x7f030013
-			public const int sound26 = 2130903059;
-			
-			// aapt resource value: 0x7f030014
-			public const int sound27 = 2130903060;
-			
-			// aapt resource value: 0x7f030015
-			public const int sound28 = 2130903061;
-			
-			// aapt resource value: 0x7f030016
-			public const int sound29 = 2130903062;
-			
-			// aapt resource value: 0x7f030017
-			public const int sound3 = 2130903063;
-			
-			// aapt resource value: 0x7f030018
-			public const int sound30 = 2130903064;
-			
-			// aapt resource value: 0x7f030019
-			public const int sound31 = 2130903065;
-			
-			// aapt resource value: 0x7f03001a
-			public const int sound32 = 2130903066;
-			
-			// aapt resource value: 0x7f03001b
-			public const int sound33 = 2130903067;
-			
-			// aapt resource value: 0x7f03001c
-			public const int sound34 = 2130903068;
-			
-			// aapt resource value: 0x7f03001d
-			public const int sound35 = 2130903069;
-			
-			// aapt resource value: 0x7f03001e
-			public const int sound36 = 2130903070;
-			
-			// aapt resource value: 0x7f03001f
-			public const int sound37 = 2130903071;
-			
-			// aapt resource value: 0x7f030020
-			public const int sound38 = 2130903072;
-			
-			// aapt resource value: 0x7f030021
-			public const int sound39 = 2130903073;
-			
-			// aapt resource value: 0x7f030022
-			public const int sound4 = 2130903074;
-			
-			// aapt resource value: 0x7f030023
-			public const int sound40 = 2130903075;
-			
-			// aapt resource value: 0x7f030024
-			public const int sound41 = 2130903076;
-			
-			// aapt resource value: 0x7f030025
-			public const int sound42 = 2130903077;
-			
-			// aapt resource value: 0x7f030026
-			public const int sound43 = 2130903078;
-			
-			// aapt resource value: 0x7f030027
-			public const int sound44 = 2130903079;
-			
-			// aapt resource value: 0x7f030028
-			public const int sound5 = 2130903080;
-			
-			// aapt resource value: 0x7f030029
-			public const int sound6 = 2130903081;
-			
-			// aapt resource value: 0x7f03002a
-			public const int sound7 = 2130903082;
-			
-			// aapt resource value: 0x7f03002b
-			public const int sound8 = 2130903083;
-			
-			// aapt resource value: 0x7f03002c
-			public const int sound9 = 2130903084;
-			
-			// aapt resource value: 0x7f03002d
-			public const int vraag = 2130903085;
+			public const int vraag = 2130903041;
 			
 			static Raw()
 			{

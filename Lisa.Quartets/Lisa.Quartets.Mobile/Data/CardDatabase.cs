@@ -85,12 +85,24 @@ namespace Lisa.Quartets.Mobile
             return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 1 AND IsQuartet = 0");
         }
 
-        public int IsQuartet(int Category)
+        public bool IsQuartet(Card card)
         {
-            return Category;
+            List<Card> cards = _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 1 AND IsQuartet = 0 AND Category =" + card.Category);
+
+            return cards.Count == 4;
         }
 
-		public void CreateDefaultCards()			
+        public void SetQuartet(int category)
+        {
+            _database.Execute("UPDATE Card SET IsQuartet = 1 WHERE Category =" + category);
+        }
+
+        public List<Card> RetrieveQuartet(int category)
+        {
+            return _database.Query<Card>("SELECt * FROM Card WHERE Category =" + category);
+        }
+
+		public void CreateDefaultCards()
 		{
             int category = 1;
             int j = 0;

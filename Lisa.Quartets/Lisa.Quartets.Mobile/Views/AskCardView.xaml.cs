@@ -13,10 +13,14 @@ namespace Lisa.Quartets.Mobile
 		{
 			InitializeComponent();
 			_cards = _database.RetrieveCardsWhereInHandIs(0);
+            if(_cards.Count == 0)
+            {
+                Navigation.PopToRootAsync();
+            }
+
 			Shuffle(_cards);
 			InitializeFirstImage();
 			Timer();
-
 		}
 
 		public void InitializeFirstImage()
