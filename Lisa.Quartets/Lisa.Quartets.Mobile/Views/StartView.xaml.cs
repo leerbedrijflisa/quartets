@@ -13,22 +13,22 @@ namespace Lisa.Quartets.Mobile
 
         private void LockViewClicked(object sender, EventArgs e)
         {            
-            Navigation.PushAsync(new LockView());
+            Navigation.PushAsync(new IdleView());
         }
 
 		private void AskCard(object sender, EventArgs e)
         {            
-			Navigation.PushAsync(new AskCardView());
+			Navigation.PushAsync(new RequestView());
 		}
 
         private void SelectCardsClicked(object sender, EventArgs e)
 		{
-            Navigation.PushAsync(new CardEnlargeView());
+            Navigation.PushAsync(new HandEditorView());
 		}
 
         private void GiveCardClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new GiveCardView());
+            Navigation.PushAsync(new HandOverView());
         }
 
 //		private void QuartetViewClicked(object sender, EventArgs e)

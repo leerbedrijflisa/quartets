@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace Lisa.Quartets.Mobile
 {
-	public partial class YesNoView : ContentPage
+	public partial class ConfirmationView : ContentPage
 	{
-        public YesNoView(Card card)
+        public ConfirmationView(Card card)
 		{
 			InitializeComponent();
 			NavigationPage.SetHasNavigationBar(this, false);
@@ -28,14 +28,14 @@ namespace Lisa.Quartets.Mobile
             else
             {
                 Navigation.RemovePage(this);
-                await Navigation.PushAsync(new AskCardView());
+                await Navigation.PushAsync(new RequestView());
             }
 		}
 
 		public async void NoClicked(object sender, EventArgs args)
 		{
 			Navigation.RemovePage(this);
-			await Navigation.PushAsync(new LockView());
+			await Navigation.PushAsync(new IdleView());
         }
 
         public void SetSelectedCard()

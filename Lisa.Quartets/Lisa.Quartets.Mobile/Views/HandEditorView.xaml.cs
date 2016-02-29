@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace Lisa.Quartets.Mobile
 {
-	public partial class CardEnlargeView : ContentPage
+	public partial class HandEditorView : ContentPage
 	{
-        public CardEnlargeView()
+        public HandEditorView()
         {
             InitializeComponent();
             SetPreviousSelectedCards();

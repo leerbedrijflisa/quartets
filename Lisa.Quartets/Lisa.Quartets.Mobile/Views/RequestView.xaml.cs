@@ -6,10 +6,10 @@ using System.Threading;
 
 namespace Lisa.Quartets.Mobile
 {
-	public partial class AskCardView : ContentPage
+	public partial class RequestView : ContentPage
 	{
 		
-		public AskCardView()
+		public RequestView()
 		{
 			InitializeComponent();
 
@@ -82,7 +82,7 @@ namespace Lisa.Quartets.Mobile
         {
             await cardimage.ScaleTo(1.6);
 			await Task.Delay(4000);
-			await Navigation.PushAsync(new YesNoView(card), false);
+			await Navigation.PushAsync(new ConfirmationView(card), false);
             Navigation.RemovePage(this);
         }
 

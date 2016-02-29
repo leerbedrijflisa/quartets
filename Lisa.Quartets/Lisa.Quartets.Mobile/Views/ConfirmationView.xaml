@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Lisa.Quartets.Mobile.YesNoView" Padding="0, 20, 0, 0" xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets" >
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Lisa.Quartets.Mobile.ConfirmationView" 
+             xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets" >
+             Padding="0, 20, 0, 0" 
     <StackLayout x:Name="layout">
         <Label Text="Heb ik de kaart gekregen?" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Start" />
         

@@ -51,7 +51,7 @@ namespace Lisa.Quartets.Mobile
 		public async void AdvanceToNextPage()
 		{
 			Navigation.RemovePage(this);
-			await Navigation.PushAsync(new AskCardView());
+			await Navigation.PushAsync(new RequestView());
 		}
 
 		public async void SlingersAnimation()

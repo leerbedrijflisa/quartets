@@ -4,9 +4,9 @@ using Xamarin.Forms;
 
 namespace Lisa.Quartets.Mobile
 {
-	public partial class LockView : ContentPage
+	public partial class IdleView : ContentPage
 	{
-		public LockView()
+		public IdleView()
 		{
 			InitializeComponent();
 
@@ -20,7 +20,7 @@ namespace Lisa.Quartets.Mobile
 		public async void AskCardSliderUnlocked(object sender, EventArgs args)
 		{
 			Navigation.RemovePage(this);
-			await Navigation.PushAsync(new AskCardView());
+			await Navigation.PushAsync(new RequestView());
 		}
 
 		private void SetImages()

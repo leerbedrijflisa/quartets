@@ -6,9 +6,9 @@ using System.Linq;
 
 namespace Lisa.Quartets.Mobile
 {
-    public partial class GiveCardView : ContentPage
+    public partial class HandOverView : ContentPage
     {
-        public GiveCardView()
+        public HandOverView()
         {
             InitializeComponent();
             EnsureCardsExist();
