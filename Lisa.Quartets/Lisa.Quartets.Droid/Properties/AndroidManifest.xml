@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="lisa.quartets">
 	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21" />
-	<application android:largeHeap="true" ></application>
+	<application android:largeHeap="true" android:label="quartets"></application>
 </manifest>
