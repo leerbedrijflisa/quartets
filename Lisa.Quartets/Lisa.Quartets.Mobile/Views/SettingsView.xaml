@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Lisa.Quartets.Mobile.SettingsView">
+	<ContentPage.Content>
+	    <StackLayout
+	    VerticalOptions = "Start"
+		Spacing="30">
+		<Label Text = "Settings" FontSize="30" HorizontalOptions = "Center"></Label>
+		<Label Text = "Stel hier de weergave tijd in tussen het vragen van kaarten." FontSize="15" HorizontalOptions = "Center"></Label>
+		<Entry Keyboard ="Numeric"></Entry>
+		<Button Text = "Opslaan"></Button>	
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
