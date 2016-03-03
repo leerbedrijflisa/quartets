@@ -33,4 +33,3 @@ namespace Lisa.Quartets.Droid
 		}
 	}
 }
-
