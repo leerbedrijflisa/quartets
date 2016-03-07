@@ -14,7 +14,8 @@ namespace Lisa.Quartets.Mobile
 			InitializeComponent();
 
 			_cards = _database.RetrieveAskableCards();
-            if(_cards.Count == 0)
+
+            if (_cards.Count == 0)
             {
                 Navigation.PopToRootAsync();
             }            

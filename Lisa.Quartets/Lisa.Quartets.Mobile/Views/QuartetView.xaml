@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Lisa.Quartets.Mobile.QuartetView">
     <StackLayout x:Name="layout">
-        <AbsoluteLayout>
-		    <Image x:Name="slingers" Source="slingers.png" Rotation="0" Scale="3"/>
-		    <Image x:Name="slingers2" Source="slingers.png" Rotation="0" Scale="3" />
+        <AbsoluteLayout HorizontalOptions="Center">
+		    <Image x:Name="decoration" Source="slingers.png" Rotation="0" Scale="3" HorizontalOptions="Center"/>
+		    <Image x:Name="decoration2" Source="slingers.png" Rotation="0" Scale="3" HorizontalOptions="Center"/>
 	    </AbsoluteLayout>
     </StackLayout>
 </ContentPage>

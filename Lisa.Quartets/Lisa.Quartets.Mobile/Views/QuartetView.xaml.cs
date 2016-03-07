@@ -13,8 +13,8 @@ namespace Lisa.Quartets.Mobile
 			InitializeComponent();
 
             SetImages(category);
-			Animation();
-			PlaySound();
+            Animation();
+            PlaySound();           
 		}
 
         private void SetImages(int category)
@@ -50,26 +50,35 @@ namespace Lisa.Quartets.Mobile
 
 		public async void AdvanceToNextPage()
 		{
-			Navigation.RemovePage(this);
-			await Navigation.PushAsync(new RequestView());
+            List<Card> cards = _database.RetrieveAskableCards();
+            Navigation.RemovePage(this);
+            if (cards.Count == 0)
+            {
+                await Navigation.PushAsync(new EmptyHandView());
+
+            }
+            else
+            {
+                await Navigation.PushAsync(new RequestView());
+            }
+
 		}
 
 		public async void SlingersAnimation()
 		{
-
 			for (int i = 0; i <= 3; i++)
 			{
-				slingers.Rotation = 10;
-				slingers2.Rotation = -10;
+				decoration.Rotation = 10;
+				decoration2.Rotation = -10;
 				await Task.Delay(500);
-				slingers.Rotation = 0;
-				slingers2.Rotation = 0;
+				decoration.Rotation = 0;
+				decoration2.Rotation = 0;
 				await Task.Delay(500);
-				slingers.Rotation = -10;
-				slingers2.Rotation = 10;
+				decoration.Rotation = -10;
+				decoration2.Rotation = 10;
 				await Task.Delay(500);
-				slingers.Rotation = 0;
-				slingers2.Rotation = 0;
+				decoration.Rotation = 0;
+				decoration2.Rotation = 0;
 				if (i <3)
 				{
 					await Task.Delay(500);
@@ -85,7 +94,5 @@ namespace Lisa.Quartets.Mobile
 		}
 
         private CardDatabase _database = new CardDatabase();
-			
 	}
 }
-

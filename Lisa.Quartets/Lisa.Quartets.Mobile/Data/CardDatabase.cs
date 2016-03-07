@@ -57,7 +57,7 @@ namespace Lisa.Quartets.Mobile
 
         public void ResetCards()
         {
-            _database.Execute("UPDATE Card SET IsInHand = 0");
+            _database.Execute("UPDATE Card SET IsInHand = 0 AND IsInHand = 0");
         }
 
         public void UpdateSelectedCards(List<int> ids)
@@ -87,7 +87,7 @@ namespace Lisa.Quartets.Mobile
 
         public bool IsQuartet(Card card)
         {
-            List<Card> cards = _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 1 AND IsQuartet = 0 AND Category =" + card.Category);
+            List<Card> cards = _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 1 AND Category =" + card.Category);
 
             return cards.Count == 4;
         }
