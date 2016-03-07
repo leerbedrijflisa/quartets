@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets" 
+             x:Class="Lisa.Quartets.Mobile.EmptyHandView">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Geen kaarten meer" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" />
+
+            <local:UnlockSlider x:Name="YesSlider" Value="0" OnUnlock="SliderUnlocked"/>
+            <Label Text="Terug naar het hoofdmenu"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -28,8 +28,17 @@ namespace Lisa.Quartets.Mobile
         {
             _database.GiveCardAway(_selectedImage);
 
-			// REVIEW: Is it safe to call an async function in a method that isn't async itself?
-            Navigation.PopToRootAsync();
+            var cards = _database.RetrieveNonQuartetCardsInHand();
+
+            if (cards.Count < 1)
+            {                
+                Navigation.PushAsync(new EmptyHandView());
+            }
+            else
+            {
+                // REVIEW: Is it safe to call an async function in a method that isn't async itself?
+                Navigation.PopToRootAsync();
+            }
         }
 
         private void OnImageClick(object sender, EventArgs args)
@@ -74,7 +83,7 @@ namespace Lisa.Quartets.Mobile
 
         private void SetImages()
         {
-            var cards = _database.RetrieveCardsWhereInHandIs(1);
+            var cards = _database.RetrieveNonQuartetCardsInHand();
             if (cards.Count < 1)
             {                
                 DisplayErrorMessage("Je hebt geen kaarten in je hand om weg te geven");
