@@ -7,19 +7,25 @@ namespace Lisa.Quartets.Mobile
 {
 	public partial class HandEditorView : ContentPage
 	{
-        public HandEditorView()
+        public HandEditorView(Type newView)
         {
+            _newView = CreateNewView(newView);
             InitializeComponent();
             SetPreviousSelectedCards();
             SetImages();
+        }
+
+        private Page CreateNewView(Type newView)
+        {
+            return (Page)Activator.CreateInstance(newView);
         }
 
         private void SaveSelectedCards(object sender, EventArgs args)
         {
             _database.UpdateSelectedCards(_selectedImages);
 
-			// REVIEW: Is it safe to call an async function in a method that isn't async itself?
-            Navigation.PopToRootAsync();
+            Navigation.InsertPageBefore(_newView , this);
+            Navigation.PopAsync();
         }
 
         private void StatsButtonClicked(object sender, EventArgs args)
@@ -143,6 +149,6 @@ namespace Lisa.Quartets.Mobile
 		private CardDatabase _database = new CardDatabase();
         private List<int> _selectedImages = new List<int>();
 		private Dictionary<int, Image> _opacity = new Dictionary<int, Image>();
-//      private CardImageHolder _cardImageHolder;
+        private Page _newView;
 	}
 }

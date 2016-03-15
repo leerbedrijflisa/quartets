@@ -32,12 +32,13 @@ namespace Lisa.Quartets.Mobile
 
             if (cards.Count < 1)
             {                
-                Navigation.PushAsync(new EmptyHandView());
+                Navigation.InsertPageBefore(new EmptyHandView(), this);
+                Navigation.PopAsync();
             }
             else
             {
-                // REVIEW: Is it safe to call an async function in a method that isn't async itself?
-                Navigation.PopToRootAsync();
+                Navigation.InsertPageBefore(new IdleView(), this);
+                Navigation.PopAsync();
             }
         }
 

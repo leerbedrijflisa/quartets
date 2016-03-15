@@ -48,20 +48,19 @@ namespace Lisa.Quartets.Mobile
 			SlingersAnimation();
 		}
 
-		public async void AdvanceToNextPage()
+		public void AdvanceToNextPage()
 		{
             List<Card> cards = _database.RetrieveAskableCards();
-            Navigation.RemovePage(this);
             if (cards.Count == 0)
             {
-                await Navigation.PushAsync(new EmptyHandView());
-
+                Navigation.InsertPageBefore(new EmptyHandView(), this);
             }
             else
             {
-                await Navigation.PushAsync(new RequestView());
+                Navigation.InsertPageBefore(new RequestView(), this);
             }
 
+            Navigation.PopAsync();
 		}
 
 		public async void SlingersAnimation()

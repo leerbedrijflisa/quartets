@@ -44,8 +44,7 @@ namespace Lisa.Quartets.Mobile
                 PlaySound();
 
                 ContinueToNextView(_cards[_id]);
-            }
-           
+            }           
 		}
 
 		private void PlaySound() 
@@ -91,8 +90,8 @@ namespace Lisa.Quartets.Mobile
         {
             await cardimage.ScaleTo(1.6);
 			await Task.Delay(4000);
-			await Navigation.PushAsync(new ConfirmationView(card), false);
-            Navigation.RemovePage(this);
+            Navigation.InsertPageBefore(new ConfirmationView(card) , this);
+            await Navigation.PopAsync();
         }
 
         public IList<T> Shuffle<T>(IList<T> list) {

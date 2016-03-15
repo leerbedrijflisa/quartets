@@ -15,7 +15,8 @@ namespace Lisa.Quartets.Mobile
         public void SliderUnlocked(object sender, EventArgs args)
         {
             _database.ResetCards();   
-            Navigation.PopToRootAsync();
+            Navigation.InsertPageBefore(new HandEditorView(typeof(StartView)), this);
+            Navigation.PopAsync();
         }
 
         private CardDatabase _database = new CardDatabase();

@@ -11,31 +11,10 @@ namespace Lisa.Quartets.Mobile
 			InitializeComponent();
 		}
 
-        private void LockViewClicked(object sender, EventArgs e)
+        private void StartClicked(object sender, EventArgs e)
         {            
-            Navigation.PushAsync(new IdleView());
+            Navigation.InsertPageBefore(new IdleView(), this);
+            Navigation.PopAsync();
         }
-
-		private void AskCard(object sender, EventArgs e)
-        {            
-			Navigation.PushAsync(new RequestView());
-		}
-
-        private void SelectCardsClicked(object sender, EventArgs e)
-		{
-            Navigation.PushAsync(new HandEditorView());
-		}
-
-        private void GiveCardClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new HandOverView());
-        }
-
-//		private void QuartetViewClicked(object sender, EventArgs e)
-//		{            
-//			Navigation.PushAsync(new QuartetView());
-//		}
-
-        private CardImageHolder _cardImageHolder = new CardImageHolder();
 	}
 }

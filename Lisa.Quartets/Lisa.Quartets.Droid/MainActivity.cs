@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Lisa.Quartets.Mobile;
+using System.Threading.Tasks;
 
 namespace Lisa.Quartets.Droid
 {
@@ -20,10 +21,27 @@ namespace Lisa.Quartets.Droid
             LoadApplication(new App());
         }
 
-		//Disables the back button.
-		//public override void OnBackPressed() 
-		//{
-		//}
+		public async override void OnBackPressed() 
+		{
+            if (_toasting)
+            {
+                _toast.Cancel();
+                base.OnBackPressed();
+            }
+            else
+            {
+                _toasting = true;
+                _toast = Toast.MakeText(this, "klik nogeens op de terugknop om de app af te sluiten", ToastLength.Long);
+                _toast.Show();
+                
+                await Task.Delay(4000);
+                
+                _toasting = false;
+            }
+		}
+
+        private bool _toasting = false;
+        private Toast _toast;
     }
 }
 

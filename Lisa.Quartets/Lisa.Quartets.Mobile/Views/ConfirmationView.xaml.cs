@@ -15,27 +15,27 @@ namespace Lisa.Quartets.Mobile
             SetSelectedCard();
 		}
 
-		public async void YesClicked(object sender, EventArgs args)
+		public void YesClicked(object sender, EventArgs args)
 		{ 
             SaveCard();
 
             if (_database.IsQuartet(_selectedCard))
             {
                 _database.SetQuartet(_selectedCard.Category);
-                Navigation.RemovePage(this);
-                await Navigation.PushAsync(new QuartetView(_selectedCard.Category));
+                Navigation.InsertPageBefore(new QuartetView(_selectedCard.Category) , this);
+                Navigation.PopAsync();
             }
             else
             {
-                Navigation.RemovePage(this);
-                await Navigation.PushAsync(new RequestView());
+                Navigation.InsertPageBefore(new RequestView() , this);
+                Navigation.PopAsync();
             }
 		}
 
-		public async void NoClicked(object sender, EventArgs args)
+		public void NoClicked(object sender, EventArgs args)
 		{
-			Navigation.RemovePage(this);
-			await Navigation.PushAsync(new IdleView());
+            Navigation.InsertPageBefore(new IdleView() , this);
+            Navigation.PopAsync();
         }
 
         public void SetSelectedCard()

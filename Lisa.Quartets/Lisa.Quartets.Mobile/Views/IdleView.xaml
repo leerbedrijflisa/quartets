@@ -3,30 +3,16 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 x:Class="Lisa.Quartets.Mobile.IdleView" 
 			 xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets"
-			 xmlns:local2="clr-namespace:Lisa.Quartets.mobile;assembly=Lisa.Quartets.mobile"
-			 Padding="0, 20, 0, 0" >
+			 xmlns:local2="clr-namespace:Lisa.Quartets.mobile;assembly=Lisa.Quartets.mobile" >
 
-  <StackLayout x:Name="layout">
+    <StackLayout> 
+        <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" >Kaart vragen</Label>
+        <local:UnlockSlider OnUnlock="RequestCardUnlocked" Value="0" />
 
-  	<Grid>
-    	<Grid.RowDefinitions>
-        	<RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-              
-        <Grid.ColumnDefinitions>
-        	<ColumnDefinition Width="25*" />
-        	<ColumnDefinition Width="50*" />
-        	<ColumnDefinition Width="25*" />
-        </Grid.ColumnDefinitions>
+        <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" >Kaart weggeven</Label>
+        <local:UnlockSlider OnUnlock="HandOverCardUnlocked" Value="0" />
 
-        <Label Grid.Row="0" Grid.Column="0" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" >Kaart Kiezen</Label>
-        <local:UnlockSlider x:Name="AskCardSlider" OnUnlock="AskCardSliderUnlocked" Grid.Row="0" Grid.Column="1" Value="0" />
-
-    </Grid>
-
-
-  	<ScrollView x:Name="scrollView" />
-
-  </StackLayout>
-
+        <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" >Kaarten aanpassen</Label>
+        <local:UnlockSlider OnUnlock="EditHandUnlocked" Value="0" />
+    </StackLayout>
 </ContentPage>

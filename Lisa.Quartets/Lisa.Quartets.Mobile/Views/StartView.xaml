@@ -5,10 +5,7 @@
              xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets">
 	<ContentPage.Content>
 		<StackLayout VerticalOptions="Center">
-            <Button Text="lockview" Clicked="LockViewClicked" />              
-            <Button Text="Kaart Vragen" Clicked="AskCard" />			  
-            <Button Text="Selecteer kaarten" Clicked="SelectCardsClicked" />
-            <Button Text="Geef een kaart weg" Clicked="GiveCardClicked" />
+            <Button Text="START" Clicked="StartClicked" />
             <Label Text="Lisa.Quartets v6" FontSize="10" HorizontalOptions="End" VerticalOptions="End" />          
         </StackLayout>
 	</ContentPage.Content>
