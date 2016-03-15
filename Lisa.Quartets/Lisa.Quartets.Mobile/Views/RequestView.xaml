@@ -4,7 +4,7 @@
              x:Class="Lisa.Quartets.Mobile.RequestView">
 	<ContentPage.Content>
 		<StackLayout VerticalOptions = "Center">
-			 <Image x:Name="cardimage" />
+			 <Image HeightRequest="312" WidthRequest="397"  x:Name="cardimage" />
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
