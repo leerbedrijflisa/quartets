@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lisa.Quartets.Mobile.StatisticView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="reset" Clicked="ResetStatsClicked"/>
+        
+            <ListView x:Name="statisticList" RowHeight="-1" HasUnevenRows="true">
+            <ListView.ItemTemplate>
+                  <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Timestamp, StringFormat='Date/time: {0}'}" />
+                            <Label Text="{Binding TimeBeforeTap, StringFormat='Time before tap: {0}'}" />
+                            <Label Text="{Binding CardIndex, StringFormat='Card index: {0}'}" />
+                            <Label Text="{Binding DelaySetting, StringFormat='Delay setting: {0}'}" />
+                        </StackLayout>
+                    </ViewCell>
+                  </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -15,6 +15,7 @@ namespace Lisa.Quartets.Mobile
 		{
 			_database = DependencyService.Get<ISQLite>().GetConnection();
 			_database.CreateTable<Card>();
+            _database.CreateTable<RequestCardStats>();
 		}
 
 		public void DeleteCards()
@@ -99,12 +100,27 @@ namespace Lisa.Quartets.Mobile
 
         public List<Card> RetrieveQuartet(int category)
         {
-            return _database.Query<Card>("SELECt * FROM Card WHERE Category =" + category);
+            return _database.Query<Card>("SELECT * FROM Card WHERE Category =" + category);
         }
 
         public List<Card> RetrieveAskableCards()
         {              
             return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 0 AND Category in (SELECT Category FROM Card WHERE IsInHand = 1 GROUP By Category)");
+        }
+
+        public void SaveCardRequestStats(RequestCardStats stats)
+        {
+            _database.InsertWithChildren(stats);
+        }
+
+        public List<RequestCardStats> RetrieveStatistics()
+        {
+            return _database.GetAllWithChildren<RequestCardStats>();
+        }
+
+        public void DeleteStats()
+        {
+            _database.DeleteAll<RequestCardStats>();
         }
 
 		public void CreateDefaultCards()			

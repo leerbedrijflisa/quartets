@@ -7,8 +7,7 @@ using System.Threading;
 namespace Lisa.Quartets.Mobile
 {
 	public partial class RequestView : ContentPage
-	{
-		
+	{		
 		public RequestView()
 		{
 			InitializeComponent();
@@ -22,7 +21,8 @@ namespace Lisa.Quartets.Mobile
 
 			Shuffle(_cards);
 			InitializeFirstImage();
-			Timer();
+			Timer();   
+            _startTime = DateTime.UtcNow;
 		}
 
 		public void InitializeFirstImage()
@@ -35,29 +35,27 @@ namespace Lisa.Quartets.Mobile
 		}
 
 		private void OnCardClick(object sender, EventArgs args)
-		{			
-			_stop = true;
+		{		
+            if (!_stopped)
+            {
+                SaveRequestStats();
+                _stopped = true;
 
-			if (!_soundPlayed)
-			{
-				PlaySound();
-			}
-			_soundPlayed = true;
-            ContinueToNextView(_cards[_id]);
+                PlaySound();
+
+                ContinueToNextView(_cards[_id]);
+            }
+           
 		}
 
-		private async void PlaySound() 
+		private void PlaySound() 
 		{
-
-//			DependencyService.Get<IAudio>().PlayFile("vraag");
-//			await Task.Delay(2000);
 			DependencyService.Get<IAudio>().PlayFile(_cards[_id].SoundFile);
-
 		}
 
 		public void Timer(){
-			Device.StartTimer (new TimeSpan (0, 0, 0,3,0), () => {
-				if(_stop == true)
+            Device.StartTimer(new TimeSpan (0, 0, 0,3,0), () => {
+				if(_stopped == true)
 				{
 					return false;	
 				}
@@ -78,6 +76,16 @@ namespace Lisa.Quartets.Mobile
 			cardimage.Source = _cards[id].FileName;
 			await cardimage.FadeTo(1,500);
 		}
+
+        private void SaveRequestStats(){
+            RequestCardStats stats = new RequestCardStats();
+            stats.Timestamp = DateTime.UtcNow;
+            stats.TimeBeforeTap = (DateTime.UtcNow - _startTime).TotalMilliseconds;
+            stats.CardIndex = _id;
+            stats.DelaySetting = 300;
+
+            _database.SaveCardRequestStats(stats);
+        }
 
         private async void ContinueToNextView(Card card)
         {
@@ -101,9 +109,9 @@ namespace Lisa.Quartets.Mobile
         }
 
 		private CardDatabase _database = new CardDatabase();
-		private bool _stop;
-		private bool _soundPlayed = false;
-		private List<Card> _cards = new List<Card>();
-		private int _id = 0;
+        private List<Card> _cards = new List<Card>();
+        private DateTime _startTime;
+        private bool _stopped;
+        private int _id = 0;
 	}
 }

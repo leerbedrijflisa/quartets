@@ -22,6 +22,11 @@ namespace Lisa.Quartets.Mobile
             Navigation.PopToRootAsync();
         }
 
+        private void StatsButtonClicked(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new StatisticView());
+        }
+
 		private void OnImageClick(object sender, EventArgs args)
         {
             var image = (CardImage) sender;
