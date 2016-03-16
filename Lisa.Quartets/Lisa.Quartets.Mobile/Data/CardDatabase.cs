@@ -15,6 +15,7 @@ namespace Lisa.Quartets.Mobile
 		{
 			_database = DependencyService.Get<ISQLite>().GetConnection();
 			_database.CreateTable<Card>();
+			_database.CreateTable<Settings>();
 			_database.CreateTable<RequestCardStats>();
 		}
 
