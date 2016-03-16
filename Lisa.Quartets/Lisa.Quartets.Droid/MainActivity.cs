@@ -44,4 +44,3 @@ namespace Lisa.Quartets.Droid
         private Toast _toast;
     }
 }
-

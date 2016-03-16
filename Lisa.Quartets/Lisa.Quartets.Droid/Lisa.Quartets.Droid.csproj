@@ -200,14 +200,14 @@
   </Target>
   -->
   <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Resources\raw\" />
+    <Content Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Lisa.Quartets.Mobile\Lisa.Quartets.Mobile.csproj">
       <Project>{781C4586-1501-443A-B821-D483C3BE886B}</Project>
       <Name>Lisa.Quartets.Mobile</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="Resources\raw\" />
-    <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
 </Project>

@@ -66,6 +66,10 @@
     <Compile Include="Views\ConfirmationView.xaml.cs">
       <DependentUpon>ConfirmationView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings.cs" />
     <Compile Include="Views\EmptyHandView.xaml.cs">
       <DependentUpon>EmptyHandView.xaml</DependentUpon>
     </Compile>
@@ -136,6 +140,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ConfirmationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SettingsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\EmptyHandView.xaml">

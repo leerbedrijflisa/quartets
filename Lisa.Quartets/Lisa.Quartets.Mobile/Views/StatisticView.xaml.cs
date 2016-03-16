@@ -5,33 +5,33 @@ using Xamarin.Forms;
 
 namespace Lisa.Quartets.Mobile
 {
-    public partial class StatisticView : ContentPage
-    {
-        public StatisticView()
-        {
-            InitializeComponent();
+	public partial class StatisticView : ContentPage
+	{
+		public StatisticView()
+		{
+			InitializeComponent();
 
-            List<RequestCardStats> stats = _database.RetrieveStatistics();
+			List<RequestCardStats> stats = _database.RetrieveStatistics();
 
-            foreach (var item in stats)
-            {
-                item.Timestamp = item.Timestamp.ToLocalTime();
-            }
-            
-            statisticList.ItemsSource = stats;         
-        }
+			foreach (var item in stats)
+			{
+				item.Timestamp = item.Timestamp.ToLocalTime();
+			}
 
-        private async void ResetStatsClicked(object sender, EventArgs args)
-        {
-            var action = await DisplayAlert("Waarschuwing", "Weet u zeker dat u alle data wilt verwijderen?", "Ja", "Nee");
+			statisticList.ItemsSource = stats;         
+		}
 
-            if (action)
-            {
-                _database.DeleteStats();
-            }
-        }
+		private async void ResetStatsClicked(object sender, EventArgs args)
+		{
+			var action = await DisplayAlert("Waarschuwing", "Weet u zeker dat u alle data wilt verwijderen?", "Ja", "Nee");
 
-        private CardDatabase _database = new CardDatabase();
-    }
+			if (action)
+			{
+				_database.DeleteStats();
+			}
+		}
+
+		private CardDatabase _database = new CardDatabase();
+	}
 }
 
