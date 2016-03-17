@@ -2,10 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Lisa.Quartets.Mobile.QuartetView">
-    <StackLayout x:Name="layout">
+    <StackLayout Spacing="100" x:Name="layout">
         <AbsoluteLayout HorizontalOptions="Center">
-		    <Image x:Name="decoration" Source="slingers.png" Rotation="0" Scale="3" HorizontalOptions="Center"/>
-		    <Image x:Name="decoration2" Source="slingers.png" Rotation="0" Scale="3" HorizontalOptions="Center"/>
-	    </AbsoluteLayout>
+            <Image x:Name="decoration" Source="slingers.png" Rotation="0" Scale="3" HorizontalOptions="Center"/>
+            <Image x:Name="decoration2" Source="slingers.png" Rotation="0" Scale="3" HorizontalOptions="Center"/>
+        </AbsoluteLayout>
+        <StackLayout x:Name="quartetCards" Spacing="50" Orientation="Vertical">
+	        <StackLayout x:Name="cards12" Spacing="50" Orientation="Horizontal">
+	        	<Image x:Name="card1" Rotation="0" Scale="0" HorizontalOptions="CenterAndExpand"/>
+            	<Image x:Name="card2" Rotation="0" Scale="0" HorizontalOptions="CenterAndExpand"/>
+	        </StackLayout>
+	        <StackLayout x:Name="cards34" Spacing="50" Orientation="Horizontal">
+	        	<Image x:Name="card3" Rotation="0" Scale="0" HorizontalOptions="CenterAndExpand"/>
+            	<Image x:Name="card4" Rotation="0" Scale="0" HorizontalOptions="CenterAndExpand"/>
+	        </StackLayout>
+		</StackLayout>
     </StackLayout>
 </ContentPage>
