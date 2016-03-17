@@ -104,6 +104,17 @@ namespace Lisa.Quartets.Mobile
 			return _database.Query<Card>("SELECT * FROM Card WHERE Category =" + category);
 		}
 
+		public void SetDelay(string delay)
+		{
+			_database.Execute("UPDATE Settings SET delay = " + delay + " " + "WHERE id = 1");
+		}
+
+		public Settings GetDelay ()
+		{
+			var setting = _database.Query<Settings>("SELECT * FROM Settings WHERE id = 1");
+			var result = setting.FirstOrDefault();
+			return result;
+		}
 		public List<Card> RetrieveAskableCards()
 		{              
 			return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 0 AND Category in (SELECT Category FROM Card WHERE IsInHand = 1 GROUP By Category)");

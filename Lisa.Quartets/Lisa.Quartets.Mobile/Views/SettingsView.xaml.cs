@@ -10,5 +10,14 @@ namespace Lisa.Quartets.Mobile
 		{
 			InitializeComponent ();
 		}
+
+		private void SaveSettings(object sender, EventArgs e)
+		{            
+			string settingsDelay = delayInput.Text;
+			_database.SetDelay(settingsDelay);
+			Navigation.PushAsync (new StartView ());
+		}
+
+		private CardDatabase _database = new CardDatabase();
 	}
 }

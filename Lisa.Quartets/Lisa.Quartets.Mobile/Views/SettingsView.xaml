@@ -4,11 +4,11 @@
 	<ContentPage.Content>
 	    <StackLayout
 	    VerticalOptions = "Start"
-		Spacing="30">
+		Spacing="80">
 		<Label Text = "Settings" FontSize="30" HorizontalOptions = "Center"></Label>
 		<Label Text = "Stel hier de weergave tijd in tussen het vragen van kaarten." FontSize="15" HorizontalOptions = "Center"></Label>
-		<Entry Keyboard ="Numeric"></Entry>
-		<Button Text = "Opslaan"></Button>	
+		<Entry x:Name="delayInput" Keyboard ="Numeric"></Entry>
+		<Button Text = "Opslaan" Clicked="SaveSettings"></Button>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

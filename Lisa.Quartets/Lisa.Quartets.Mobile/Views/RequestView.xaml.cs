@@ -53,7 +53,8 @@ namespace Lisa.Quartets.Mobile
 		}
 
 		public void Timer(){
-            Device.StartTimer(new TimeSpan (0, 0, 0,3,0), () => {
+			var result = _database.GetDelay ();
+			Device.StartTimer(new TimeSpan (0, 0, 0,result.Delay,0), () => {
 				if(_stopped == true)
 				{
 					return false;	
