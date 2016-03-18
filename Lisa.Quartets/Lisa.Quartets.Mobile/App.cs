@@ -11,6 +11,7 @@ namespace Lisa.Quartets.Mobile
         public App()
         {
             EnsureCardsExist();
+			_database.InsertOrReplaceDelay();
             MainPage = new NavigationPage(new HandEditorView(typeof(StartView)));
         }
 

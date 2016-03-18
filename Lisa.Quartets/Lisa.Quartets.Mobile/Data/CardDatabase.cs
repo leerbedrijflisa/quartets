@@ -115,6 +115,10 @@ namespace Lisa.Quartets.Mobile
 			var result = setting.FirstOrDefault();
 			return result;
 		}
+		public void InsertOrReplaceDelay ()
+		{
+			_database.Execute ("INSERT OR REPLACE INTO Settings (Id, Delay) values (1, 3)");
+		}
 		public List<Card> RetrieveAskableCards()
 		{              
 			return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 0 AND Category in (SELECT Category FROM Card WHERE IsInHand = 1 GROUP By Category)");
