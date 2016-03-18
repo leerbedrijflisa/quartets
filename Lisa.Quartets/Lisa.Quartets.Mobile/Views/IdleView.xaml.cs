@@ -22,14 +22,12 @@ namespace Lisa.Quartets.Mobile
 
         public void HandOverCardUnlocked(object sender, EventArgs args)
         {
-            Navigation.InsertPageBefore(new HandOverView(), this);
-            Navigation.PopAsync();
+            Navigation.PushAsync(new HandOverView());
         }
 
         public void EditHandUnlocked(object sender, EventArgs args)
         {
-            Navigation.InsertPageBefore(new HandEditorView(typeof(IdleView)
-            ), this);
+            Navigation.InsertPageBefore(new HandEditorView(typeof(IdleView)), this);
             Navigation.PopAsync();
         }
 	}

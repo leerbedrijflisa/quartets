@@ -58,7 +58,7 @@ namespace Lisa.Quartets.Mobile
 
         public void ResetCards()
         {
-            _database.Execute("UPDATE Card SET IsInHand = 0 AND IsInHand = 0");
+            _database.Execute("UPDATE Card SET IsInHand = 0, IsQuartet = 0");
         }
 
         public void UpdateSelectedCards(List<int> ids)
@@ -76,9 +76,9 @@ namespace Lisa.Quartets.Mobile
             _database.Execute("UPDATE Card SET IsInHand = 0 WHERE Id = ?", id);
         }
 
-		public List<Card> RetrieveCardsWhereInHandIs(int inHand)
+        public List<Card> RetrieveCardsInHand()
         {
-			return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand =" + inHand);
+			return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 1");
         }
 
         public List<Card> RetrieveNonQuartetCardsInHand()
@@ -86,9 +86,9 @@ namespace Lisa.Quartets.Mobile
             return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 1 AND IsQuartet = 0");
         }
 
-        public bool IsQuartet(Card card)
+        public bool IsQuartet(int category)
         {
-            List<Card> cards = _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 1 AND Category =" + card.Category);
+            List<Card> cards = _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 1 AND Category =" + category);
 
             return cards.Count == 4;
         }
@@ -98,12 +98,24 @@ namespace Lisa.Quartets.Mobile
             _database.Execute("UPDATE Card SET IsQuartet = 1 WHERE Category =" + category);
         }
 
+        public List<int> RetrieveCategories()
+        {
+            List<int> categoryList = new List<int>();
+            var cards = _database.Query<Card>("SELECT * FROM Card GROUP BY Category");
+            foreach (Card card in cards)
+            {
+                categoryList.Add(card.Category);
+            }
+
+            return categoryList;
+        }
+
         public List<Card> RetrieveQuartet(int category)
         {
             return _database.Query<Card>("SELECT * FROM Card WHERE Category =" + category);
         }
 
-        public List<Card> RetrieveAskableCards()
+        public List<Card> RetrieveRequestableCards()
         {              
             return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 0 AND Category in (SELECT Category FROM Card WHERE IsInHand = 1 GROUP By Category)");
         }

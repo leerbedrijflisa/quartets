@@ -50,7 +50,7 @@ namespace Lisa.Quartets.Mobile
 
 		public void AdvanceToNextPage()
 		{
-            List<Card> cards = _database.RetrieveAskableCards();
+            List<Card> cards = _database.RetrieveRequestableCards();
             if (cards.Count == 0)
             {
                 Navigation.InsertPageBefore(new EmptyHandView(), this);

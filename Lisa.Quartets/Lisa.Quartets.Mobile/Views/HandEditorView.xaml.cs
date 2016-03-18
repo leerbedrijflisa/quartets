@@ -20,17 +20,42 @@ namespace Lisa.Quartets.Mobile
             return (Page)Activator.CreateInstance(newView);
         }
 
+        private void ContinueToNextView()
+        {
+            Navigation.InsertPageBefore(_newView , this);
+            Navigation.PopAsync();
+        }      
+
         private void SaveSelectedCards(object sender, EventArgs args)
         {
             _database.UpdateSelectedCards(_selectedImages);
+            FindQuartets();
 
-            Navigation.InsertPageBefore(_newView , this);
-            Navigation.PopAsync();
+            if (_database.RetrieveRequestableCards().Count == 0)
+            {
+                _newView = CreateNewView(typeof(EmptyHandView));
+                ContinueToNextView();
+            }
+            else
+            {
+                ContinueToNextView();
+            }
         }
 
         private void StatsButtonClicked(object sender, EventArgs args)
         {
             Navigation.PushAsync(new StatisticView());
+        }
+
+        private void FindQuartets()
+        {
+            foreach (int category in _database.RetrieveCategories())
+            {
+                if (_database.IsQuartet(category))
+                {
+                    _database.SetQuartet(category);
+                }
+            }
         }
 
 		private void OnImageClick(object sender, EventArgs args)
@@ -65,7 +90,14 @@ namespace Lisa.Quartets.Mobile
 
 			}
 
-            saveButton.IsEnabled = true;
+            if (_selectedImages.Count > 0)
+            {
+                saveButton.IsEnabled = true;
+            }
+            else
+            {
+                saveButton.IsEnabled = false;
+            }
 		}
 
         private void SetImages()
@@ -85,7 +117,6 @@ namespace Lisa.Quartets.Mobile
 
                 image.Scale = 0.8;
                 image.GestureRecognizers.Add(tapGestureRecognizer);
-                //Image shadow = new Image { Source = shawdowSource, Scale = 0.8 };
 
                 if (IsIos()) {
 					if (IsSelected(image)) {
@@ -140,15 +171,15 @@ namespace Lisa.Quartets.Mobile
 
         private void SetPreviousSelectedCards()
         {
-            foreach (Card card in _database.RetrieveCardsWhereInHandIs(1))
+            foreach (Card card in _database.RetrieveCardsInHand())
             {
                 _selectedImages.Add(card.Id);
             }
         }
 
-		private CardDatabase _database = new CardDatabase();
+        private Dictionary<int, Image> _opacity = new Dictionary<int, Image>();
+        private CardDatabase _database = new CardDatabase();
         private List<int> _selectedImages = new List<int>();
-		private Dictionary<int, Image> _opacity = new Dictionary<int, Image>();
         private Page _newView;
 	}
 }

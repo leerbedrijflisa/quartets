@@ -19,7 +19,7 @@ namespace Lisa.Quartets.Mobile
 		{ 
             SaveCard();
 
-            if (_database.IsQuartet(_selectedCard))
+            if (_database.IsQuartet(_selectedCard.Category))
             {
                 _database.SetQuartet(_selectedCard.Category);
                 Navigation.InsertPageBefore(new QuartetView(_selectedCard.Category) , this);

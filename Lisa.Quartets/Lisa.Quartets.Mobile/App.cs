@@ -25,6 +25,11 @@ namespace Lisa.Quartets.Mobile
             _database.ResetCards();
         }
 
+        protected override void OnSleep()
+        {
+            return;
+        }
+
         CardDatabase _database = new CardDatabase();
     }
 }

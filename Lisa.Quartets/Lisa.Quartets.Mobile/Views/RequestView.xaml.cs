@@ -12,7 +12,7 @@ namespace Lisa.Quartets.Mobile
 		{
 			InitializeComponent();
 
-			_cards = _database.RetrieveAskableCards();
+			_cards = _database.RetrieveRequestableCards();
 
             if (_cards.Count == 0)
             {
@@ -27,10 +27,6 @@ namespace Lisa.Quartets.Mobile
 
 		public void InitializeFirstImage()
 		{
-			var tapGestureRecognizer = new TapGestureRecognizer();
-			cardimage.GestureRecognizers.Add(tapGestureRecognizer);
-			tapGestureRecognizer.Tapped += OnCardClick;
-
 			cardimage.Source = _cards[0].FileName;
 		}
 
