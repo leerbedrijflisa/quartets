@@ -10,6 +10,7 @@ namespace Lisa.Quartets.Mobile
         public EmptyHandView()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         public void SliderUnlocked(object sender, EventArgs args)

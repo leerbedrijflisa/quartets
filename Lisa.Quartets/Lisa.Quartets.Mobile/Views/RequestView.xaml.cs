@@ -11,14 +11,9 @@ namespace Lisa.Quartets.Mobile
 		public RequestView()
 		{
 			InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
 
 			_cards = _database.RetrieveRequestableCards();
-
-            if (_cards.Count == 0)
-            {
-                Navigation.PopToRootAsync();
-            }            
-
 			Shuffle(_cards);
 			InitializeFirstImage();
 			Timer();   

@@ -11,7 +11,7 @@ namespace Lisa.Quartets.Mobile
         public QuartetView (int category)
 		{
 			InitializeComponent();
-
+            NavigationPage.SetHasNavigationBar(this, false);
             SetImages(category);
             Animation();
             PlaySound();           

@@ -15,7 +15,7 @@ using Android.App;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
-[assembly: Application(Icon = "@drawable/Icon", Theme = "@android:style/Theme.Holo.Light")]
+//[assembly: Application(Icon = "@drawable/Icon", Theme = "@android:style/Theme.Holo.Light")]
 
 // Version information for an assembly consists of the following four values:
 //

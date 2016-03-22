@@ -15,27 +15,41 @@ namespace Lisa.Quartets.Mobile
             SetSelectedCard();
 		}
 
+        protected override void OnAppearing()
+        {
+            _sliderUnlocked = false;
+            base.OnAppearing();
+        }
+
 		public void YesClicked(object sender, EventArgs args)
 		{ 
-            SaveCard();
+            if (!_sliderUnlocked)
+            {
+                _sliderUnlocked = true;
+                SaveCard();
 
-            if (_database.IsQuartet(_selectedCard.Category))
-            {
-                _database.SetQuartet(_selectedCard.Category);
-                Navigation.InsertPageBefore(new QuartetView(_selectedCard.Category) , this);
-                Navigation.PopAsync();
-            }
-            else
-            {
-                Navigation.InsertPageBefore(new RequestView() , this);
-                Navigation.PopAsync();
+                if (_database.IsQuartet(_selectedCard.Category))
+                {
+                    _database.SetQuartet(_selectedCard.Category);
+                    Navigation.InsertPageBefore(new QuartetView(_selectedCard.Category), this);
+                    Navigation.PopAsync();
+                }
+                else
+                {
+                    Navigation.InsertPageBefore(new RequestView(), this);
+                    Navigation.PopAsync();
+                }
             }
 		}
 
 		public void NoClicked(object sender, EventArgs args)
 		{
-            Navigation.InsertPageBefore(new IdleView() , this);
-            Navigation.PopAsync();
+            if (!_sliderUnlocked)
+            {
+                _sliderUnlocked = true;
+                Navigation.InsertPageBefore(new IdleView(), this);
+                Navigation.PopAsync();
+            }
         }
 
         public void SetSelectedCard()
@@ -70,7 +84,7 @@ namespace Lisa.Quartets.Mobile
         }
 
         private bool _soundPlaying = false;
-
+        private bool _sliderUnlocked = false;
         private Card _selectedCard;
         private CardDatabase _database = new CardDatabase();
 	}

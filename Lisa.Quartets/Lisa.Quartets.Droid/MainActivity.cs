@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Lisa.Quartets.Droid
 {
-    [Activity(Label = "Lisa.Quartets", Icon = "@drawable/icon96", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Lisa.Quartets", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -20,14 +20,14 @@ namespace Lisa.Quartets.Droid
             this.Window.SetFlags(WindowManagerFlags.KeepScreenOn, WindowManagerFlags.KeepScreenOn);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
-        }
+        }       
 
 		public async override void OnBackPressed() 
 		{
             if (_toasting)
             {
                 _toast.Cancel();
-                base.OnBackPressed();
+                this.Finish();
             }
             else
             {

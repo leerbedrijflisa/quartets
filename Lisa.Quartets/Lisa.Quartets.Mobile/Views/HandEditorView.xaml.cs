@@ -9,6 +9,10 @@ namespace Lisa.Quartets.Mobile
 	{
         public HandEditorView(Type newView)
         {
+            if (newView != typeof(IdleView))
+            {
+                NavigationPage.SetHasNavigationBar(this, false);
+            }
             _newView = CreateNewView(newView);
             InitializeComponent();
             SetPreviousSelectedCards();

@@ -46,7 +46,7 @@ namespace Lisa.Quartets.iOS
 		private void StoppedDragging(object sender, System.EventArgs e)
 		{
 			var slider = (UnlockSlider)Element;
-			if (Control.Value >= 900)
+			if (Control.Value >= 800)
 			{
 				slider.OnStopDragging();
 				Control.Value = 0;
@@ -61,7 +61,7 @@ namespace Lisa.Quartets.iOS
 		{
             if (DidUserDragSlider())
 			{
-				if (Control.Value >= 900)
+				if (Control.Value >= 800)
 				{
                     Unlock();
 				}
@@ -89,7 +89,7 @@ namespace Lisa.Quartets.iOS
 
         private bool DidUserDragSlider()
         {
-			return Control.Value - _lastProgress < 900;
+			return Control.Value - _lastProgress < 800;
         }
 
 		private float _lastProgress;

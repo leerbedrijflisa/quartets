@@ -5,9 +5,9 @@
 			 xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets"
 			 xmlns:local2="clr-namespace:Lisa.Quartets.mobile;assembly=Lisa.Quartets.mobile" >
 
-    <StackLayout> 
+    <StackLayout VerticalOptions="Center" WidthRequest="80"> 
         <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" >Kaart vragen</Label>
-        <local:UnlockSlider OnUnlock="RequestCardUnlocked" Value="0" />
+        <local:UnlockSlider OnUnlock="RequestCardUnlocked" Value="0"/>
 
         <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" >Kaart weggeven</Label>
         <local:UnlockSlider OnUnlock="HandOverCardUnlocked" Value="0" />

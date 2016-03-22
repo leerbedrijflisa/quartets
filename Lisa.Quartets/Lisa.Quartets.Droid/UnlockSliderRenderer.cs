@@ -50,7 +50,7 @@ namespace Lisa.Quartets.Droid
         private void StoppedDragging(object sender, SeekBar.StopTrackingTouchEventArgs e)
         {
             var slider = (UnlockSlider) Element;
-            if (Control.Progress >= 900)
+            if (Control.Progress >= 800)
             {
                 slider.OnStopDragging();
             }
@@ -62,7 +62,7 @@ namespace Lisa.Quartets.Droid
         {
             if (DidUserDragSlider())
             {
-                if (Control.Progress >= 900)
+                if (Control.Progress >= 800)
                 {
                     Unlock();
                 }
@@ -90,7 +90,7 @@ namespace Lisa.Quartets.Droid
 
         private bool DidUserDragSlider()
         {
-            return (int) Control.Progress - _lastProgress < 900;
+            return (int) Control.Progress - _lastProgress < 800;
         }
 
         private int _lastProgress;

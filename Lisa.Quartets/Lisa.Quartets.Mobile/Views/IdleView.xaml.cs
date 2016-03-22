@@ -9,26 +9,43 @@ namespace Lisa.Quartets.Mobile
 		public IdleView()
 		{
 			InitializeComponent();
-
-			// REVIEW: Should we hide the navigation bar in other views as well?
 			NavigationPage.SetHasNavigationBar(this, false);
 		}
 
+        protected override void OnAppearing()
+        {
+            _sliderUnlocked = false;
+            base.OnAppearing();
+        }
+
         public void RequestCardUnlocked(object sender, EventArgs args)
 		{
-            Navigation.InsertPageBefore(new RequestView(), this);
-            Navigation.PopAsync();
+            if (!_sliderUnlocked)
+            {
+                _sliderUnlocked = true;
+                Navigation.InsertPageBefore(new RequestView(), this);
+                Navigation.PopAsync();
+            }           
 		}
 
         public void HandOverCardUnlocked(object sender, EventArgs args)
         {
-            Navigation.PushAsync(new HandOverView());
+            if (!_sliderUnlocked)
+            {
+                _sliderUnlocked = true;
+                Navigation.PushAsync(new HandOverView());
+            }
         }
 
         public void EditHandUnlocked(object sender, EventArgs args)
         {
-            Navigation.InsertPageBefore(new HandEditorView(typeof(IdleView)), this);
-            Navigation.PopAsync();
+            if (!_sliderUnlocked)
+            {
+                _sliderUnlocked = true;
+                Navigation.PushAsync(new HandEditorView(typeof(IdleView)));
+            }
         }
+
+        private bool _sliderUnlocked = false;
 	}
 }
