@@ -7,8 +7,10 @@
 		Spacing="80">
 		<Label Text = "Settings" FontSize="30" HorizontalOptions = "Center"></Label>
 		<Label Text = "Stel hier de weergave tijd in tussen het vragen van kaarten." FontSize="15" HorizontalOptions = "Center"></Label>
-		<Entry x:Name="delayInput" Keyboard ="Numeric"></Entry>
-		<Button Text = "Opslaan" Clicked="SaveSettings"></Button>
+		<StackLayout x:Name="DelayPickerPlace"
+		Spacing="50">
+		</StackLayout>
+		<Button Text = "Opslaan" HorizontalOptions="CenterAndExpand" Clicked="SaveSettings"></Button>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

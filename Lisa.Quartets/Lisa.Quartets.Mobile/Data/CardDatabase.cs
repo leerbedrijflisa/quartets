@@ -106,7 +106,7 @@ namespace Lisa.Quartets.Mobile
 
 		public void SetDelay(string delay)
 		{
-			_database.Execute("UPDATE Settings SET delay = " + delay + " " + "WHERE id = 1");
+			_database.Execute("UPDATE Settings SET delay = " + delay + " WHERE id = 1");
 		}
 
 		public Settings GetDelay ()
@@ -117,7 +117,7 @@ namespace Lisa.Quartets.Mobile
 		}
 		public void InsertOrReplaceDelay ()
 		{
-			_database.Execute ("INSERT OR REPLACE INTO Settings (Id, Delay) values (1, 3)");
+			_database.Execute ("INSERT OR REPLACE INTO Settings (Id, Delay) values (1, 4)");
 		}
 		public List<Card> RetrieveAskableCards()
 		{              
