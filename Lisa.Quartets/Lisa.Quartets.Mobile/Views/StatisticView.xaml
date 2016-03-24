@@ -6,7 +6,7 @@
         <StackLayout>
             <Button Text="reset" Clicked="ResetStatsClicked"/>
         
-            <ListView x:Name="statisticList" RowHeight="-1" HasUnevenRows="true">
+            <ListView x:Name="statisticList" RowHeight="100" HasUnevenRows="true">
             <ListView.ItemTemplate>
                   <DataTemplate>
                     <ViewCell>
