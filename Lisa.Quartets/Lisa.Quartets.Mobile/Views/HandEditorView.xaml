@@ -13,10 +13,12 @@
 
              <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
              </Grid.RowDefinitions>
 
                 <Button Grid.Row="0" Grid.Column="1" x:Name="saveButton" Text="Opslaan"  Clicked="SaveSelectedCards" IsEnabled="false" />
                 <Button Grid.Row="0" Grid.Column="2" Text="stats" Clicked="StatsButtonClicked" BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent"/>
+                <Button Grid.Row="1" Grid.Column="1" x:Name="scanButton" Text="Scannen"  Clicked="ScanButtonClicked"/>
             </Grid>
             <ScrollView x:Name="scrollView"/>
         </StackLayout>

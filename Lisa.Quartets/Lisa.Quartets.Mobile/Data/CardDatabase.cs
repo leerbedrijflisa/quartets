@@ -120,6 +120,24 @@ namespace Lisa.Quartets.Mobile
             return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 0 AND Category in (SELECT Category FROM Card WHERE IsInHand = 1 GROUP By Category)");
         }
 
+        public Card RetrieveFromBarcode(string code)
+        {
+            int deck = int.Parse(code.Substring(0, 2));
+            int category =  int.Parse(code.Substring(2, 2));
+            int card =  int.Parse(code.Substring(4, 2));    
+
+            List<Card> cards = _database.Query<Card>("SELECT * from Card Where Category = ? AND Name = ?", category, "card" + card);
+
+            if (cards.Count == 1)
+            {
+                return cards.First<Card>();
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public void SaveCardRequestStats(RequestCardStats stats)
         {
             _database.InsertWithChildren(stats);
@@ -149,6 +167,7 @@ namespace Lisa.Quartets.Mobile
                 card.SoundFile = string.Format("sound{0}", i);
 				card.IsInHand = 0;
                 card.IsQuartet = 0;
+
 
 				CreateCard(card);
 

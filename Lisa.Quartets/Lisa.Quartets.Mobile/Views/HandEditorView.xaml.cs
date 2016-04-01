@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
+using ZXing.Net.Mobile.Forms;
+using ZXing.Mobile;
 
 namespace Lisa.Quartets.Mobile
 {
@@ -49,6 +51,30 @@ namespace Lisa.Quartets.Mobile
         private void StatsButtonClicked(object sender, EventArgs args)
         {
             Navigation.PushAsync(new StatisticView());
+        }
+
+        private async void ScanButtonClicked(object sender, EventArgs args)
+        {
+            MobileBarcodeScanningOptions options = new MobileBarcodeScanningOptions{ UseFrontCameraIfAvailable = false };
+            StackLayout overlay = new StackLayout();
+
+            ZXingScannerPage scanPage = new ZXingScannerPage(options, overlay);
+
+            scanPage.OnScanResult += (result) => {
+                scanPage.IsScanning = false;
+
+                Device.BeginInvokeOnMainThread (() => {
+                    Navigation.PopAsync ();
+                    Card card = _database.RetrieveFromBarcode(result.Text);
+
+                    if (card != null)
+                    {
+                        System.Diagnostics.Debug.WriteLine(card.Name);
+                    }
+                });
+            };
+
+            await Navigation.PushAsync (scanPage);
         }
 
         private void FindQuartets()
