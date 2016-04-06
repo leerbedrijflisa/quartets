@@ -7,5 +7,6 @@ namespace Lisa.Quartets.Mobile
 		[PrimaryKey, AutoIncrement]
 		public int Id { get; set; }
 		public int Delay { get; set; }
+		public int Instruction { get; set; }
 	}
 }

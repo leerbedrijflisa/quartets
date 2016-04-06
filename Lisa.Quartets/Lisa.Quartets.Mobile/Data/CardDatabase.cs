@@ -119,6 +119,22 @@ namespace Lisa.Quartets.Mobile
 		{
 			_database.Execute ("INSERT OR REPLACE INTO Settings (Id, Delay) values (1, 4)");
 		}
+
+		public void SetInstructions (int Instruction)
+		{
+			_database.Execute ("UPDATE Settings SET Instruction = " + Instruction + " WHERE id = 1");
+		}
+
+		public Settings GetInstructions	()
+		{
+			var instruction = _database.Query<Settings> ("SELECT Instruction FROM Settings WHERE id = 1");
+			var instructionResult = instruction.FirstOrDefault ();
+			return instructionResult;
+		}
+
+		//public void InsertOrReplaceInstructions	()
+	
+
 		public List<Card> RetrieveAskableCards()
 		{              
 			return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 0 AND Category in (SELECT Category FROM Card WHERE IsInHand = 1 GROUP By Category)");
