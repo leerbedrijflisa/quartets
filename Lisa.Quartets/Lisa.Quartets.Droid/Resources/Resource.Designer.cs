@@ -4938,52 +4938,52 @@ namespace Lisa.Quartets.Droid
 			public const int icon = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int kaart1 = 2130837630;
+			public const int mr_ic_cast_dark = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int kwartet = 2130837631;
+			public const int mr_ic_cast_light = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int mr_ic_cast_dark = 2130837632;
+			public const int mr_ic_media_route_connecting_mono_dark = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int mr_ic_cast_light = 2130837633;
+			public const int mr_ic_media_route_connecting_mono_light = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int mr_ic_media_route_connecting_mono_dark = 2130837634;
+			public const int mr_ic_media_route_mono_dark = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int mr_ic_media_route_connecting_mono_light = 2130837635;
+			public const int mr_ic_media_route_mono_light = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int mr_ic_media_route_mono_dark = 2130837636;
+			public const int mr_ic_pause_dark = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int mr_ic_media_route_mono_light = 2130837637;
+			public const int mr_ic_pause_light = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int mr_ic_pause_dark = 2130837638;
+			public const int mr_ic_play_dark = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int mr_ic_pause_light = 2130837639;
+			public const int mr_ic_play_light = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int mr_ic_play_dark = 2130837640;
+			public const int mr_ic_settings_dark = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int mr_ic_play_light = 2130837641;
-			
-			// aapt resource value: 0x7f02008a
-			public const int mr_ic_settings_dark = 2130837642;
-			
-			// aapt resource value: 0x7f02008b
-			public const int mr_ic_settings_light = 2130837643;
+			public const int mr_ic_settings_light = 2130837641;
 			
 			// aapt resource value: 0x7f020090
 			public const int notification_template_icon_bg = 2130837648;
 			
+			// aapt resource value: 0x7f02008a
+			public const int opacity = 2130837642;
+			
+			// aapt resource value: 0x7f02008b
+			public const int rood = 2130837643;
+			
 			// aapt resource value: 0x7f02008c
-			public const int opacity = 2130837644;
+			public const int rood2 = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
 			public const int shadow = 2130837645;

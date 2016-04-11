@@ -19,6 +19,28 @@ namespace Lisa.Quartets.Mobile
             InitializeComponent();
             SetPreviousSelectedCards();
             SetImages();
+            DisplayView();
+        }
+
+        private void DisplayView()
+        {
+            MobileBarcodeScanningOptions options = new MobileBarcodeScanningOptions{ UseFrontCameraIfAvailable = false };
+
+            ZXingScannerPage scanPage = new ZXingScannerPage(options, layout);
+            scanPage.OnScanResult += (result) => {
+
+                Device.BeginInvokeOnMainThread (() => {
+                    scanPage.IsScanning = false;
+                    Card card = _database.RetrieveFromBarcode(result.Text);
+
+                    if (card != null)
+                    {
+                        DisplayAlert("resultaat", card.Name,"oké");
+                    }
+                });
+            };
+
+            Navigation.PushAsync(scanPage);
         }
 
         private Page CreateNewView(Type newView)
@@ -55,26 +77,7 @@ namespace Lisa.Quartets.Mobile
 
         private async void ScanButtonClicked(object sender, EventArgs args)
         {
-            MobileBarcodeScanningOptions options = new MobileBarcodeScanningOptions{ UseFrontCameraIfAvailable = false };
-            StackLayout overlay = new StackLayout();
-
-            ZXingScannerPage scanPage = new ZXingScannerPage(options, overlay);
-
-            scanPage.OnScanResult += (result) => {
-                scanPage.IsScanning = false;
-
-                Device.BeginInvokeOnMainThread (() => {
-                    Navigation.PopAsync ();
-                    Card card = _database.RetrieveFromBarcode(result.Text);
-
-                    if (card != null)
-                    {
-                        System.Diagnostics.Debug.WriteLine(card.Name);
-                    }
-                });
-            };
-
-            await Navigation.PushAsync (scanPage);
+           
         }
 
         private void FindQuartets()
