@@ -43,6 +43,7 @@
     <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;IOS</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CircularSliderRenderer.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />

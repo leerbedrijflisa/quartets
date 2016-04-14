@@ -7,9 +7,9 @@ namespace Lisa.Quartets.Droid
 	{
         public CircularSliderRenderer CircularSliderRenderer { get; set;}
 
-        public CircularSliderTouchEventArg(CircularSliderRenderer CircularSliderRenderer)
+        public CircularSliderTouchEventArg(CircularSliderRenderer circularSliderRenderer)
         {
-            CircularSliderRenderer = CircularSliderRenderer;
+            CircularSliderRenderer = circularSliderRenderer;
         }
 
 	}
