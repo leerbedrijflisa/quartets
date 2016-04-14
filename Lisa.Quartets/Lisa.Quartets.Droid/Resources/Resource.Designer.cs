@@ -26,6 +26,111 @@ namespace Lisa.Quartets.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circleColor = global::Lisa.Quartets.Droid.Resource.Attribute.circleColor;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circularProgressBarStyle = global::Lisa.Quartets.Droid.Resource.Attribute.circularProgressBarStyle;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_gravity = global::Lisa.Quartets.Droid.Resource.Attribute.circular_gravity;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_indeterminate = global::Lisa.Quartets.Droid.Resource.Attribute.circular_indeterminate;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_indeterminate_interval = global::Lisa.Quartets.Droid.Resource.Attribute.circular_indeterminate_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_marker_progress = global::Lisa.Quartets.Droid.Resource.Attribute.circular_marker_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress = global::Lisa.Quartets.Droid.Resource.Attribute.circular_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress_background_color = global::Lisa.Quartets.Droid.Resource.Attribute.circular_progress_background_color;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress_color = global::Lisa.Quartets.Droid.Resource.Attribute.circular_progress_color;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_stroke_width = global::Lisa.Quartets.Droid.Resource.Attribute.circular_stroke_width;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.indeterminate = global::Lisa.Quartets.Droid.Resource.Attribute.indeterminate;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.indeterminate_interval = global::Lisa.Quartets.Droid.Resource.Attribute.indeterminate_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.innerSize = global::Lisa.Quartets.Droid.Resource.Attribute.innerSize;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.max = global::Lisa.Quartets.Droid.Resource.Attribute.max;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.pinned = global::Lisa.Quartets.Droid.Resource.Attribute.pinned;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.pinnedDrawable = global::Lisa.Quartets.Droid.Resource.Attribute.pinnedDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.progress = global::Lisa.Quartets.Droid.Resource.Attribute.progress;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.progressButtonStyle = global::Lisa.Quartets.Droid.Resource.Attribute.progressButtonStyle;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.progressColor = global::Lisa.Quartets.Droid.Resource.Attribute.progressColor;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.shadowDrawable = global::Lisa.Quartets.Droid.Resource.Attribute.shadowDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.unpinnedDrawable = global::Lisa.Quartets.Droid.Resource.Attribute.unpinnedDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Color.progress_default_circle_color = global::Lisa.Quartets.Droid.Resource.Color.progress_default_circle_color;
+			global::com.refractored.monodroidtoolkit.Resource.Color.progress_default_progress_color = global::Lisa.Quartets.Droid.Resource.Color.progress_default_progress_color;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_background_dark = global::Lisa.Quartets.Droid.Resource.Color.refractored_background_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_background_holo_dark = global::Lisa.Quartets.Droid.Resource.Color.refractored_background_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_background_holo_light = global::Lisa.Quartets.Droid.Resource.Color.refractored_background_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_background_light = global::Lisa.Quartets.Droid.Resource.Color.refractored_background_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_dark = global::Lisa.Quartets.Droid.Resource.Color.refractored_bright_foreground_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_dark_disabled = global::Lisa.Quartets.Droid.Resource.Color.refractored_bright_foreground_dark_disabled;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_disabled_holo_dark = global::Lisa.Quartets.Droid.Resource.Color.refractored_bright_foreground_disabled_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_disabled_holo_light = global::Lisa.Quartets.Droid.Resource.Color.refractored_bright_foreground_disabled_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_holo_dark = global::Lisa.Quartets.Droid.Resource.Color.refractored_bright_foreground_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_holo_light = global::Lisa.Quartets.Droid.Resource.Color.refractored_bright_foreground_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_light = global::Lisa.Quartets.Droid.Resource.Color.refractored_bright_foreground_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_disabled_holo_dark = global::Lisa.Quartets.Droid.Resource.Color.refractored_dim_foreground_disabled_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_disabled_holo_light = global::Lisa.Quartets.Droid.Resource.Color.refractored_dim_foreground_disabled_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_holo_dark = global::Lisa.Quartets.Droid.Resource.Color.refractored_dim_foreground_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_holo_light = global::Lisa.Quartets.Droid.Resource.Color.refractored_dim_foreground_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_highlighted_text_holo_dark = global::Lisa.Quartets.Droid.Resource.Color.refractored_highlighted_text_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_highlighted_text_holo_light = global::Lisa.Quartets.Droid.Resource.Color.refractored_highlighted_text_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_hint_foreground_holo_dark = global::Lisa.Quartets.Droid.Resource.Color.refractored_hint_foreground_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_hint_foreground_holo_light = global::Lisa.Quartets.Droid.Resource.Color.refractored_hint_foreground_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_bright = global::Lisa.Quartets.Droid.Resource.Color.refractored_holo_blue_bright;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_dark = global::Lisa.Quartets.Droid.Resource.Color.refractored_holo_blue_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_light = global::Lisa.Quartets.Droid.Resource.Color.refractored_holo_blue_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_green_dark = global::Lisa.Quartets.Droid.Resource.Color.refractored_holo_green_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_green_light = global::Lisa.Quartets.Droid.Resource.Color.refractored_holo_green_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_orange_dark = global::Lisa.Quartets.Droid.Resource.Color.refractored_holo_orange_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_orange_light = global::Lisa.Quartets.Droid.Resource.Color.refractored_holo_orange_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_purple = global::Lisa.Quartets.Droid.Resource.Color.refractored_holo_purple;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_red_dark = global::Lisa.Quartets.Droid.Resource.Color.refractored_holo_red_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_red_light = global::Lisa.Quartets.Droid.Resource.Color.refractored_holo_red_light;
+			global::com.refractored.monodroidtoolkit.Resource.Dimension.progress_inner_size = global::Lisa.Quartets.Droid.Resource.Dimension.progress_inner_size;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_pinned = global::Lisa.Quartets.Droid.Resource.Drawable.pin_progress_pinned;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_shadow = global::Lisa.Quartets.Droid.Resource.Drawable.pin_progress_shadow;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_unpinned = global::Lisa.Quartets.Droid.Resource.Drawable.pin_progress_unpinned;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.scrubber_control_normal_holo = global::Lisa.Quartets.Droid.Resource.Drawable.scrubber_control_normal_holo;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.scrubber_control_pressed_holo = global::Lisa.Quartets.Droid.Resource.Drawable.scrubber_control_pressed_holo;
+			global::com.refractored.monodroidtoolkit.Resource.Id.bottom = global::Lisa.Quartets.Droid.Resource.Id.bottom;
+			global::com.refractored.monodroidtoolkit.Resource.Id.center = global::Lisa.Quartets.Droid.Resource.Id.center;
+			global::com.refractored.monodroidtoolkit.Resource.Id.center_horizontal = global::Lisa.Quartets.Droid.Resource.Id.center_horizontal;
+			global::com.refractored.monodroidtoolkit.Resource.Id.center_vertical = global::Lisa.Quartets.Droid.Resource.Id.center_vertical;
+			global::com.refractored.monodroidtoolkit.Resource.Id.clip = global::Lisa.Quartets.Droid.Resource.Id.clip;
+			global::com.refractored.monodroidtoolkit.Resource.Id.clip_horizontal = global::Lisa.Quartets.Droid.Resource.Id.clip_horizontal;
+			global::com.refractored.monodroidtoolkit.Resource.Id.clip_vertical = global::Lisa.Quartets.Droid.Resource.Id.clip_vertical;
+			global::com.refractored.monodroidtoolkit.Resource.Id.end = global::Lisa.Quartets.Droid.Resource.Id.end;
+			global::com.refractored.monodroidtoolkit.Resource.Id.fill = global::Lisa.Quartets.Droid.Resource.Id.fill;
+			global::com.refractored.monodroidtoolkit.Resource.Id.fill_horizontal = global::Lisa.Quartets.Droid.Resource.Id.fill_horizontal;
+			global::com.refractored.monodroidtoolkit.Resource.Id.fill_vertical = global::Lisa.Quartets.Droid.Resource.Id.fill_vertical;
+			global::com.refractored.monodroidtoolkit.Resource.Id.left = global::Lisa.Quartets.Droid.Resource.Id.left;
+			global::com.refractored.monodroidtoolkit.Resource.Id.right = global::Lisa.Quartets.Droid.Resource.Id.right;
+			global::com.refractored.monodroidtoolkit.Resource.Id.start = global::Lisa.Quartets.Droid.Resource.Id.start;
+			global::com.refractored.monodroidtoolkit.Resource.Id.top = global::Lisa.Quartets.Droid.Resource.Id.top;
+			global::com.refractored.monodroidtoolkit.Resource.Integer.circular_indeterminent_interval = global::Lisa.Quartets.Droid.Resource.Integer.circular_indeterminent_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Integer.progressbutton_indeterminent_interval = global::Lisa.Quartets.Droid.Resource.Integer.progressbutton_indeterminent_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Style.CircularProgressBar = global::Lisa.Quartets.Droid.Resource.Style.CircularProgressBar;
+			global::com.refractored.monodroidtoolkit.Resource.Style.CircularProgressBarLight = global::Lisa.Quartets.Droid.Resource.Style.CircularProgressBarLight;
+			global::com.refractored.monodroidtoolkit.Resource.Style.ProgressButton = global::Lisa.Quartets.Droid.Resource.Style.ProgressButton;
+			global::com.refractored.monodroidtoolkit.Resource.Style.ProgressButton_Pin = global::Lisa.Quartets.Droid.Resource.Style.ProgressButton_Pin;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar = global::Lisa.Quartets.Droid.Resource.Styleable.HoloCircularProgressBar;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_gravity = global::Lisa.Quartets.Droid.Resource.Styleable.HoloCircularProgressBar_circular_gravity;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate = global::Lisa.Quartets.Droid.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate_interval = global::Lisa.Quartets.Droid.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_marker_progress = global::Lisa.Quartets.Droid.Resource.Styleable.HoloCircularProgressBar_circular_marker_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress = global::Lisa.Quartets.Droid.Resource.Styleable.HoloCircularProgressBar_circular_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress_background_color = global::Lisa.Quartets.Droid.Resource.Styleable.HoloCircularProgressBar_circular_progress_background_color;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress_color = global::Lisa.Quartets.Droid.Resource.Styleable.HoloCircularProgressBar_circular_progress_color;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_stroke_width = global::Lisa.Quartets.Droid.Resource.Styleable.HoloCircularProgressBar_circular_stroke_width;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_clickable = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_android_clickable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_focusable = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_android_focusable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_selectableItemBackground = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_android_selectableItemBackground;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_circleColor = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_circleColor;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_indeterminate = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_indeterminate;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_indeterminate_interval = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_indeterminate_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_innerSize = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_innerSize;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_max = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_max;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_pinned = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_pinned;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_pinnedDrawable = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_pinnedDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_progress = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_progressColor = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_progressColor;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_shadowDrawable = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_shadowDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_unpinnedDrawable = global::Lisa.Quartets.Droid.Resource.Styleable.ProgressButton_unpinnedDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.Theme = global::Lisa.Quartets.Droid.Resource.Styleable.Theme;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.Theme_circularProgressBarStyle = global::Lisa.Quartets.Droid.Resource.Styleable.Theme_circularProgressBarStyle;
 			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::Lisa.Quartets.Droid.Resource.String.ApplicationName;
 			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::Lisa.Quartets.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Resource.Animation.abc_fade_in = global::Lisa.Quartets.Droid.Resource.Animation.abc_fade_in;
@@ -3295,6 +3400,36 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0100c5
 			public const int checkedTextViewStyle = 2130772165;
 			
+			// aapt resource value: 0x7f01011b
+			public const int circleColor = 2130772251;
+			
+			// aapt resource value: 0x7f01012c
+			public const int circularProgressBarStyle = 2130772268;
+			
+			// aapt resource value: 0x7f010124
+			public const int circular_gravity = 2130772260;
+			
+			// aapt resource value: 0x7f01012a
+			public const int circular_indeterminate = 2130772266;
+			
+			// aapt resource value: 0x7f01012b
+			public const int circular_indeterminate_interval = 2130772267;
+			
+			// aapt resource value: 0x7f010127
+			public const int circular_marker_progress = 2130772263;
+			
+			// aapt resource value: 0x7f010126
+			public const int circular_progress = 2130772262;
+			
+			// aapt resource value: 0x7f010129
+			public const int circular_progress_background_color = 2130772265;
+			
+			// aapt resource value: 0x7f010128
+			public const int circular_progress_color = 2130772264;
+			
+			// aapt resource value: 0x7f010125
+			public const int circular_stroke_width = 2130772261;
+			
 			// aapt resource value: 0x7f010051
 			public const int closeIcon = 2130772049;
 			
@@ -3499,11 +3634,20 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f01004e
 			public const int iconifiedByDefault = 2130772046;
 			
+			// aapt resource value: 0x7f010122
+			public const int indeterminate = 2130772258;
+			
 			// aapt resource value: 0x7f010026
 			public const int indeterminateProgressStyle = 2130772006;
 			
+			// aapt resource value: 0x7f010123
+			public const int indeterminate_interval = 2130772259;
+			
 			// aapt resource value: 0x7f010031
 			public const int initialActivityCount = 2130772017;
+			
+			// aapt resource value: 0x7f010120
+			public const int innerSize = 2130772256;
 			
 			// aapt resource value: 0x7f010101
 			public const int insetForeground = 2130772225;
@@ -3592,6 +3736,9 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0100d7
 			public const int logoDescription = 2130772183;
 			
+			// aapt resource value: 0x7f01011a
+			public const int max = 2130772250;
+			
 			// aapt resource value: 0x7f010103
 			public const int maxActionInlineWidth = 2130772227;
 			
@@ -3658,6 +3805,12 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0100ad
 			public const int panelMenuListWidth = 2130772141;
 			
+			// aapt resource value: 0x7f010121
+			public const int pinned = 2130772257;
+			
+			// aapt resource value: 0x7f01011d
+			public const int pinnedDrawable = 2130772253;
+			
 			// aapt resource value: 0x7f01009b
 			public const int popupMenuStyle = 2130772123;
 			
@@ -3673,11 +3826,20 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0100f9
 			public const int pressedTranslationZ = 2130772217;
 			
+			// aapt resource value: 0x7f010119
+			public const int progress = 2130772249;
+			
 			// aapt resource value: 0x7f010027
 			public const int progressBarPadding = 2130772007;
 			
 			// aapt resource value: 0x7f010025
 			public const int progressBarStyle = 2130772005;
+			
+			// aapt resource value: 0x7f010118
+			public const int progressButtonStyle = 2130772248;
+			
+			// aapt resource value: 0x7f01011c
+			public const int progressColor = 2130772252;
 			
 			// aapt resource value: 0x7f010058
 			public const int queryBackground = 2130772056;
@@ -3708,6 +3870,9 @@ namespace Lisa.Quartets.Droid
 			
 			// aapt resource value: 0x7f010094
 			public const int selectableItemBackgroundBorderless = 2130772116;
+			
+			// aapt resource value: 0x7f01011f
+			public const int shadowDrawable = 2130772255;
 			
 			// aapt resource value: 0x7f010046
 			public const int showAsAction = 2130772038;
@@ -3898,6 +4063,9 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f01005a
 			public const int track = 2130772058;
 			
+			// aapt resource value: 0x7f01011e
+			public const int unpinnedDrawable = 2130772254;
+			
 			// aapt resource value: 0x7f010055
 			public const int voiceIcon = 2130772053;
 			
@@ -3978,32 +4146,32 @@ namespace Lisa.Quartets.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f090047
-			public const int abc_background_cache_hint_selector_material_dark = 2131296327;
+			// aapt resource value: 0x7f090066
+			public const int abc_background_cache_hint_selector_material_dark = 2131296358;
 			
-			// aapt resource value: 0x7f090048
-			public const int abc_background_cache_hint_selector_material_light = 2131296328;
+			// aapt resource value: 0x7f090067
+			public const int abc_background_cache_hint_selector_material_light = 2131296359;
 			
-			// aapt resource value: 0x7f090049
-			public const int abc_color_highlight_material = 2131296329;
+			// aapt resource value: 0x7f090068
+			public const int abc_color_highlight_material = 2131296360;
 			
 			// aapt resource value: 0x7f090004
 			public const int abc_input_method_navigation_guard = 2131296260;
 			
-			// aapt resource value: 0x7f09004a
-			public const int abc_primary_text_disable_only_material_dark = 2131296330;
+			// aapt resource value: 0x7f090069
+			public const int abc_primary_text_disable_only_material_dark = 2131296361;
 			
-			// aapt resource value: 0x7f09004b
-			public const int abc_primary_text_disable_only_material_light = 2131296331;
+			// aapt resource value: 0x7f09006a
+			public const int abc_primary_text_disable_only_material_light = 2131296362;
 			
-			// aapt resource value: 0x7f09004c
-			public const int abc_primary_text_material_dark = 2131296332;
+			// aapt resource value: 0x7f09006b
+			public const int abc_primary_text_material_dark = 2131296363;
 			
-			// aapt resource value: 0x7f09004d
-			public const int abc_primary_text_material_light = 2131296333;
+			// aapt resource value: 0x7f09006c
+			public const int abc_primary_text_material_light = 2131296364;
 			
-			// aapt resource value: 0x7f09004e
-			public const int abc_search_url_text = 2131296334;
+			// aapt resource value: 0x7f09006d
+			public const int abc_search_url_text = 2131296365;
 			
 			// aapt resource value: 0x7f090005
 			public const int abc_search_url_text_normal = 2131296261;
@@ -4014,11 +4182,11 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f090007
 			public const int abc_search_url_text_selected = 2131296263;
 			
-			// aapt resource value: 0x7f09004f
-			public const int abc_secondary_text_material_dark = 2131296335;
+			// aapt resource value: 0x7f09006e
+			public const int abc_secondary_text_material_dark = 2131296366;
 			
-			// aapt resource value: 0x7f090050
-			public const int abc_secondary_text_material_light = 2131296336;
+			// aapt resource value: 0x7f09006f
+			public const int abc_secondary_text_material_light = 2131296367;
 			
 			// aapt resource value: 0x7f090008
 			public const int accent_material_dark = 2131296264;
@@ -4191,6 +4359,99 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f090033
 			public const int primary_text_disabled_material_light = 2131296307;
 			
+			// aapt resource value: 0x7f090047
+			public const int progress_default_circle_color = 2131296327;
+			
+			// aapt resource value: 0x7f090048
+			public const int progress_default_progress_color = 2131296328;
+			
+			// aapt resource value: 0x7f090049
+			public const int refractored_background_dark = 2131296329;
+			
+			// aapt resource value: 0x7f09004e
+			public const int refractored_background_holo_dark = 2131296334;
+			
+			// aapt resource value: 0x7f09004f
+			public const int refractored_background_holo_light = 2131296335;
+			
+			// aapt resource value: 0x7f09004a
+			public const int refractored_background_light = 2131296330;
+			
+			// aapt resource value: 0x7f09004b
+			public const int refractored_bright_foreground_dark = 2131296331;
+			
+			// aapt resource value: 0x7f09004d
+			public const int refractored_bright_foreground_dark_disabled = 2131296333;
+			
+			// aapt resource value: 0x7f090052
+			public const int refractored_bright_foreground_disabled_holo_dark = 2131296338;
+			
+			// aapt resource value: 0x7f090053
+			public const int refractored_bright_foreground_disabled_holo_light = 2131296339;
+			
+			// aapt resource value: 0x7f090050
+			public const int refractored_bright_foreground_holo_dark = 2131296336;
+			
+			// aapt resource value: 0x7f090051
+			public const int refractored_bright_foreground_holo_light = 2131296337;
+			
+			// aapt resource value: 0x7f09004c
+			public const int refractored_bright_foreground_light = 2131296332;
+			
+			// aapt resource value: 0x7f090055
+			public const int refractored_dim_foreground_disabled_holo_dark = 2131296341;
+			
+			// aapt resource value: 0x7f090058
+			public const int refractored_dim_foreground_disabled_holo_light = 2131296344;
+			
+			// aapt resource value: 0x7f090054
+			public const int refractored_dim_foreground_holo_dark = 2131296340;
+			
+			// aapt resource value: 0x7f090057
+			public const int refractored_dim_foreground_holo_light = 2131296343;
+			
+			// aapt resource value: 0x7f09005a
+			public const int refractored_highlighted_text_holo_dark = 2131296346;
+			
+			// aapt resource value: 0x7f09005b
+			public const int refractored_highlighted_text_holo_light = 2131296347;
+			
+			// aapt resource value: 0x7f090056
+			public const int refractored_hint_foreground_holo_dark = 2131296342;
+			
+			// aapt resource value: 0x7f090059
+			public const int refractored_hint_foreground_holo_light = 2131296345;
+			
+			// aapt resource value: 0x7f090065
+			public const int refractored_holo_blue_bright = 2131296357;
+			
+			// aapt resource value: 0x7f09005f
+			public const int refractored_holo_blue_dark = 2131296351;
+			
+			// aapt resource value: 0x7f09005c
+			public const int refractored_holo_blue_light = 2131296348;
+			
+			// aapt resource value: 0x7f090060
+			public const int refractored_holo_green_dark = 2131296352;
+			
+			// aapt resource value: 0x7f09005d
+			public const int refractored_holo_green_light = 2131296349;
+			
+			// aapt resource value: 0x7f090064
+			public const int refractored_holo_orange_dark = 2131296356;
+			
+			// aapt resource value: 0x7f090063
+			public const int refractored_holo_orange_light = 2131296355;
+			
+			// aapt resource value: 0x7f090062
+			public const int refractored_holo_purple = 2131296354;
+			
+			// aapt resource value: 0x7f090061
+			public const int refractored_holo_red_dark = 2131296353;
+			
+			// aapt resource value: 0x7f09005e
+			public const int refractored_holo_red_light = 2131296350;
+			
 			// aapt resource value: 0x7f090034
 			public const int ripple_material_dark = 2131296308;
 			
@@ -4215,11 +4476,11 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f09003b
 			public const int switch_thumb_disabled_material_light = 2131296315;
 			
-			// aapt resource value: 0x7f090051
-			public const int switch_thumb_material_dark = 2131296337;
+			// aapt resource value: 0x7f090070
+			public const int switch_thumb_material_dark = 2131296368;
 			
-			// aapt resource value: 0x7f090052
-			public const int switch_thumb_material_light = 2131296338;
+			// aapt resource value: 0x7f090071
+			public const int switch_thumb_material_light = 2131296369;
 			
 			// aapt resource value: 0x7f09003c
 			public const int switch_thumb_normal_material_dark = 2131296316;
@@ -4545,6 +4806,9 @@ namespace Lisa.Quartets.Droid
 			
 			// aapt resource value: 0x7f07004b
 			public const int notification_subtext_size = 2131165259;
+			
+			// aapt resource value: 0x7f070066
+			public const int progress_inner_size = 2131165286;
 			
 			static Dimension()
 			{
@@ -4973,26 +5237,41 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f020089
 			public const int mr_ic_settings_light = 2130837641;
 			
-			// aapt resource value: 0x7f020090
-			public const int notification_template_icon_bg = 2130837648;
+			// aapt resource value: 0x7f020095
+			public const int notification_template_icon_bg = 2130837653;
 			
 			// aapt resource value: 0x7f02008a
 			public const int opacity = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int rood = 2130837643;
+			public const int pin_progress_pinned = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int rood2 = 2130837644;
+			public const int pin_progress_shadow = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int shadow = 2130837645;
+			public const int pin_progress_unpinned = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int slide = 2130837646;
+			public const int rood = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int slingers = 2130837647;
+			public const int rood2 = 2130837647;
+			
+			// aapt resource value: 0x7f020090
+			public const int scrubber_control_normal_holo = 2130837648;
+			
+			// aapt resource value: 0x7f020091
+			public const int scrubber_control_pressed_holo = 2130837649;
+			
+			// aapt resource value: 0x7f020092
+			public const int shadow = 2130837650;
+			
+			// aapt resource value: 0x7f020093
+			public const int slide = 2130837651;
+			
+			// aapt resource value: 0x7f020094
+			public const int slingers = 2130837652;
 			
 			static Drawable()
 			{
@@ -5007,35 +5286,35 @@ namespace Lisa.Quartets.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0c0074
-			public const int action0 = 2131492980;
+			// aapt resource value: 0x7f0c0075
+			public const int action0 = 2131492981;
 			
-			// aapt resource value: 0x7f0c0055
-			public const int action_bar = 2131492949;
+			// aapt resource value: 0x7f0c0056
+			public const int action_bar = 2131492950;
 			
 			// aapt resource value: 0x7f0c0000
 			public const int action_bar_activity_content = 2131492864;
 			
-			// aapt resource value: 0x7f0c0054
-			public const int action_bar_container = 2131492948;
+			// aapt resource value: 0x7f0c0055
+			public const int action_bar_container = 2131492949;
 			
-			// aapt resource value: 0x7f0c0050
-			public const int action_bar_root = 2131492944;
+			// aapt resource value: 0x7f0c0051
+			public const int action_bar_root = 2131492945;
 			
 			// aapt resource value: 0x7f0c0001
 			public const int action_bar_spinner = 2131492865;
 			
+			// aapt resource value: 0x7f0c003a
+			public const int action_bar_subtitle = 2131492922;
+			
 			// aapt resource value: 0x7f0c0039
-			public const int action_bar_subtitle = 2131492921;
+			public const int action_bar_title = 2131492921;
 			
-			// aapt resource value: 0x7f0c0038
-			public const int action_bar_title = 2131492920;
+			// aapt resource value: 0x7f0c0057
+			public const int action_context_bar = 2131492951;
 			
-			// aapt resource value: 0x7f0c0056
-			public const int action_context_bar = 2131492950;
-			
-			// aapt resource value: 0x7f0c0078
-			public const int action_divider = 2131492984;
+			// aapt resource value: 0x7f0c0079
+			public const int action_divider = 2131492985;
 			
 			// aapt resource value: 0x7f0c0002
 			public const int action_menu_divider = 2131492866;
@@ -5043,26 +5322,26 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0c0003
 			public const int action_menu_presenter = 2131492867;
 			
+			// aapt resource value: 0x7f0c0053
+			public const int action_mode_bar = 2131492947;
+			
 			// aapt resource value: 0x7f0c0052
-			public const int action_mode_bar = 2131492946;
-			
-			// aapt resource value: 0x7f0c0051
-			public const int action_mode_bar_stub = 2131492945;
-			
-			// aapt resource value: 0x7f0c003a
-			public const int action_mode_close_button = 2131492922;
+			public const int action_mode_bar_stub = 2131492946;
 			
 			// aapt resource value: 0x7f0c003b
-			public const int activity_chooser_view_content = 2131492923;
+			public const int action_mode_close_button = 2131492923;
 			
-			// aapt resource value: 0x7f0c0045
-			public const int alertTitle = 2131492933;
+			// aapt resource value: 0x7f0c003c
+			public const int activity_chooser_view_content = 2131492924;
+			
+			// aapt resource value: 0x7f0c0046
+			public const int alertTitle = 2131492934;
 			
 			// aapt resource value: 0x7f0c001c
 			public const int always = 2131492892;
 			
-			// aapt resource value: 0x7f0c006c
-			public const int art = 2131492972;
+			// aapt resource value: 0x7f0c006d
+			public const int art = 2131492973;
 			
 			// aapt resource value: 0x7f0c0019
 			public const int beginning = 2131492889;
@@ -5070,14 +5349,14 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0c0028
 			public const int bottom = 2131492904;
 			
-			// aapt resource value: 0x7f0c004b
-			public const int buttonPanel = 2131492939;
+			// aapt resource value: 0x7f0c004c
+			public const int buttonPanel = 2131492940;
 			
-			// aapt resource value: 0x7f0c0071
-			public const int buttons = 2131492977;
+			// aapt resource value: 0x7f0c0072
+			public const int buttons = 2131492978;
 			
-			// aapt resource value: 0x7f0c0075
-			public const int cancel_action = 2131492981;
+			// aapt resource value: 0x7f0c0076
+			public const int cancel_action = 2131492982;
 			
 			// aapt resource value: 0x7f0c0029
 			public const int center = 2131492905;
@@ -5088,11 +5367,14 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0c002b
 			public const int center_vertical = 2131492907;
 			
-			// aapt resource value: 0x7f0c004d
-			public const int checkbox = 2131492941;
+			// aapt resource value: 0x7f0c004e
+			public const int checkbox = 2131492942;
 			
-			// aapt resource value: 0x7f0c007b
-			public const int chronometer = 2131492987;
+			// aapt resource value: 0x7f0c007c
+			public const int chronometer = 2131492988;
+			
+			// aapt resource value: 0x7f0c0038
+			public const int clip = 2131492920;
 			
 			// aapt resource value: 0x7f0c0031
 			public const int clip_horizontal = 2131492913;
@@ -5103,41 +5385,41 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0c001d
 			public const int collapseActionView = 2131492893;
 			
-			// aapt resource value: 0x7f0c0081
-			public const int contentFrame = 2131492993;
+			// aapt resource value: 0x7f0c0082
+			public const int contentFrame = 2131492994;
 			
-			// aapt resource value: 0x7f0c0046
-			public const int contentPanel = 2131492934;
+			// aapt resource value: 0x7f0c0047
+			public const int contentPanel = 2131492935;
+			
+			// aapt resource value: 0x7f0c004b
+			public const int custom = 2131492939;
 			
 			// aapt resource value: 0x7f0c004a
-			public const int custom = 2131492938;
+			public const int customPanel = 2131492938;
 			
-			// aapt resource value: 0x7f0c0049
-			public const int customPanel = 2131492937;
+			// aapt resource value: 0x7f0c0054
+			public const int decor_content_parent = 2131492948;
 			
-			// aapt resource value: 0x7f0c0053
-			public const int decor_content_parent = 2131492947;
+			// aapt resource value: 0x7f0c003f
+			public const int default_activity_button = 2131492927;
 			
-			// aapt resource value: 0x7f0c003e
-			public const int default_activity_button = 2131492926;
-			
-			// aapt resource value: 0x7f0c006b
-			public const int default_control_frame = 2131492971;
+			// aapt resource value: 0x7f0c006c
+			public const int default_control_frame = 2131492972;
 			
 			// aapt resource value: 0x7f0c000d
 			public const int disableHome = 2131492877;
 			
-			// aapt resource value: 0x7f0c0072
-			public const int disconnect = 2131492978;
+			// aapt resource value: 0x7f0c0073
+			public const int disconnect = 2131492979;
 			
-			// aapt resource value: 0x7f0c0057
-			public const int edit_query = 2131492951;
+			// aapt resource value: 0x7f0c0058
+			public const int edit_query = 2131492952;
 			
 			// aapt resource value: 0x7f0c001a
 			public const int end = 2131492890;
 			
-			// aapt resource value: 0x7f0c0080
-			public const int end_padder = 2131492992;
+			// aapt resource value: 0x7f0c0081
+			public const int end_padder = 2131492993;
 			
 			// aapt resource value: 0x7f0c0022
 			public const int enterAlways = 2131492898;
@@ -5148,11 +5430,11 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0c0024
 			public const int exitUntilCollapsed = 2131492900;
 			
-			// aapt resource value: 0x7f0c003c
-			public const int expand_activities_button = 2131492924;
+			// aapt resource value: 0x7f0c003d
+			public const int expand_activities_button = 2131492925;
 			
-			// aapt resource value: 0x7f0c004c
-			public const int expanded_menu = 2131492940;
+			// aapt resource value: 0x7f0c004d
+			public const int expanded_menu = 2131492941;
 			
 			// aapt resource value: 0x7f0c0033
 			public const int fill = 2131492915;
@@ -5172,47 +5454,47 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0c000e
 			public const int homeAsUp = 2131492878;
 			
-			// aapt resource value: 0x7f0c0040
-			public const int icon = 2131492928;
+			// aapt resource value: 0x7f0c0041
+			public const int icon = 2131492929;
 			
 			// aapt resource value: 0x7f0c001e
 			public const int ifRoom = 2131492894;
 			
-			// aapt resource value: 0x7f0c003d
-			public const int image = 2131492925;
+			// aapt resource value: 0x7f0c003e
+			public const int image = 2131492926;
 			
-			// aapt resource value: 0x7f0c007f
-			public const int info = 2131492991;
+			// aapt resource value: 0x7f0c0080
+			public const int info = 2131492992;
 			
 			// aapt resource value: 0x7f0c002d
 			public const int left = 2131492909;
 			
-			// aapt resource value: 0x7f0c0079
-			public const int line1 = 2131492985;
+			// aapt resource value: 0x7f0c007a
+			public const int line1 = 2131492986;
 			
-			// aapt resource value: 0x7f0c007d
-			public const int line3 = 2131492989;
+			// aapt resource value: 0x7f0c007e
+			public const int line3 = 2131492990;
 			
 			// aapt resource value: 0x7f0c000a
 			public const int listMode = 2131492874;
 			
-			// aapt resource value: 0x7f0c003f
-			public const int list_item = 2131492927;
+			// aapt resource value: 0x7f0c0040
+			public const int list_item = 2131492928;
 			
-			// aapt resource value: 0x7f0c0077
-			public const int media_actions = 2131492983;
+			// aapt resource value: 0x7f0c0078
+			public const int media_actions = 2131492984;
 			
-			// aapt resource value: 0x7f0c006a
-			public const int media_route_control_frame = 2131492970;
+			// aapt resource value: 0x7f0c006b
+			public const int media_route_control_frame = 2131492971;
 			
-			// aapt resource value: 0x7f0c0066
-			public const int media_route_list = 2131492966;
-			
-			// aapt resource value: 0x7f0c006f
-			public const int media_route_volume_layout = 2131492975;
+			// aapt resource value: 0x7f0c0067
+			public const int media_route_list = 2131492967;
 			
 			// aapt resource value: 0x7f0c0070
-			public const int media_route_volume_slider = 2131492976;
+			public const int media_route_volume_layout = 2131492976;
+			
+			// aapt resource value: 0x7f0c0071
+			public const int media_route_volume_slider = 2131492977;
 			
 			// aapt resource value: 0x7f0c001b
 			public const int middle = 2131492891;
@@ -5235,14 +5517,14 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0c0026
 			public const int parallax = 2131492902;
 			
-			// aapt resource value: 0x7f0c0042
-			public const int parentPanel = 2131492930;
+			// aapt resource value: 0x7f0c0043
+			public const int parentPanel = 2131492931;
 			
 			// aapt resource value: 0x7f0c0027
 			public const int pin = 2131492903;
 			
-			// aapt resource value: 0x7f0c006d
-			public const int play_pause = 2131492973;
+			// aapt resource value: 0x7f0c006e
+			public const int play_pause = 2131492974;
 			
 			// aapt resource value: 0x7f0c0005
 			public const int progress_circular = 2131492869;
@@ -5250,14 +5532,14 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0c0006
 			public const int progress_horizontal = 2131492870;
 			
-			// aapt resource value: 0x7f0c004f
-			public const int radio = 2131492943;
+			// aapt resource value: 0x7f0c0050
+			public const int radio = 2131492944;
 			
 			// aapt resource value: 0x7f0c002e
 			public const int right = 2131492910;
 			
-			// aapt resource value: 0x7f0c0068
-			public const int route_name = 2131492968;
+			// aapt resource value: 0x7f0c0069
+			public const int route_name = 2131492969;
 			
 			// aapt resource value: 0x7f0c0015
 			public const int screen = 2131492885;
@@ -5265,50 +5547,50 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0c0025
 			public const int scroll = 2131492901;
 			
-			// aapt resource value: 0x7f0c0047
-			public const int scrollView = 2131492935;
+			// aapt resource value: 0x7f0c0048
+			public const int scrollView = 2131492936;
 			
 			// aapt resource value: 0x7f0c0037
 			public const int scrollable = 2131492919;
 			
-			// aapt resource value: 0x7f0c0059
-			public const int search_badge = 2131492953;
-			
-			// aapt resource value: 0x7f0c0058
-			public const int search_bar = 2131492952;
-			
 			// aapt resource value: 0x7f0c005a
-			public const int search_button = 2131492954;
+			public const int search_badge = 2131492954;
 			
-			// aapt resource value: 0x7f0c005f
-			public const int search_close_btn = 2131492959;
+			// aapt resource value: 0x7f0c0059
+			public const int search_bar = 2131492953;
 			
 			// aapt resource value: 0x7f0c005b
-			public const int search_edit_frame = 2131492955;
+			public const int search_button = 2131492955;
 			
-			// aapt resource value: 0x7f0c0061
-			public const int search_go_btn = 2131492961;
+			// aapt resource value: 0x7f0c0060
+			public const int search_close_btn = 2131492960;
 			
 			// aapt resource value: 0x7f0c005c
-			public const int search_mag_icon = 2131492956;
-			
-			// aapt resource value: 0x7f0c005d
-			public const int search_plate = 2131492957;
-			
-			// aapt resource value: 0x7f0c005e
-			public const int search_src_text = 2131492958;
+			public const int search_edit_frame = 2131492956;
 			
 			// aapt resource value: 0x7f0c0062
-			public const int search_voice_btn = 2131492962;
+			public const int search_go_btn = 2131492962;
+			
+			// aapt resource value: 0x7f0c005d
+			public const int search_mag_icon = 2131492957;
+			
+			// aapt resource value: 0x7f0c005e
+			public const int search_plate = 2131492958;
+			
+			// aapt resource value: 0x7f0c005f
+			public const int search_src_text = 2131492959;
 			
 			// aapt resource value: 0x7f0c0063
-			public const int select_dialog_listview = 2131492963;
+			public const int search_voice_btn = 2131492963;
 			
-			// aapt resource value: 0x7f0c0069
-			public const int settings = 2131492969;
+			// aapt resource value: 0x7f0c0064
+			public const int select_dialog_listview = 2131492964;
 			
-			// aapt resource value: 0x7f0c004e
-			public const int shortcut = 2131492942;
+			// aapt resource value: 0x7f0c006a
+			public const int settings = 2131492970;
+			
+			// aapt resource value: 0x7f0c004f
+			public const int shortcut = 2131492943;
 			
 			// aapt resource value: 0x7f0c0010
 			public const int showCustom = 2131492880;
@@ -5319,11 +5601,11 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0c0012
 			public const int showTitle = 2131492882;
 			
-			// aapt resource value: 0x7f0c0065
-			public const int snackbar_action = 2131492965;
+			// aapt resource value: 0x7f0c0066
+			public const int snackbar_action = 2131492966;
 			
-			// aapt resource value: 0x7f0c0064
-			public const int snackbar_text = 2131492964;
+			// aapt resource value: 0x7f0c0065
+			public const int snackbar_text = 2131492965;
 			
 			// aapt resource value: 0x7f0c0007
 			public const int split_action_bar = 2131492871;
@@ -5340,47 +5622,47 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0c002f
 			public const int start = 2131492911;
 			
-			// aapt resource value: 0x7f0c0076
-			public const int status_bar_latest_event_content = 2131492982;
+			// aapt resource value: 0x7f0c0077
+			public const int status_bar_latest_event_content = 2131492983;
 			
-			// aapt resource value: 0x7f0c0073
-			public const int stop = 2131492979;
+			// aapt resource value: 0x7f0c0074
+			public const int stop = 2131492980;
 			
-			// aapt resource value: 0x7f0c0060
-			public const int submit_area = 2131492960;
+			// aapt resource value: 0x7f0c0061
+			public const int submit_area = 2131492961;
 			
-			// aapt resource value: 0x7f0c006e
-			public const int subtitle = 2131492974;
+			// aapt resource value: 0x7f0c006f
+			public const int subtitle = 2131492975;
 			
 			// aapt resource value: 0x7f0c000c
 			public const int tabMode = 2131492876;
 			
-			// aapt resource value: 0x7f0c007e
-			public const int text = 2131492990;
+			// aapt resource value: 0x7f0c007f
+			public const int text = 2131492991;
 			
-			// aapt resource value: 0x7f0c007c
-			public const int text2 = 2131492988;
+			// aapt resource value: 0x7f0c007d
+			public const int text2 = 2131492989;
 			
-			// aapt resource value: 0x7f0c0048
-			public const int textSpacerNoButtons = 2131492936;
+			// aapt resource value: 0x7f0c0049
+			public const int textSpacerNoButtons = 2131492937;
 			
-			// aapt resource value: 0x7f0c007a
-			public const int time = 2131492986;
+			// aapt resource value: 0x7f0c007b
+			public const int time = 2131492987;
 			
-			// aapt resource value: 0x7f0c0041
-			public const int title = 2131492929;
+			// aapt resource value: 0x7f0c0042
+			public const int title = 2131492930;
 			
-			// aapt resource value: 0x7f0c0067
-			public const int title_bar = 2131492967;
+			// aapt resource value: 0x7f0c0068
+			public const int title_bar = 2131492968;
 			
-			// aapt resource value: 0x7f0c0044
-			public const int title_template = 2131492932;
+			// aapt resource value: 0x7f0c0045
+			public const int title_template = 2131492933;
 			
 			// aapt resource value: 0x7f0c0030
 			public const int top = 2131492912;
 			
-			// aapt resource value: 0x7f0c0043
-			public const int topPanel = 2131492931;
+			// aapt resource value: 0x7f0c0044
+			public const int topPanel = 2131492932;
 			
 			// aapt resource value: 0x7f0c0008
 			public const int up = 2131492872;
@@ -5422,8 +5704,14 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f0b0003
 			public const int cancel_button_image_alpha = 2131427331;
 			
+			// aapt resource value: 0x7f0b0007
+			public const int circular_indeterminent_interval = 2131427335;
+			
 			// aapt resource value: 0x7f0b0005
 			public const int design_snackbar_text_max_lines = 2131427333;
+			
+			// aapt resource value: 0x7f0b0006
+			public const int progressbutton_indeterminent_interval = 2131427334;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int status_bar_notification_info_maxnum = 2131427332;
@@ -6281,6 +6569,12 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f080006
 			public const int CardView_Light = 2131230726;
 			
+			// aapt resource value: 0x7f080146
+			public const int CircularProgressBar = 2131231046;
+			
+			// aapt resource value: 0x7f080147
+			public const int CircularProgressBarLight = 2131231047;
+			
 			// aapt resource value: 0x7f080016
 			public const int Platform_AppCompat = 2131230742;
 			
@@ -6310,6 +6604,12 @@ namespace Lisa.Quartets.Droid
 			
 			// aapt resource value: 0x7f08001a
 			public const int Platform_Widget_AppCompat_Spinner = 2131230746;
+			
+			// aapt resource value: 0x7f080144
+			public const int ProgressButton = 2131231044;
+			
+			// aapt resource value: 0x7f080145
+			public const int ProgressButton_Pin = 2131231045;
 			
 			// aapt resource value: 0x7f080027
 			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131230759;
@@ -6815,8 +7115,8 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f080003
 			public const int Widget_MediaRouter_MediaRouteButton = 2131230723;
 			
-			// aapt resource value: 0x7f080144
-			public const int YrsaTheme = 2131231044;
+			// aapt resource value: 0x7f080148
+			public const int YrsaTheme = 2131231048;
 			
 			static Style()
 			{
@@ -7279,6 +7579,40 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 4
 			public const int FloatingActionButton_rippleColor = 4;
 			
+			public static int[] HoloCircularProgressBar = new int[] {
+					2130772260,
+					2130772261,
+					2130772262,
+					2130772263,
+					2130772264,
+					2130772265,
+					2130772266,
+					2130772267};
+			
+			// aapt resource value: 0
+			public const int HoloCircularProgressBar_circular_gravity = 0;
+			
+			// aapt resource value: 6
+			public const int HoloCircularProgressBar_circular_indeterminate = 6;
+			
+			// aapt resource value: 7
+			public const int HoloCircularProgressBar_circular_indeterminate_interval = 7;
+			
+			// aapt resource value: 3
+			public const int HoloCircularProgressBar_circular_marker_progress = 3;
+			
+			// aapt resource value: 2
+			public const int HoloCircularProgressBar_circular_progress = 2;
+			
+			// aapt resource value: 5
+			public const int HoloCircularProgressBar_circular_progress_background_color = 5;
+			
+			// aapt resource value: 4
+			public const int HoloCircularProgressBar_circular_progress_color = 4;
+			
+			// aapt resource value: 1
+			public const int HoloCircularProgressBar_circular_stroke_width = 1;
+			
 			public static int[] LinearLayoutCompat = new int[] {
 					16842927,
 					16842948,
@@ -7546,6 +7880,64 @@ namespace Lisa.Quartets.Droid
 			
 			// aapt resource value: 0
 			public const int PopupWindowBackgroundState_state_above_anchor = 0;
+			
+			public static int[] ProgressButton = new int[] {
+					16842970,
+					16842981,
+					16843534,
+					2130772249,
+					2130772250,
+					2130772251,
+					2130772252,
+					2130772253,
+					2130772254,
+					2130772255,
+					2130772256,
+					2130772257,
+					2130772258,
+					2130772259};
+			
+			// aapt resource value: 1
+			public const int ProgressButton_android_clickable = 1;
+			
+			// aapt resource value: 0
+			public const int ProgressButton_android_focusable = 0;
+			
+			// aapt resource value: 2
+			public const int ProgressButton_android_selectableItemBackground = 2;
+			
+			// aapt resource value: 5
+			public const int ProgressButton_circleColor = 5;
+			
+			// aapt resource value: 12
+			public const int ProgressButton_indeterminate = 12;
+			
+			// aapt resource value: 13
+			public const int ProgressButton_indeterminate_interval = 13;
+			
+			// aapt resource value: 10
+			public const int ProgressButton_innerSize = 10;
+			
+			// aapt resource value: 4
+			public const int ProgressButton_max = 4;
+			
+			// aapt resource value: 11
+			public const int ProgressButton_pinned = 11;
+			
+			// aapt resource value: 7
+			public const int ProgressButton_pinnedDrawable = 7;
+			
+			// aapt resource value: 3
+			public const int ProgressButton_progress = 3;
+			
+			// aapt resource value: 6
+			public const int ProgressButton_progressColor = 6;
+			
+			// aapt resource value: 9
+			public const int ProgressButton_shadowDrawable = 9;
+			
+			// aapt resource value: 8
+			public const int ProgressButton_unpinnedDrawable = 8;
 			
 			public static int[] ScrimInsetsFrameLayout = new int[] {
 					2130772225};
@@ -7925,7 +8317,8 @@ namespace Lisa.Quartets.Droid
 					2130772167,
 					2130772168,
 					2130772169,
-					2130772170};
+					2130772170,
+					2130772268};
 			
 			// aapt resource value: 23
 			public const int Theme_actionBarDivider = 23;
@@ -8070,6 +8463,9 @@ namespace Lisa.Quartets.Droid
 			
 			// aapt resource value: 102
 			public const int Theme_checkedTextViewStyle = 102;
+			
+			// aapt resource value: 108
+			public const int Theme_circularProgressBarStyle = 108;
 			
 			// aapt resource value: 83
 			public const int Theme_colorAccent = 83;

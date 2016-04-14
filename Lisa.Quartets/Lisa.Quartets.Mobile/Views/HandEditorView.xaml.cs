@@ -19,28 +19,6 @@ namespace Lisa.Quartets.Mobile
             InitializeComponent();
             SetPreviousSelectedCards();
             SetImages();
-            DisplayView();
-        }
-
-        private void DisplayView()
-        {
-            MobileBarcodeScanningOptions options = new MobileBarcodeScanningOptions{ UseFrontCameraIfAvailable = false };
-
-            ZXingScannerPage scanPage = new ZXingScannerPage(options, layout);
-            scanPage.OnScanResult += (result) => {
-
-                Device.BeginInvokeOnMainThread (() => {
-                    scanPage.IsScanning = false;
-                    Card card = _database.RetrieveFromBarcode(result.Text);
-
-                    if (card != null)
-                    {
-                        DisplayAlert("resultaat", card.Name,"oké");
-                    }
-                });
-            };
-
-            Navigation.PushAsync(scanPage);
         }
 
         private Page CreateNewView(Type newView)
