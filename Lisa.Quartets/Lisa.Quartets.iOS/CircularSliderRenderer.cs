@@ -1,8 +1,8 @@
 ﻿using System;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
-using MonoTouch.UIKit;
-using MonoTouch.CoreGraphics;
+using UIKit;
+using CoreGraphics;
 using System.Drawing;
 using Lisa.Quartets.Mobile;
 using Lisa.Quartets.iOS;
@@ -15,14 +15,14 @@ namespace Lisa.Quartets.iOS
         private readonly float QuarterTurnCounterClockwise = (float)(-1f * (Math.PI * 0.5f));
         
 
-        public override void Draw(System.Drawing.RectangleF rect)
+        public override void Draw(CGRect rect)
         {
-            var currentContext = UIGraphics.GetCurrentContext();
-            var properRect = AdjustForThickness(rect);
-            HandleShapeDraw(currentContext, properRect);
+            var currentcontext = UIGraphics.GetCurrentContext();
+            var properrect = AdjustForThickness(rect);
+            HandleShapeDraw(currentcontext, properrect);
         }
 
-        protected RectangleF AdjustForThickness(RectangleF rect)
+        protected RectangleF AdjustForThickness(CGRect rect)
         {
             var x = rect.X + Element.Padding.Left;
             var y = rect.Y + Element.Padding.Top;
@@ -39,29 +39,10 @@ namespace Lisa.Quartets.iOS
             var radius = rect.Width / 2;
             var startAngle = 0;
             var endAngle = (float)(Math.PI * 2);
-
-            switch (Element.ShapeType)
-            {
-                case ShapeType.Box:
-                    HandleStandardDraw(currentContext, rect, () => {
-                        if (Element.CornerRadius > 0)
-                        {
-                            var path = UIBezierPath.FromRoundedRect(rect, Element.CornerRadius);
-                            currentContext.AddPath(path.CGPath);
-                        }
-                        else {
-                            currentContext.AddRect(rect);
-                        }
-                    });
-                    break;
-                case ShapeType.Circle:
-                    HandleStandardDraw(currentContext, rect, () => currentContext.AddArc(centerX, centerY, radius, startAngle, endAngle, true));
-                    break;
-                case ShapeType.CircleIndicator:
+            
                     HandleStandardDraw(currentContext, rect, () => currentContext.AddArc(centerX, centerY, radius, startAngle, endAngle, true));
                     HandleStandardDraw(currentContext, rect, () => currentContext.AddArc(centerX, centerY, radius, QuarterTurnCounterClockwise, (float)(Math.PI * 2 * (Element.IndicatorPercentage / 100)) + QuarterTurnCounterClockwise, false), Element.StrokeWidth + 3);
-                    break;
-            }
+           
         }
 
         /// <summary>
@@ -79,7 +60,7 @@ namespace Lisa.Quartets.iOS
 
             createPathForShape();
 
-            currentContext.DrawPath(MonoTouch.CoreGraphics.CGPathDrawingMode.FillStroke);
+            currentContext.DrawPath(CGPathDrawingMode.FillStroke);
         }
     }
 }
