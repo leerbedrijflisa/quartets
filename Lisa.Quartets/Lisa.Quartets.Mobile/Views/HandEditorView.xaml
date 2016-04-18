@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lisa.Quartets.Mobile.HandEditorView">
 	<ContentPage.Content>
+	<StackLayout>
         <StackLayout VerticalOptions="Center">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -20,5 +21,8 @@
             </Grid>
             <ScrollView x:Name="scrollView"/>
         </StackLayout>
+           <StackLayout x:Name = "instructionsLayout">
+    	</StackLayout>
+	</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

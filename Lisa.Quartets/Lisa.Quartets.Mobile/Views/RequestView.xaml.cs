@@ -11,6 +11,7 @@ namespace Lisa.Quartets.Mobile
 		public RequestView()
 		{
 			InitializeComponent();
+			ToggledSwitch();
 
 			_cards = _database.RetrieveAskableCards();
 
@@ -107,6 +108,27 @@ namespace Lisa.Quartets.Mobile
             }
             return list;
         }
+		public void ToggledSwitch()
+		{
+			var result = _database.GetInstructions ();
+			if (result.Instruction == 1) {
+				var contentpage = new InstructionsPage ();
+				Editor add= new Editor
+				{
+					IsEnabled = false,
+					Text="Hier kan je een kaart aanvragen die je van een andere speler zou willen ontvangen." +
+						"Selecteer de kaart die je wilt vragen en druk erop, je zal zien dat de kaart groter wordt" +
+						"en na een paar seconde krijg een bevestiging, kies ja als je de kaart ontvangen hebt " +
+						"en nee als je de kaart niet ontvangen hebt.",
+				};
+				instructionsLayout.Children.Add(add);
+				/*var page = new NavigationPage (contentpage);
+				ToolbarItems.Add (new ToolbarItem {
+					Text = "?",
+					Command = new Command (() => Navigation.PushModalAsync (page))
+				});*/
+			}
+		}
 
 		private CardDatabase _database = new CardDatabase();
         private List<Card> _cards = new List<Card>();

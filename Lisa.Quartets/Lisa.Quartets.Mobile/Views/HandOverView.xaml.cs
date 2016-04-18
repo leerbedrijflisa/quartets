@@ -13,6 +13,7 @@ namespace Lisa.Quartets.Mobile
             InitializeComponent();
             EnsureCardsExist();
             SetImages();
+			ToggledSwitch();
         }
 
         private void EnsureCardsExist()
@@ -166,6 +167,24 @@ namespace Lisa.Quartets.Mobile
                 saveButton.IsEnabled = false;
             }
         }
+		public void ToggledSwitch()
+		{
+			var result = _database.GetInstructions ();
+			if (result.Instruction == 1) {
+				var contentpage = new InstructionsPage ();
+				Editor add= new Editor
+				{
+					IsEnabled = false,
+					Text="Hier kan je een kaart weggeven aan een andere speler."
+				};
+				instructionsLayout.Children.Add(add);
+				/*var page = new NavigationPage (contentpage);
+				ToolbarItems.Add (new ToolbarItem {
+					Text = "?",
+					Command = new Command (() => Navigation.PushModalAsync (page))
+				});*/
+			}
+		}
 
         private CardDatabase _database = new CardDatabase();
         private int _selectedImage = -1;

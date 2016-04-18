@@ -13,6 +13,7 @@ namespace Lisa.Quartets.Mobile
             InitializeComponent();
             SetPreviousSelectedCards();
             SetImages();
+			ToggledSwitch();
         }
 
         private Page CreateNewView(Type newView)
@@ -145,6 +146,26 @@ namespace Lisa.Quartets.Mobile
                 _selectedImages.Add(card.Id);
             }
         }
+		public void ToggledSwitch()
+		{
+			var result = _database.GetInstructions ();
+			if (result.Instruction == 1) {
+				var contentpage = new InstructionsPage ();
+				Editor add= new Editor
+				{
+					IsEnabled = false,
+					Text= "Hier kan je je kaarten aanpassen als dat nodig is." +
+						  "Selecteer de kaarten die je wilt hebben " +
+						  "en deselecteer de kaarten die je niet meer wilt hebben.",
+				};
+				instructionsLayout.Children.Add(add);
+				/*var page = new NavigationPage (contentpage);
+				ToolbarItems.Add (new ToolbarItem {
+					Text = "?",
+					Command = new Command (() => Navigation.PushModalAsync (page))
+				});*/
+			}
+		}
 
 		private CardDatabase _database = new CardDatabase();
         private List<int> _selectedImages = new List<int>();

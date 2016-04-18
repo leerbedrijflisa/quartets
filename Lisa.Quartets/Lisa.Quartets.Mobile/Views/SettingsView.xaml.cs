@@ -35,21 +35,18 @@ namespace Lisa.Quartets.Mobile
 			};
 		}
 
-		async void switcher_Toggled(object sender, ToggledEventArgs e)
+		public void switcher_Toggled(object sender, ToggledEventArgs e)
 		{
 			//The switch settings are saved here and entered into the database for further use.
 			bool toggleState = e.Value;
 			int Instruction;
-			var modalPage = new InstructionsPage ();
 			if (toggleState == false) {
 				Instruction = 0;
 				InstructionLabel.Text = "Instructions are now disabled";
-				await Navigation.PushModalAsync (modalPage);
 			} else{
 				Instruction = 1;
 				InstructionLabel.Text = "Instructions are now enabled";
-				//await DisplayAlert ("Instructions enabled", "Instructions are enabled", "OK");
-				await Navigation.PushAsync (modalPage);
+				System.Diagnostics.Debug.WriteLine("test");
 			}
 			_database.SetInstructions (Instruction);
 		}
