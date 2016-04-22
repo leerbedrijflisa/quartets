@@ -155,6 +155,7 @@
     <BundleResource Include="Resources\raw\sound34.wav" />
     <BundleResource Include="Resources\raw\sound35.wav" />
     <BundleResource Include="Resources\raw\sound36.wav" />
+    <BundleResource Include="Resources\knop-test.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -13,12 +13,17 @@ namespace Lisa.Quartets.Mobile
             var slider = new CircularSlider {
                 WidthRequest = 300,
                 HeightRequest = 300,
-                Unlock = UnlockedSlider
+                Unlock = UnlockedSlider,
+                ProgressBackgroundColor = Color.FromHex("00a55e"),
+                ProgressColor = Color.FromHex("037041")
             };
+
             var slider2 = new CircularSlider {
                 WidthRequest = 300,
                 HeightRequest = 300,
-                Unlock = UnlockedSlider
+                Unlock = UnlockedSlider,
+                ProgressBackgroundColor = Color.FromHex("d11111"),
+                ProgressColor = Color.FromHex("8e0c0c")           
             };
 
             layout.Children.Add(slider);
@@ -26,7 +31,7 @@ namespace Lisa.Quartets.Mobile
             this.Content = layout;
         }
 
-       private void UnlockedSlider(object sender, EventArgs e)
+        private void UnlockedSlider(object sender, EventArgs e)
         {
             DisplayAlert("alert", "unlock", "ok"); 
         }

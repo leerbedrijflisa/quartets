@@ -192,6 +192,5 @@ namespace Lisa.Quartets.Droid
         private int _translateX;
         private int _translateY;
         private float _IgnoreRadius;
-//        private readonly RectF _ractangle = new RectF();
     }
 }
