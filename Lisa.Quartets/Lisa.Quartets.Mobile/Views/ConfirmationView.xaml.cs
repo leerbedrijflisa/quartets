@@ -66,7 +66,9 @@ namespace Lisa.Quartets.Mobile
 
             card.GestureRecognizers.Add(gestureRecognizer);
             card.Source = _selectedCard.FileName;
-            layout.Children.Add(card);
+
+            grid.Children.Add(card, 0, 0);
+            Grid.SetColumnSpan(card, 2);
         }
 
         private void SaveCard()

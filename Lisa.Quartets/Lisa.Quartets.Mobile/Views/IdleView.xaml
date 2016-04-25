@@ -2,17 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 x:Class="Lisa.Quartets.Mobile.IdleView" 
-			 xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets"
-			 xmlns:local2="clr-namespace:Lisa.Quartets.mobile;assembly=Lisa.Quartets.mobile" >
+			 xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-    <StackLayout VerticalOptions="Center" WidthRequest="80"> 
-        <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" >Kaart vragen</Label>
-        <local:UnlockSlider OnUnlock="RequestCardUnlocked" Value="0"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-        <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" >Kaart weggeven</Label>
-        <local:UnlockSlider OnUnlock="HandOverCardUnlocked" Value="0" />
-
-        <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" >Kaarten aanpassen</Label>
-        <local:UnlockSlider OnUnlock="EditHandUnlocked" Value="0" />
-    </StackLayout>
+        <local:CircularSlider Grid.Row="0" Grid.Column="0" Unlock="RequestCardUnlocked" Label="Vragen"/>
+        <local:CircularSlider Grid.Row="0" Grid.Column="1" Unlock="HandOverCardUnlocked" Label="Weggeven"/>
+        <local:CircularSlider Grid.Row="1" Grid.Column="0" Unlock="EditHandUnlocked" Label="Aanpassen"/>
+        <local:CircularSlider Grid.Row="1" Grid.Column="1" Label="Instellingen"/>
+    </Grid>
 </ContentPage>

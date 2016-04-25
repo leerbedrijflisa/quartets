@@ -5237,41 +5237,41 @@ namespace Lisa.Quartets.Droid
 			// aapt resource value: 0x7f020089
 			public const int mr_ic_settings_light = 2130837641;
 			
+			// aapt resource value: 0x7f02008a
+			public const int newIcon = 2130837642;
+			
 			// aapt resource value: 0x7f020095
 			public const int notification_template_icon_bg = 2130837653;
 			
-			// aapt resource value: 0x7f02008a
-			public const int opacity = 2130837642;
-			
 			// aapt resource value: 0x7f02008b
-			public const int pin_progress_pinned = 2130837643;
+			public const int opacity = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int pin_progress_shadow = 2130837644;
+			public const int pin_progress_pinned = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int pin_progress_unpinned = 2130837645;
+			public const int pin_progress_shadow = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int rood = 2130837646;
+			public const int pin_progress_unpinned = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int rood2 = 2130837647;
+			public const int scrubber_control_normal_holo = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int scrubber_control_normal_holo = 2130837648;
+			public const int scrubber_control_pressed_holo = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int scrubber_control_pressed_holo = 2130837649;
+			public const int shadow = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int shadow = 2130837650;
+			public const int slide = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int slide = 2130837651;
+			public const int slingers = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int slingers = 2130837652;
+			public const int thumb = 2130837652;
 			
 			static Drawable()
 			{

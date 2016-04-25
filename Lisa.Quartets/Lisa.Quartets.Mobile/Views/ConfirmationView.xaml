@@ -4,29 +4,19 @@
              x:Class="Lisa.Quartets.Mobile.ConfirmationView" 
              xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets" 
              Padding="0, 20, 0, 0" >
-    <StackLayout x:Name="layout">
-        <Label Text="Heb ik de kaart gekregen?" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Start" />
-        
-        <Grid>
-             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*"/>
-             </Grid.RowDefinitions>
-               
-             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="25*" />
-                <ColumnDefinition Width="50*" />
-                <ColumnDefinition Width="25*" />
-             </Grid.ColumnDefinitions>
 
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-             <Label Grid.Row="0" Grid.Column="0" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" >Ja</Label>
-             <local:UnlockSlider x:Name="YesSlider" OnUnlock="YesClicked" Grid.Row="0" Grid.Column="1" Value="0" />
-              
-             <Label Grid.Row="1" Grid.Column="0" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" >Nee</Label>
-             <local:UnlockSlider x:Name="NoSlider" OnUnlock="NoClicked" Grid.Row="1" Grid.Column="1" Value="0"/>
-        </Grid>
-       
-        <Label x:Name="label1" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Start" Text="Maak een keuze" />  
-    </StackLayout>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <local:CircularSlider Grid.Row="1" Grid.Column="0" Unlock="YesClicked" ProgressBackgroundColor="#00a55e" ProgressColor="#037041" Label="Ja"/>
+        <local:CircularSlider Grid.Row="1" Grid.Column="1" Unlock="NoClicked" ProgressBackgroundColor="#d11111" ProgressColor="#8e0c0c" Label="Nee"/>
+    </Grid>
 </ContentPage>

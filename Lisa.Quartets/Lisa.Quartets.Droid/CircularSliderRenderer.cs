@@ -4,48 +4,119 @@ using Xamarin.Forms.Platform.Android;
 using com.refractored.monodroidtoolkit;
 using Lisa.Quartets.Droid;
 using Lisa.Quartets.Mobile;
+using Lisa.Quartets;
 using Android.Views;
 using Android.Graphics;
+using System.Threading.Tasks;
 
 [assembly:ExportRenderer(typeof(CircularSlider), typeof(CircularSliderRenderer))]
 namespace Lisa.Quartets.Droid
 {
-    public class CircularSliderRenderer : ViewRenderer<CircularSlider, HoloCircularProgressBar>
+    public class CircularSliderRenderer : VisualElementRenderer<CircularSlider>
     {
-        protected override void OnElementChanged (ElementChangedEventArgs<CircularSlider> e)
+        public CircularSliderRenderer()
         {
-            base.OnElementChanged (e);
-
-            if (e.OldElement != null || this.Element == null)
-                return;
-            
-
-            var progress = new HoloCircularProgressBar (Forms.Context) {
-                Max = Element.Max,
-                Progress = Element.Progress,
-                ProgressColor = Element.ProgressColor.ToAndroid (),
-                ProgressBackgroundColor = Element.ProgressBackgroundColor.ToAndroid ()
-            };
-
-            SetNativeControl(progress);
-
-            _translateX = (int)(Element.Width * 0.5f);
-            _translateY = (int)(Element.Height * 0.5f);                
+            SetWillNotDraw(false);
         }
 
-        protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            base.OnElementPropertyChanged (sender, e);
+            base.OnElementPropertyChanged(sender, e);
 
-            if (Control == null || Element == null)
-                return;
+            Invalidate();
+        }
 
+        protected override void OnDraw(Canvas canvas)
+        {   
+            RectF rectF = new RectF(_left, _top, _diameter + _left, _diameter + _top);
+            var paint = new Paint
+            {
+                Color = Element.ProgressBackgroundColor.ToAndroid(),
+                AntiAlias = true,
+                StrokeWidth = Element.StrokeWidth
+            };
+            
+            paint.SetStyle(Paint.Style.Stroke);
 
-            if (e.PropertyName == CircularSlider.MaxProperty.PropertyName) {
-                Control.Max = Element.Max;
-            } else if (e.PropertyName == CircularSlider.ProgressProperty.PropertyName) {
-                Control.Progress = Element.Progress;
+            canvas.DrawArc(rectF, 0, 360, false, paint);
+
+            paint.Color = Element.ProgressColor.ToAndroid();
+            canvas.DrawArc(rectF, -90, Element.Progress, false, paint);
+
+            DrawThumb(canvas);
+
+            if (Element.Label != null)
+            {                
+                DrawLabel(canvas, rectF);  
             }
+        }
+
+        private void DrawLabel(Canvas canvas, RectF rectF)
+        {
+            var paint = new Paint
+            {
+                    Color = Android.Graphics.Color.Black,
+                    AntiAlias = true,
+                    TextSize = 50
+            };
+           
+            paint.SetStyle(Paint.Style.Fill);
+            var textWidth = paint.MeasureText(Element.Label);
+
+            while (textWidth > rectF.Width())
+            {
+                paint.TextSize--;
+            }
+
+            canvas.DrawText(Element.Label, rectF.CenterX() - textWidth / 2, rectF.CenterY(), paint);
+            paint.TextAlign = Paint.Align.Center;
+        }
+
+        private void DrawThumb(Canvas canvas)
+        {
+            var x = _radius * Math.Cos((Element.Progress - 90) * (float)(Math.PI / 180));
+            var y = _radius * Math.Sin((Element.Progress - 90) * (float)(Math.PI / 180));
+
+            x += _middleX - _thumb.Width / 2;
+            y += _middleY - _thumb.Height / 2;
+
+            Matrix matrix = new Matrix();
+            matrix.PreTranslate((float)x, (float)y);
+            matrix.PreRotate(Element.Progress, _thumb.Width / 2, _thumb.Height / 2);           
+
+            canvas.DrawBitmap(_thumb, matrix, null);
+        }
+
+        private async void AnimateToZero()
+        {
+            for (float i = Element.Progress; i > 0; i--)
+            {
+                if (_touching || !this.IsShown)
+                {
+                    return;
+                }
+
+                Element.Progress = i;
+                await Task.Delay(1);
+            }
+        }
+
+        protected override void OnMeasure(int widthMeasureSpec, int heightMeasureSpec)
+        {
+            base.OnMeasure(widthMeasureSpec, heightMeasureSpec);
+
+            _thumb = BitmapFactory.DecodeResource (Resources, Resource.Drawable.thumb);
+            var height = GetDefaultSize(SuggestedMinimumHeight, heightMeasureSpec);
+            var width = GetDefaultSize(SuggestedMinimumWidth, widthMeasureSpec);
+            var min = Math.Min(width, height);
+
+            _diameter = min - Element.StrokeWidth * 2 - _thumb.Height;
+            _radius = _diameter / 2;
+            _left = (width - _diameter) / 2;
+            _top = (height - _diameter) / 2;
+            _middleX = (int)(width / 2);
+            _middleY = (int)(height / 2);
+
         }
 
         public override bool OnTouchEvent(MotionEvent e)
@@ -53,68 +124,32 @@ namespace Lisa.Quartets.Droid
             switch (e.Action)
             {
                 case MotionEventActions.Down:
-                    OnStartTrackingTouch();
                     UpdateOnTouch(e, true);
+                    _touching = true;
                     break;
                 case MotionEventActions.Move:
                     UpdateOnTouch(e);
                     CheckForUnlock();
                     break;
                 case MotionEventActions.Up:
-                    OnStopTrackingTouch();
                     CheckForUnlock();
-                    Element.Progress = 0;
-                    Pressed = false;
+                    _touching = false;
+                    AnimateToZero();
                     break;
                 case MotionEventActions.Cancel:
-                    OnStopTrackingTouch();
-                    Element.Progress = 0;
-                    Pressed = false;
+                    _touching = false;
+                    AnimateToZero();
                     break;
             }
 
             return true;
         }
 
-        protected override void OnMeasure(int widthMeasureSpec, int heightMeasureSpec)
-        {
-            var height = GetDefaultSize(SuggestedMinimumHeight, heightMeasureSpec);
-            var width = GetDefaultSize(SuggestedMinimumWidth, widthMeasureSpec);
-            var min = Math.Min(width, height);
-            float top = 0;
-            float left = 0;
-            var arcDiameter = 0;
-
-            _translateX = (int)(width * 0.5f);
-            _translateY = (int)(height * 0.5f);
-
-            arcDiameter = min - PaddingLeft;
-            _radius = arcDiameter / 2;
-            top = height / 2 - (arcDiameter / 2);
-            left = width / 2 - (arcDiameter / 2);
-            _IgnoreRadius = (float)_radius / 4;
-
-            base.OnMeasure(widthMeasureSpec, heightMeasureSpec);
-        }
-
-        private void OnStartTrackingTouch()
-        {
-            if (StartTouch != null)
-            {
-                StartTouch(this,new CircularSliderTouchEventArg(this));
-            }
-        }
-
         private void UpdateOnTouch(MotionEvent e, bool tap = false)
         {
-            if (ShouldIgnoreTouch(e.GetX(), e.GetY()))
-            {
-                return;
-            }
-
             int progress = GetProgress(e.GetX(), e.GetY());
 
-            if (progress > (Element.Progress + (Element.Max * 0.10)))
+            if (progress > (Element.Progress + (360 * 0.10)))
             {
                 return;
             }
@@ -122,32 +157,11 @@ namespace Lisa.Quartets.Droid
             Element.Progress = progress;
         }
 
-        private bool ShouldIgnoreTouch(float xPos, float yPos)
-        {
-            var ignore = false;
-            float x = xPos - _translateX;
-            float y = yPos - _translateY;
-
-            float touchRadius = (float)Math.Sqrt(((x * x) + (y * y)));
-            if (touchRadius < _IgnoreRadius)
-            {
-                ignore = true;
-            }
-            return ignore;
-        }
-
-        private void OnStopTrackingTouch()
-        {
-            if (StopTouch != null)
-            {
-                StopTouch(this, new CircularSliderTouchEventArg(this));
-            }
-        }
-
         private void CheckForUnlock()
         {
-            if (Element.Progress > (Element.Max - Element.Max * 0.05))
+            if (Element.Progress > (360 - 360 * 0.05))
             {
+                _touching = true;
                 Element.OnUnlock();
                 Element.Progress = 0;
             }
@@ -155,19 +169,17 @@ namespace Lisa.Quartets.Droid
 
         private int GetProgress(float xPosition, float yPosition)
         {
-            float x = xPosition - _translateX;
-            float y = yPosition - _translateY;
+            float x = xPosition - _middleX;
+            float y = yPosition - _middleY;
 
-            double angle = ConvertToDegrees(Math.Atan2(y, x) + (Math.PI / 2) - ConvertToRadians(Element.Rotation));
+            double angle = ConvertToDegrees(Math.Atan2(y, x) + (Math.PI / 2));
 
             if (angle < 0)
             {
                 angle = 360 + angle;
             }
 
-            angle = Math.Round(ValuePerDegree() * angle);
-
-            return (int)Math.Round((Element.Max / 100) * angle);
+            return (int)Math.Round(angle);
         }
 
         private double ConvertToDegrees(double value)
@@ -180,17 +192,13 @@ namespace Lisa.Quartets.Droid
             return (Math.PI / 180) * angle;
         }
 
-        private float ValuePerDegree()
-        {
-            return (float)Element.Max / 360;
-        }
-
-        public event EventHandler<CircularSliderTouchEventArg> StartTouch;
-        public event EventHandler<CircularSliderTouchEventArg> StopTouch;
-
-        private int _radius;
-        private int _translateX;
-        private int _translateY;
-        private float _IgnoreRadius;
+        private bool _touching;
+        private Bitmap _thumb;
+        private float _top;
+        private float _left;
+        private int _middleX;
+        private int _middleY;
+        private float _radius;
+        private float _diameter;
     }
 }

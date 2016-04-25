@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace Lisa.Quartets.Mobile
+namespace Lisa.Quartets
 {
     public class CircularSlider : BoxView
     {
@@ -9,9 +9,10 @@ namespace Lisa.Quartets.Mobile
         {
             ProgressColor = Color.FromHex("3498DB");
             ProgressBackgroundColor = Color.FromHex("B4BCBC");
+            StrokeWidth = 10;
         }
 
-        public EventHandler Unlock;
+        public event EventHandler Unlock;
 
         public void OnUnlock()
         {
@@ -33,5 +34,6 @@ namespace Lisa.Quartets.Mobile
         public Color ProgressColor { get; set;}
         public Color ProgressBackgroundColor{ get; set;}
         public String Label { get; set;}
+        public int StrokeWidth{ get; set;}
     }
 }
