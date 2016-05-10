@@ -81,8 +81,7 @@ namespace Lisa.Quartets.Droid
             y += _middleY - _thumb.Height / 2;
 
             Matrix matrix = new Matrix();
-            matrix.PreTranslate((float)x, (float)y);
-            matrix.PreRotate(Element.Progress, _thumb.Width / 2, _thumb.Height / 2);           
+            matrix.PreTranslate((float)x, (float)y);        
 
             canvas.DrawBitmap(_thumb, matrix, null);
         }
@@ -105,7 +104,7 @@ namespace Lisa.Quartets.Droid
         {
             base.OnMeasure(widthMeasureSpec, heightMeasureSpec);
 
-            _thumb = BitmapFactory.DecodeResource (Resources, Resource.Drawable.thumb);
+            _thumb = BitmapFactory.DecodeResource (Resources, Resource.Drawable.knop);
             var height = GetDefaultSize(SuggestedMinimumHeight, heightMeasureSpec);
             var width = GetDefaultSize(SuggestedMinimumWidth, widthMeasureSpec);
             var min = Math.Min(width, height);
