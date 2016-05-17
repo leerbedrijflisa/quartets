@@ -91,7 +91,6 @@ namespace Lisa.Quartets.Mobile
                 {
 					_opacity[image.CardId].FadeTo(0, 100);
 				}
-
 			}
 
             if (_selectedImages.Count > 0)

@@ -17,5 +17,11 @@ namespace Lisa.Quartets.Mobile
             Navigation.InsertPageBefore(new IdleView(), this);
             Navigation.PopAsync();
         }
+
+		private void CardsetClicked(object seneder, EventArgs e)
+		{
+			Navigation.InsertPageBefore(new CardSetView(), this);
+			Navigation.PopAsync();
+		}
 	}
 }

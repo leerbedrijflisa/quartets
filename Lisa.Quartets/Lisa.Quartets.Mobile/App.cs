@@ -11,12 +11,13 @@ namespace Lisa.Quartets.Mobile
         public App()
         {
             EnsureCardsExist();
-            MainPage = new NavigationPage(new HandEditorView(typeof(StartView)));
+            MainPage = new NavigationPage(new CardSetView());
         }
 
         private void EnsureCardsExist()
         {
-            List<Card> cards = _database.RetrieveCards();
+			_database.CreateDefaultCardSets();
+            List<Card>  cards = _database.RetrieveCards();
             if (cards.Count == 0)
             {
                 _database.CreateDefaultCards();

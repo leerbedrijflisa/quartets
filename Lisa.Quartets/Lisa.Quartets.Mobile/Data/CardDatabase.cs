@@ -15,6 +15,7 @@ namespace Lisa.Quartets.Mobile
 		{
 			_database = DependencyService.Get<ISQLite>().GetConnection();
 			_database.CreateTable<Card>();
+			_database.CreateTable<CardSet>();
             _database.CreateTable<RequestCardStats>();
 		}
 
@@ -26,6 +27,11 @@ namespace Lisa.Quartets.Mobile
 		public List<Card> RetrieveCards()
 		{
 			return _database.GetAllWithChildren<Card>();
+		}
+
+		public List<CardSet> RetrieveCardSets()
+		{
+			return _database.GetAllWithChildren<CardSet>();
 		}
 
 		public int CreateOrUpdateCard(Card card)
@@ -51,10 +57,20 @@ namespace Lisa.Quartets.Mobile
 			_database.InsertWithChildren(card);
 		}
 
+		public void CreateCardSet(CardSet cardset)
+		{
+			_database.InsertWithChildren(cardset);
+		}
+
 		public Card RetrieveCard(int cardId)
 		{
 			return _database.GetWithChildren<Card>(cardId);
 		}
+
+		public CardSet RetrieveCardSet(int cardsetId)
+		{
+			return _database.GetWithChildren<CardSet>(cardsetId);
+		} 
 
         public void ResetCards()
         {
@@ -134,6 +150,18 @@ namespace Lisa.Quartets.Mobile
         {
             _database.DeleteAll<RequestCardStats>();
         }
+
+		public void CreateDefaultCardSets()
+		{
+			for (int i = 1; i <= 1; i++)
+			{
+				var cardset = new CardSet ();
+				cardset.Name = string.Format("cardset{0}", i);
+				cardset.FileName = string.Format("cardset{0}.png", i);	
+
+				CreateCardSet(cardset);	
+			}
+		}	
 
 		public void CreateDefaultCards()			
 		{

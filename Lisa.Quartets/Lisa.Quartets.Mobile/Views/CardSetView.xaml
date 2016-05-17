@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Lisa.Quartets.Mobile.CardSetView"
+             xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets">
+	<ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+             <Grid>
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="80*" />
+                <ColumnDefinition Width="10*" />
+             </Grid.ColumnDefinitions>
+
+              <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+             </Grid.RowDefinitions>
+
+             	<Button Grid.Row="0" Grid.Column="1" x:Name="saveButton" Text="Opslaan"  Clicked="CardSetSelected"  />
+              
+            </Grid>
+            <ScrollView x:Name="scrollViewCardSet"/>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

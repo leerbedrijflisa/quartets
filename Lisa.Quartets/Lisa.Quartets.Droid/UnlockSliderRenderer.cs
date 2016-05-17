@@ -27,7 +27,7 @@ namespace Lisa.Quartets.Droid
                 Control.ProgressChanged += CheckProgress;
             }
         }
-
+	
         private void SetBackground(SeekBar element)
         {
             GradientDrawable background = new GradientDrawable();
