@@ -16,7 +16,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <local:CircularSlider Grid.Row="1" Grid.Column="0" Unlock="YesClicked" ProgressBackgroundColor="#00a55e" ProgressColor="#037041" Label="Ja"/>
-        <local:CircularSlider Grid.Row="1" Grid.Column="1" Unlock="NoClicked" ProgressBackgroundColor="#d11111" ProgressColor="#8e0c0c" Label="Nee"/>
+        <local:CircularSlider Grid.Row="1" Grid.Column="0" Unlock="YesClicked" ProgressColor="#aed1a7" ThumbColor="#1a9502" Label="Ja"/>
+        <local:CircularSlider Grid.Row="1" Grid.Column="1" Unlock="NoClicked" ProgressColor="#e3c1c5" ThumbColor="#e32139" Label="Nee"/>
     </Grid>
 </ContentPage>

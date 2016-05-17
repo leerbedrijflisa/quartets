@@ -12,6 +12,7 @@ namespace Lisa.Quartets.Mobile
         {
             EnsureCardsExist();
             MainPage = new NavigationPage(new HandEditorView(typeof(StartView)));
+//            MainPage = new IdleView();
         }
 
         private void EnsureCardsExist()

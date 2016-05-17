@@ -7,9 +7,10 @@ namespace Lisa.Quartets
     {
         public CircularSlider ()
         {
-            ProgressColor = Color.FromHex("3498DB");
             ProgressBackgroundColor = Color.FromHex("B4BCBC");
-            StrokeWidth = 10;
+            ProgressColor = Color.FromHex("bfdfff");
+            ThumbColor = Color.FromHex("3f9eff");
+            StrokeWidth = 25;
         }
 
         public event EventHandler Unlock;
@@ -33,7 +34,8 @@ namespace Lisa.Quartets
 
         public Color ProgressColor { get; set;}
         public Color ProgressBackgroundColor{ get; set;}
-        public String Label { get; set;}
+        public Color ThumbColor{ get; set;}
+        public String Label{ get; set;}
         public int StrokeWidth{ get; set;}
     }
 }

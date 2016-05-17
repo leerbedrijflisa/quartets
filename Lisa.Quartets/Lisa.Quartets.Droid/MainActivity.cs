@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Lisa.Quartets.Droid
 {
-    [Activity(Label = "Lisa.Quartets", Icon = "@drawable/newIcon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Lisa.Quartets", Icon = "@drawable/ic_launcher", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)

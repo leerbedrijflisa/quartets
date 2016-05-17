@@ -38,10 +38,10 @@ namespace Lisa.Quartets.Droid
             
             paint.SetStyle(Paint.Style.Stroke);
 
-            canvas.DrawArc(rectF, 0, 360, false, paint);
+            canvas.DrawArc(rectF, 110, 320, false, paint);
 
             paint.Color = Element.ProgressColor.ToAndroid();
-            canvas.DrawArc(rectF, -90, Element.Progress, false, paint);
+            canvas.DrawArc(rectF, 110, Element.Progress, false, paint);
 
             DrawThumb(canvas);
 
@@ -74,19 +74,23 @@ namespace Lisa.Quartets.Droid
 
         private void DrawThumb(Canvas canvas)
         {
-            var x = _radius * Math.Cos((Element.Progress - 90) * (float)(Math.PI / 180));
-            var y = _radius * Math.Sin((Element.Progress - 90) * (float)(Math.PI / 180));
+            var paint = new Paint
+            {
+                Color  = Element.ThumbColor.ToAndroid(),
+                AntiAlias = true,
+                StrokeWidth = 10
+            };
 
-            x += _middleX - _thumb.Width / 2;
-            y += _middleY - _thumb.Height / 2;
+            float x = (float)(_radius * Math.Cos((Element.Progress + 110) * (float)(Math.PI / 180)));
+            float y = (float)(_radius * Math.Sin((Element.Progress + 110) * (float)(Math.PI / 180)));
 
-            Matrix matrix = new Matrix();
-            matrix.PreTranslate((float)x, (float)y);        
+            x += _middleX;
+            y += _middleY;
 
-            canvas.DrawBitmap(_thumb, matrix, null);
+            canvas.DrawCircle(x, y, _thumbSize, paint);
         }
 
-        private async void AnimateToZero()
+        private void AnimateToZero()
         {
             for (float i = Element.Progress; i > 0; i--)
             {
@@ -96,7 +100,6 @@ namespace Lisa.Quartets.Droid
                 }
 
                 Element.Progress = i;
-                await Task.Delay(1);
             }
         }
 
@@ -104,18 +107,17 @@ namespace Lisa.Quartets.Droid
         {
             base.OnMeasure(widthMeasureSpec, heightMeasureSpec);
 
-            _thumb = BitmapFactory.DecodeResource (Resources, Resource.Drawable.knop);
             var height = GetDefaultSize(SuggestedMinimumHeight, heightMeasureSpec);
             var width = GetDefaultSize(SuggestedMinimumWidth, widthMeasureSpec);
             var min = Math.Min(width, height);
 
-            _diameter = min - Element.StrokeWidth * 2 - _thumb.Height;
+            _thumbSize = Element.StrokeWidth * (float)1.05;
+            _diameter = min - Element.StrokeWidth * 2 - _thumbSize;
             _radius = _diameter / 2;
             _left = (width - _diameter) / 2;
             _top = (height - _diameter) / 2;
             _middleX = (int)(width / 2);
             _middleY = (int)(height / 2);
-
         }
 
         public override bool OnTouchEvent(MotionEvent e)
@@ -148,7 +150,7 @@ namespace Lisa.Quartets.Droid
         {
             int progress = GetProgress(e.GetX(), e.GetY());
 
-            if (progress > (Element.Progress + (360 * 0.10)))
+            if (progress > (Element.Progress + (320 * 0.10)))
             {
                 return;
             }
@@ -158,7 +160,7 @@ namespace Lisa.Quartets.Droid
 
         private void CheckForUnlock()
         {
-            if (Element.Progress > (360 - 360 * 0.05))
+            if (Element.Progress > (320 - 320 * 0.025))
             {
                 _touching = true;
                 Element.OnUnlock();
@@ -171,7 +173,7 @@ namespace Lisa.Quartets.Droid
             float x = xPosition - _middleX;
             float y = yPosition - _middleY;
 
-            double angle = ConvertToDegrees(Math.Atan2(y, x) + (Math.PI / 2));
+            double angle = ConvertToDegrees(Math.Atan2(y, x) + (Math.PI / 2)) - 200;
 
             if (angle < 0)
             {
@@ -191,13 +193,14 @@ namespace Lisa.Quartets.Droid
             return (Math.PI / 180) * angle;
         }
 
-        private bool _touching;
-        private Bitmap _thumb;
+
         private float _top;
         private float _left;
         private int _middleX;
         private int _middleY;
         private float _radius;
+        private bool _touching;
         private float _diameter;
+        private float _thumbSize;
     }
 }
