@@ -25,6 +25,7 @@ namespace Lisa.Quartets.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 			UIApplication.SharedApplication.IdleTimerDisabled = true;
+            UIApplication.SharedApplication.SetStatusBarHidden(true, false);
 
             return base.FinishedLaunching(app, options);
         }

@@ -10,7 +10,7 @@ namespace Lisa.Quartets
             ProgressBackgroundColor = Color.FromHex("B4BCBC");
             ProgressColor = Color.FromHex("bfdfff");
             ThumbColor = Color.FromHex("3f9eff");
-            StrokeWidth = 25;
+            StrokeWidth = 15;
         }
 
         public event EventHandler Unlock;

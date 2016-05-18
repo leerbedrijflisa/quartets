@@ -3,14 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets" 
              x:Class="Lisa.Quartets.Mobile.EmptyHandView">
-    <ContentPage.Content>
-        <StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-            <Label Text="Geen kaarten meer" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-            <local:UnlockSlider x:Name="YesSlider" Value="0" OnUnlock="SliderUnlocked"/>
-            <Label Text="Terug naar het hoofdmenu"/>
-
-        </StackLayout>
-    </ContentPage.Content>
+		<Label Grid.Row="0" Grid.Column="0" Text="Geen kaarten meer" FontSize="Large" HorizontalOptions="Center"/>
+        
+        <local:CircularSlider Grid.Row="1" Grid.Column="0" Unlock="SliderUnlocked" Label="Naar het begin"/>
+    </Grid>
 </ContentPage>

@@ -18,8 +18,7 @@ namespace Lisa.Quartets.Mobile
 
             var slider2 = new CircularSlider {
                 WidthRequest = 300,
-                HeightRequest = 300,
-                HoloThumb = true
+                HeightRequest = 300
             };
 
             layout.Children.Add(slider);
