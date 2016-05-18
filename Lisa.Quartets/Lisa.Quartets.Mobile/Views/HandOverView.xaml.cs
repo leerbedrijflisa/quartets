@@ -171,18 +171,12 @@ namespace Lisa.Quartets.Mobile
 		{
 			var result = _database.GetInstructions ();
 			if (result.Instruction == 1) {
-				var contentpage = new InstructionsPage ();
-				Editor add= new Editor
+				Label add= new Label
 				{
-					IsEnabled = false,
-					Text="Hier kan je een kaart weggeven aan een andere speler."
+					LineBreakMode = LineBreakMode.WordWrap,
+					Text="Hier kan je een kaart weggeven aan een andere speler. Kies de kaart die je wilt weggeven en druk op de geef weg knop."
 				};
 				instructionsLayout.Children.Add(add);
-				/*var page = new NavigationPage (contentpage);
-				ToolbarItems.Add (new ToolbarItem {
-					Text = "?",
-					Command = new Command (() => Navigation.PushModalAsync (page))
-				});*/
 			}
 		}
 

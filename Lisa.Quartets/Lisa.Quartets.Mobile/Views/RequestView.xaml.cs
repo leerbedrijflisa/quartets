@@ -112,21 +112,12 @@ namespace Lisa.Quartets.Mobile
 		{
 			var result = _database.GetInstructions ();
 			if (result.Instruction == 1) {
-				var contentpage = new InstructionsPage ();
-				Editor add= new Editor
+					Label add = new Label
 				{
-					IsEnabled = false,
-					Text="Hier kan je een kaart aanvragen die je van een andere speler zou willen ontvangen." +
-						"Selecteer de kaart die je wilt vragen en druk erop, je zal zien dat de kaart groter wordt" +
-						"en na een paar seconde krijg een bevestiging, kies ja als je de kaart ontvangen hebt " +
-						"en nee als je de kaart niet ontvangen hebt.",
+					LineBreakMode = LineBreakMode.CharacterWrap,
+					Text="Hier kan je een kaart aanvragen die je van een andere speler zou willen ontvangen. Selecteer de kaart die je wilt vragen en druk erop, je zal zien dat de kaart groter wordt en na een paar seconden krijg je een bevestiging, kies ja als je de kaart ontvangen hebt of nee als je de kaart niet ontvangen hebt.",
 				};
 				instructionsLayout.Children.Add(add);
-				/*var page = new NavigationPage (contentpage);
-				ToolbarItems.Add (new ToolbarItem {
-					Text = "?",
-					Command = new Command (() => Navigation.PushModalAsync (page))
-				});*/
 			}
 		}
 

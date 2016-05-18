@@ -150,20 +150,11 @@ namespace Lisa.Quartets.Mobile
 		{
 			var result = _database.GetInstructions ();
 			if (result.Instruction == 1) {
-				var contentpage = new InstructionsPage ();
-				Editor add= new Editor
-				{
-					IsEnabled = false,
-					Text= "Hier kan je je kaarten aanpassen als dat nodig is." +
-						  "Selecteer de kaarten die je wilt hebben " +
-						  "en deselecteer de kaarten die je niet meer wilt hebben.",
+				Label add = new Label {	
+					LineBreakMode = LineBreakMode.WordWrap,
+					Text = "Hier kan je je kaarten aanpassen als dat nodig is. Selecteer de kaarten die je wilt hebben en deselecteer de kaarten die je niet meer wilt hebben.",
 				};
 				instructionsLayout.Children.Add(add);
-				/*var page = new NavigationPage (contentpage);
-				ToolbarItems.Add (new ToolbarItem {
-					Text = "?",
-					Command = new Command (() => Navigation.PushModalAsync (page))
-				});*/
 			}
 		}
 
