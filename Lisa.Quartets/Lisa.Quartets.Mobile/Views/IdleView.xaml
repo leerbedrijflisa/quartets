@@ -17,6 +17,6 @@
         <local:CircularSlider Grid.Row="0" Grid.Column="0" Unlock="RequestCardUnlocked" Label="Vragen"/>
         <local:CircularSlider Grid.Row="0" Grid.Column="1" Unlock="HandOverCardUnlocked" Label="Weggeven"/>
         <local:CircularSlider Grid.Row="1" Grid.Column="0" Unlock="EditHandUnlocked" Label="Aanpassen"/>
-        <local:CircularSlider Grid.Row="1" Grid.Column="1" Label="Instellingen"/>
+<!--        <local:CircularSlider Grid.Row="1" Grid.Column="1" Label="Instellingen"/>-->
     </Grid>
 </ContentPage>
