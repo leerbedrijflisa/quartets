@@ -3,12 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Lisa.Quartets.Mobile.RequestView">
 	<ContentPage.Content>
-	<StackLayout>
 		<StackLayout VerticalOptions = "Center">
 			 <Image HeightRequest="312" WidthRequest="397"  x:Name="cardimage" />
 		</StackLayout>
-		<StackLayout x:Name = "instructionsLayout">
-    	</StackLayout>
-	</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

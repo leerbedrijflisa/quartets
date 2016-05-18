@@ -132,9 +132,6 @@ namespace Lisa.Quartets.Mobile
 			return instructionResult;
 		}
 
-		//public void InsertOrReplaceInstructions	()
-	
-
 		public List<Card> RetrieveAskableCards()
 		{              
 			return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 0 AND Category in (SELECT Category FROM Card WHERE IsInHand = 1 GROUP By Category)");

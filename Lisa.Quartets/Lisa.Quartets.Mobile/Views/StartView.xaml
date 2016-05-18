@@ -6,8 +6,6 @@
 	<ContentPage.Content>
 		<StackLayout VerticalOptions="Center">
             <Button Text="START" Clicked="StartClicked" />
-            <Button Text="SETTINGS" Clicked="SettingsClicked" />
-             <Label x:Name="toggledLabel" Text="Test"></Label>
             <Label Text="Lisa.Quartets v6" FontSize="10" HorizontalOptions="End" VerticalOptions="End" />
         </StackLayout>
 	</ContentPage.Content>

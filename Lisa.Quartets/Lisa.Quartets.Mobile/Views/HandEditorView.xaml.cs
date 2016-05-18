@@ -13,7 +13,6 @@ namespace Lisa.Quartets.Mobile
             InitializeComponent();
             SetPreviousSelectedCards();
             SetImages();
-			ToggledSwitch();
         }
 
         private Page CreateNewView(Type newView)
@@ -146,17 +145,6 @@ namespace Lisa.Quartets.Mobile
                 _selectedImages.Add(card.Id);
             }
         }
-		public void ToggledSwitch()
-		{
-			var result = _database.GetInstructions ();
-			if (result.Instruction == 1) {
-				Label add = new Label {	
-					LineBreakMode = LineBreakMode.WordWrap,
-					Text = "Hier kan je je kaarten aanpassen als dat nodig is. Selecteer de kaarten die je wilt hebben en deselecteer de kaarten die je niet meer wilt hebben.",
-				};
-				instructionsLayout.Children.Add(add);
-			}
-		}
 
 		private CardDatabase _database = new CardDatabase();
         private List<int> _selectedImages = new List<int>();
