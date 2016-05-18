@@ -16,6 +16,10 @@ namespace Lisa.Quartets.Mobile
             Navigation.InsertPageBefore(new IdleView(), this);
             Navigation.PopAsync();
         }
+		private void SettingsClicked(object sender, EventArgs e)
+		{
+			Navigation.PushAsync (new SettingsView ());
+		}
 		//private CardDatabase _database = new CardDatabase();
 	}
 }
