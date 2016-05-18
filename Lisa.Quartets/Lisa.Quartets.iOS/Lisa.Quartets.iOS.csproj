@@ -58,6 +58,8 @@
     <Compile Include="UnlockSliderRenderer.cs" />
     <None Include="Resources\shadow.png" />
     <Compile Include="Services\AudioService.cs" />
+    <None Include="Resources\button.png" />
+    <None Include="Resources\title.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />

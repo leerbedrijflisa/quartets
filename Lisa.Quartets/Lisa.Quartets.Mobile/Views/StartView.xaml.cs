@@ -13,7 +13,7 @@ namespace Lisa.Quartets.Mobile
 		}
 
         private void StartClicked(object sender, EventArgs e)
-        {            
+        {
             Navigation.InsertPageBefore(new IdleView(), this);
             Navigation.PopAsync();
         }

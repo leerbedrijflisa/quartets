@@ -3,10 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Lisa.Quartets.Mobile.StartView"
              xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets">
-	<ContentPage.Content>
-		<StackLayout VerticalOptions="Center">
-            <Button Text="START" Clicked="StartClicked" />
-            <Label Text="Yrsa Kwartet v7 (pilot build)" FontSize="10" HorizontalOptions="End" VerticalOptions="End" />          
-        </StackLayout>
-	</ContentPage.Content>
+    <StackLayout>
+    <StackLayout.GestureRecognizers>
+        <TapGestureRecognizer
+                Tapped="StartClicked"/>
+    </StackLayout.GestureRecognizers>
+        <Image Source="title.png" />
+        <Image x:Name="button" Source="button.png" />      
+    </StackLayout>
 </ContentPage>
