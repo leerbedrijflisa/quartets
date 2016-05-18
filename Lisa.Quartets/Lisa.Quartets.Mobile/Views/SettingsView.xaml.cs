@@ -8,6 +8,7 @@ namespace Lisa.Quartets.Mobile
 	{
 
 		public string delay;
+		public string Instruction;
 
 		public SettingsView ()
 		{
@@ -32,6 +33,22 @@ namespace Lisa.Quartets.Mobile
 			{
 				delay = DelayPicker.Items [DelayPicker.SelectedIndex];	
 			};
+		}
+
+		public void switcher_Toggled(object sender, ToggledEventArgs e)
+		{
+			//The switch settings are saved here and entered into the database for further use.
+			bool toggleState = e.Value;
+			int Instruction;
+			if (toggleState == false) {
+				Instruction = 0;
+				InstructionLabel.Text = "Instructions are now disabled";
+			} else{
+				Instruction = 1;
+				InstructionLabel.Text = "Instructions are now enabled";
+				System.Diagnostics.Debug.WriteLine("test");
+			}
+			_database.SetInstructions (Instruction);
 		}
 
 		private void SaveSettings(object sender, EventArgs e)

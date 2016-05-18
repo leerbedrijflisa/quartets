@@ -3,11 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Lisa.Quartets.Mobile.HandOverView">
     <ContentPage.Content>
-        <StackLayout x:Name="parentLayout" VerticalOptions="Center">
-            <Button x:Name="saveButton" Text="Geef weg"  Clicked="SaveSelectedCards" IsEnabled="false"/>            
-            <ScrollView>
-                <Grid x:Name="cardGrid" RowSpacing="1" />
-            </ScrollView>
-        </StackLayout>
+    <StackLayout>
+	    <StackLayout x:Name="parentLayout" VerticalOptions="Center">
+	            <Button x:Name="saveButton" Text="Geef weg"  Clicked="SaveSelectedCards" IsEnabled="false"/>            
+	            <ScrollView>
+	                <Grid x:Name="cardGrid" RowSpacing="1" />
+	            </ScrollView>
+	        </StackLayout>
+	        <StackLayout x:Name = "instructionsLayout">
+    	</StackLayout>
+    </StackLayout>
     </ContentPage.Content>
 </ContentPage>

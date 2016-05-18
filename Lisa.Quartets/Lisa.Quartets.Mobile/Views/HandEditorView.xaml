@@ -3,22 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lisa.Quartets.Mobile.HandEditorView">
 	<ContentPage.Content>
-        <StackLayout VerticalOptions="Center">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="10*" />
-                <ColumnDefinition Width="80*" />
-                <ColumnDefinition Width="10*" />
-             </Grid.ColumnDefinitions>
+       <StackLayout>
+	        <StackLayout VerticalOptions="Center">
+	            <Grid>
+	                <Grid.ColumnDefinitions>
+	                <ColumnDefinition Width="10*" />
+	                <ColumnDefinition Width="80*" />
+	                <ColumnDefinition Width="10*" />
+	             </Grid.ColumnDefinitions>
 
-             <Grid.RowDefinitions>
-                <RowDefinition Height="50" />
-             </Grid.RowDefinitions>
+	             <Grid.RowDefinitions>
+	                <RowDefinition Height="50" />
+	             </Grid.RowDefinitions>
 
-                <Button Grid.Row="0" Grid.Column="1" x:Name="saveButton" Text="Opslaan"  Clicked="SaveSelectedCards" IsEnabled="false" />
-                <Button Grid.Row="0" Grid.Column="2" Text="stats" Clicked="StatsButtonClicked" BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent"/>
-            </Grid>
-            <ScrollView x:Name="scrollView"/>
-        </StackLayout>
+	                <Button Grid.Row="0" Grid.Column="1" x:Name="saveButton" Text="Opslaan"  Clicked="SaveSelectedCards" IsEnabled="false" />
+	                <Button Grid.Row="0" Grid.Column="2" Text="stats" Clicked="StatsButtonClicked" BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent"/>
+	            </Grid>
+	            <ScrollView x:Name="scrollView"/>
+	        </StackLayout>
+	        <StackLayout x:Name = "instructionsLayout">
+	    	</StackLayout>
+       </StackLayout>
 	</ContentPage.Content>
 </ContentPage>

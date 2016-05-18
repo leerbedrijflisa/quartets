@@ -10,6 +10,8 @@
 		<StackLayout x:Name="DelayPickerPlace"
 		Spacing="50">
 		</StackLayout>
+		<Label x:Name="InstructionLabel" Text = "Instructions are now disabled"></Label>
+		<Switch x:Name="InstructionSwitch" Toggled="switcher_Toggled" HorizontalOptions="Start"  VerticalOptions="Start"></Switch>
 		<Button Text = "Opslaan" HorizontalOptions="CenterAndExpand" Clicked="SaveSettings"></Button>
 		</StackLayout>
 	</ContentPage.Content>

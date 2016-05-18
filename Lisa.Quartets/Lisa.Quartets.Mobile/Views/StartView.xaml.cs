@@ -20,6 +20,6 @@ namespace Lisa.Quartets.Mobile
 		{
 			Navigation.PushAsync (new SettingsView ());
 		}
-		//private CardDatabase _database = new CardDatabase();
+		private CardDatabase _database = new CardDatabase();
 	}
 }
