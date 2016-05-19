@@ -16,7 +16,8 @@
                 <RowDefinition Height="50" />
              </Grid.RowDefinitions>
 
-             	<Button Grid.Row="0" Grid.Column="1" x:Name="saveButton" Text="Opslaan"  Clicked="CardSetSelected"  />
+             	<Button Grid.Row="0" Grid.Column="1" x:Name="saveButton" Text="Opslaan"  Clicked="CardSetSelected" IsEnabled="false" />
+                <Button Grid.Row="0" Grid.Column="2" Text="stats" Clicked="StatsButtonClicked" BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent"/>
               
             </Grid>
             <ScrollView x:Name="scrollViewCardSet"/>

@@ -36,12 +36,12 @@ namespace Lisa.Quartets.Mobile
 			_selectedImages.Add(image.CardId);
 		}
 
-		private void SaveSelectedCardSet(object sender, EventArgs args)
+		/* private void SaveSelectedCardSet(object sender, EventArgs args)
 		{
-			//_database.UpdateSelectedCards(_selectedImages);
-			//FindQuartets();
+			_database.UpdateSelectedCards(_selectedImages);
+			FindQuartets();
 
-			/*if (_database.RetrieveRequestableCards().Count == 0)
+			if (_database.RetrieveRequestableCards().Count == 0)
 			{
 				_newView = CreateNewView(typeof(EmptyHandView));
 				ContinueToNextView();
@@ -49,8 +49,8 @@ namespace Lisa.Quartets.Mobile
 			else
 			{
 				ContinueToNextView();
-			} */
-		}
+			} 
+		} */
 
 		private void OnImageClick(object sender, EventArgs args)
 		{
@@ -85,11 +85,11 @@ namespace Lisa.Quartets.Mobile
 
 			if (_selectedImages.Count > 0)
 			{
-				//saveButton.IsEnabled = true;
+				saveButton.IsEnabled = true;
 			}
 			else
 			{
-				//saveButton.IsEnabled = false;
+				saveButton.IsEnabled = false;
 			}
 		}
 
@@ -98,9 +98,14 @@ namespace Lisa.Quartets.Mobile
 			return _selectedImages.Contains(image.CardId);
 		}
 
+		private void StatsButtonClicked(object sender, EventArgs args)
+		{
+			Navigation.PushAsync(new StatisticView());
+		}
+
 		private void SetCardSetImages()
 		{
-			CardLayout cardGrid = new CardLayout();
+			CardSetLayout cardGrid = new CardSetLayout();
 			List<CardSet> cardsets = _database.RetrieveCardSets();
 
 			var tapGestureRecognizer = new TapGestureRecognizer();

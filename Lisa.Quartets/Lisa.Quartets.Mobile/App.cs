@@ -18,10 +18,16 @@ namespace Lisa.Quartets.Mobile
         {
 			_database.CreateDefaultCardSets();
             List<Card>  cards = _database.RetrieveCards();
+			List<CardSet>  cardsets = _database.RetrieveCardSets();
             if (cards.Count == 0)
             {
                 _database.CreateDefaultCards();
             }
+			if (cardsets.Count == 0) 
+			{
+				_database.CreateDefaultCardSets();
+			}
+			
 
             _database.ResetCards();
         }

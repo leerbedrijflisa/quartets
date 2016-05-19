@@ -58,6 +58,7 @@
     <None Include="Resources\shadow.png" />
     <Compile Include="Services\AudioService.cs" />
     <None Include="Resources\raw\cardset1.jpg" />
+    <None Include="Resources\cardset1.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
