@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lisa.Quartets.Mobile.MainMenuView">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*" />
+            <ColumnDefinition Width="40*" />
+            <ColumnDefinition Width="30*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Source="title.png" VerticalOptions="Start"/>
+        <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Start">
+            <Button Text="Spel starten" Clicked="StartButtonClicked"/>
+            <Button Text="Opties" Clicked="OptionsButtonClicked"/>
+            <Button Text="Instructies" Clicked="InstructionsButtonClicked"/>
+            <Button Text="Credits" Clicked="CreditsButtonClicked"/>
+        </StackLayout>
+        <Label Grid.Row="2" Grid.Column="2" Text="Yrsa Kwartet v8" FontSize="10" VerticalOptions="End" HorizontalOptions="End" />
+    </Grid>
+</ContentPage>
