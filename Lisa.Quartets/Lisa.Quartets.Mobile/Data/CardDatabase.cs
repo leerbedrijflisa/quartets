@@ -120,22 +120,11 @@ namespace Lisa.Quartets.Mobile
             return _database.Query<Card>("SELECT * FROM Card WHERE IsInHand = 0 AND Category in (SELECT Category FROM Card WHERE IsInHand = 1 GROUP By Category)");
         }
 
-        public Card RetrieveFromBarcode(string code)
+        public Card RetrieveFromNumber(string number)
         {
-            int deck = int.Parse(code.Substring(0, 2));
-            int category =  int.Parse(code.Substring(2, 2));
-            int card =  int.Parse(code.Substring(4, 2));    
+            List<Card> cards = _database.Query<Card>("SELECT * from Card Where Number = ?", number);
 
-            List<Card> cards = _database.Query<Card>("SELECT * from Card Where Category = ? AND Name = ?", category, "card" + card);
-
-            if (cards.Count == 1)
-            {
-                return cards.First<Card>();
-            }
-            else
-            {
-                return null;
-            }
+            return cards.FirstOrDefault<Card>();
         }
 
         public void SaveCardRequestStats(RequestCardStats stats)
@@ -156,27 +145,28 @@ namespace Lisa.Quartets.Mobile
 		public void CreateDefaultCards()			
 		{
             int category = 1;
-            int j = 0;
+            int j = 1;
 
 			for (int i = 1; i <= 36; i++)
 			{
 				var card = new Card();
+                string number = category.ToString() + j.ToString();
+
+                card.Number = int.Parse(number);
+
 				card.Name = string.Format("card{0}", i);
                 card.Category = category;
 				card.FileName = string.Format("card{0}.png", i);
                 card.SoundFile = string.Format("sound{0}", i);
 				card.IsInHand = 0;
                 card.IsQuartet = 0;
-
-
 				CreateCard(card);
 
                 j++;
-                if (j >= 4)
+                if (j >= 5)
                 {
-                    j = 0;
+                    j = 1;
                     category++;
-
                 }
 			}
 		}
