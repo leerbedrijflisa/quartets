@@ -46,6 +46,19 @@ namespace Lisa.Quartets.Mobile
             }
         }
 
+        public void RestartUnlocked(object sender, EventArgs args)
+        {
+            if (!_sliderUnlocked)
+            {
+                _sliderUnlocked = true;
+
+                _database.ResetCards();   
+                Navigation.InsertPageBefore(new MainMenuView(), this);
+                Navigation.PopAsync();
+            }
+        }
+
+        private CardDatabase _database = new CardDatabase();
         private bool _sliderUnlocked = false;
 	}
 }
