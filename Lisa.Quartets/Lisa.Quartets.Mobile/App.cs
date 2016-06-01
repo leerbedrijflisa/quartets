@@ -11,7 +11,7 @@ namespace Lisa.Quartets.Mobile
         public App()
         {
             EnsureCardsExist();
-            MainPage = new NavigationPage(new SelectHandView());
+            MainPage = new NavigationPage(new MainMenuView());
         }
 
         private void EnsureCardsExist()

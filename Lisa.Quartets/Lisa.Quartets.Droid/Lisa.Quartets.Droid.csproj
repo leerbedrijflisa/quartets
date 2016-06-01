@@ -124,6 +124,7 @@
     <Compile Include="UnlockSliderRenderer.cs" />
     <Compile Include="Services\AudioService.cs" />
     <Compile Include="CircularSliderRenderer.cs" />
+    <Compile Include="FancyFrameRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

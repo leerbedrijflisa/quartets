@@ -15,7 +15,7 @@ namespace Lisa.Quartets.Mobile
 
         private void StartButtonClicked(object sender, EventArgs args)
         {
-            Navigation.InsertPageBefore(new HandEditorView(typeof(StartView)), this);
+            Navigation.InsertPageBefore(new SelectHandView(), this);
             Navigation.PopAsync();
         }
 

@@ -67,12 +67,11 @@ namespace Lisa.Quartets.Mobile
 
         private void OnShowCardsClicked(object sender, EventArgs args)
         {
-            Navigation.PushAsync(new HandOverView(false));
+            Navigation.PushAsync(new HandOverView());
         }
 
         private void ToggleButtons(bool isEnabled)
         {
-            showCardsButton.IsEnabled = isEnabled;
             mistakeButton.IsEnabled = isEnabled;
             doneButton.IsEnabled = isEnabled;
         }
