@@ -11,12 +11,12 @@ namespace Lisa.Quartets.Mobile
         public App()
         {
             EnsureCardsExist();
-//            MainPage = new NavigationPage(new HandEditorView(typeof(StartView)));
-            MainPage = new NavigationPage(new MainMenuView());
+            MainPage = new NavigationPage(new SelectHandView());
         }
 
         private void EnsureCardsExist()
         {
+            _database.DeleteCards();
             List<Card> cards = _database.RetrieveCards();
             if (cards.Count == 0)
             {

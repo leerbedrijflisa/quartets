@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace Lisa.Quartets.Mobile
+namespace Lisa.Quartets
 {
     public class CardImage : Image
     {

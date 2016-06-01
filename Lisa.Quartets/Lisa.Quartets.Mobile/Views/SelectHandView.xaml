@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lisa.Quartets.Mobile.SelectHandView"
+             xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets">
+   
+
+    <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+
+        <local:CardImage x:Name="cardImage" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <Button Text="7" Grid.Row="1" Grid.Column="0" Clicked="OnNumberClick"/>
+        <Button Text="8" Grid.Row="1" Grid.Column="1" Clicked="OnNumberClick"/>
+        <Button Text="9" Grid.Row="1" Grid.Column="2" Clicked="OnNumberClick"/>
+        <Button Text="4" Grid.Row="2" Grid.Column="0" Clicked="OnNumberClick"/>
+        <Button Text="5" Grid.Row="2" Grid.Column="1" Clicked="OnNumberClick"/>
+        <Button Text="6" Grid.Row="2" Grid.Column="2" Clicked="OnNumberClick"/>
+        <Button Text="1" Grid.Row="3" Grid.Column="0" Clicked="OnNumberClick"/>
+        <Button Text="2" Grid.Row="3" Grid.Column="1" Clicked="OnNumberClick"/>
+        <Button Text="3" Grid.Row="3" Grid.Column="2" Clicked="OnNumberClick"/>
+        <Button Text="fout" Grid.Row="4" Grid.Column="0" Clicked="OnMistakeClick" x:Name="mistakeButton" IsEnabled="false"/>
+        <Button Text="0" Grid.Row="4" Grid.Column="1" Clicked="OnNumberClick"/>
+        <Button Text="klaar" Grid.Row="4" Grid.Column="2" Clicked="OnDoneClick" x:Name="doneButton" IsEnabled="false"/>        
+    </Grid>
+</ContentPage>
