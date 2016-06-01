@@ -80,6 +80,7 @@
     <Compile Include="Views\MainMenuView.xaml.cs">
       <DependentUpon>MainMenuView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FancyFrame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite.Net">

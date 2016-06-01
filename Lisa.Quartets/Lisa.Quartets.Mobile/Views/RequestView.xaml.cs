@@ -25,7 +25,7 @@ namespace Lisa.Quartets.Mobile
 			cardimage.Source = _cards[0].FileName;
 		}
 
-		private void OnCardClick(object sender, EventArgs args)
+		private void OnCardSlider(object sender, EventArgs args)
 		{		
             if (!_stopped)
             {
