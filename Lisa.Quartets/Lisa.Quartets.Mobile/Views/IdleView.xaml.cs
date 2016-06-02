@@ -46,15 +46,24 @@ namespace Lisa.Quartets.Mobile
             }
         }
 
-        public void RestartUnlocked(object sender, EventArgs args)
+        public async void RestartUnlocked(object sender, EventArgs args)
         {
             if (!_sliderUnlocked)
             {
                 _sliderUnlocked = true;
 
-                _database.ResetCards();   
-                Navigation.InsertPageBefore(new MainMenuView(), this);
-                Navigation.PopAsync();
+                var action = await DisplayAlert("Waarschuwing", "Weet u zeker dat u het spel wilt herstarten?", "Ja", "Nee");
+
+                if (action)
+                {
+                    _database.ResetCards();   
+                    Navigation.InsertPageBefore(new MainMenuView(), this);
+                    Navigation.PopAsync();
+                }
+                else
+                {
+                    _sliderUnlocked = false;
+                }
             }
         }
 
