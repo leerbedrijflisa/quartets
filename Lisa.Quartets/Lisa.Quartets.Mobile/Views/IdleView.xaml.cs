@@ -58,7 +58,7 @@ namespace Lisa.Quartets.Mobile
                 {
                     _database.ResetCards();   
                     Navigation.InsertPageBefore(new MainMenuView(), this);
-                    Navigation.PopAsync();
+                    await Navigation.PopAsync();
                 }
                 else
                 {
