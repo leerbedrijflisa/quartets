@@ -13,7 +13,6 @@ namespace Lisa.Quartets.Mobile
             InitializeComponent();
             EnsureCardsExist();
             SetImages();
-			ToggledSwitch();
         }
 
         private void EnsureCardsExist()
@@ -167,18 +166,7 @@ namespace Lisa.Quartets.Mobile
                 saveButton.IsEnabled = false;
             }
         }
-		public void ToggledSwitch()
-		{
-			var result = _database.GetInstructions ();
-			if (result.Instruction == 1) {
-				Label add= new Label
-				{
-					LineBreakMode = LineBreakMode.WordWrap,
-					Text="Hier kan je een kaart weggeven aan een andere speler. Kies de kaart die je wilt weggeven en druk op de geef weg knop."
-				};
-				instructionsLayout.Children.Add(add);
-			}
-		}
+
         private CardDatabase _database = new CardDatabase();
         private int _selectedImage = -1;
     }
