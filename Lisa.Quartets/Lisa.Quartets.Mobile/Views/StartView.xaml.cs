@@ -20,6 +20,10 @@ namespace Lisa.Quartets.Mobile
 		{
 			Navigation.PushAsync (new SettingsView ());
 		}
+		private void EndScreenClicked(object sender, EventArgs e)
+		{
+			Navigation.PushAsync (new EndScreenView ());
+		}
 		private CardDatabase _database = new CardDatabase();
 	}
 }
