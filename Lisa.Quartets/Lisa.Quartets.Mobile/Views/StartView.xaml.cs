@@ -9,6 +9,7 @@ namespace Lisa.Quartets.Mobile
 		public StartView()
 		{
 			InitializeComponent();
+			InstructionsEnabled ();
 		}
 
         private void StartClicked(object sender, EventArgs e)
@@ -19,6 +20,22 @@ namespace Lisa.Quartets.Mobile
 		private void SettingsClicked(object sender, EventArgs e)
 		{
 			Navigation.PushAsync (new SettingsView ());
+		}
+		private void InstructionsEnabled()
+		{
+			var result = _database.GetInstructions();
+
+			if (result.Instruction == 1) {
+				InstructionBtn.IsVisible = true;
+			} 
+			else 
+			{
+				InstructionBtn.IsVisible = false;
+			}
+		}
+		private void InstructionsClicked(object sender, EventArgs e)
+		{
+			Navigation.PushAsync (new InstructionsPage ());
 		}
 		private CardDatabase _database = new CardDatabase();
 	}

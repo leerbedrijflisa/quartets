@@ -7,6 +7,7 @@
 		<StackLayout VerticalOptions="Center">
             <Button Text="START" Clicked="StartClicked" />
             <Button Text="SETTINGS" Clicked="SettingsClicked" />
+            <Button Text="INSTRUCTIONS" x:Name="InstructionBtn" IsVisible="false" Clicked="InstructionsClicked"></Button>
             <Label Text="Lisa.Quartets v6" FontSize="10" HorizontalOptions="End" VerticalOptions="End" />
         </StackLayout>
 	</ContentPage.Content>

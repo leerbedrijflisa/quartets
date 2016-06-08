@@ -77,7 +77,7 @@
     <Compile Include="Views\StatisticView.xaml.cs">
       <DependentUpon>StatisticView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InstructionsPage.xaml.cs">
+    <Compile Include="Views\InstructionsPage.xaml.cs">
       <DependentUpon>InstructionsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -155,7 +155,7 @@
     <EmbeddedResource Include="Views\StatisticView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="InstructionsPage.xaml">
+    <EmbeddedResource Include="Views\InstructionsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
