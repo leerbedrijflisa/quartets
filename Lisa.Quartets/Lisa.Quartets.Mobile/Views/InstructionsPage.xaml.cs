@@ -13,4 +13,3 @@ namespace Lisa.Quartets.Mobile
 		}
 	}
 }
-

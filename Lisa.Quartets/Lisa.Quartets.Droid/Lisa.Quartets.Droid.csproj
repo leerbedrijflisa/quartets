@@ -183,6 +183,9 @@
     <AndroidResource Include="Resources\raw\sound26.wav" />
     <AndroidResource Include="Resources\raw\sound27.wav" />
     <AndroidResource Include="Resources\raw\sound28.wav" />
+    <AndroidResource Include="Resources\drawable\instructie1.jpg" />
+    <AndroidResource Include="Resources\drawable\instructie2.jpg" />
+    <AndroidResource Include="Resources\drawable\instructie3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

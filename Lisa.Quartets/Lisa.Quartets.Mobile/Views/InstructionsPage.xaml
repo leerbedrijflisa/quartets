@@ -3,28 +3,32 @@
   <ContentPage>
 	  	<StackLayout>
 			<Label Text="Start" HorizontalOptions="Center" />
-			<Image Source="@drawable/card1.png"></Image>
+			<Image Source="@drawable/card1.png" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
+			<Label Text="Pagina 1/4" VerticalOptions="End" HorizontalOptions="Center"></Label>
 			<!--<BoxView BackgroundColor="Red" VerticalOptions="FillAndExpand"/>-->
 		</StackLayout>
   </ContentPage>
   <ContentPage>
 	  	<StackLayout>
 			<Label Text="Kaart Vragen" HorizontalOptions="Center" />
-			<Image Source="@drawable/card2.png"></Image>
+			<Image Source="@drawable/instructie2.jpg" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
+			<Label Text="Pagina 2/4" VerticalOptions="End" HorizontalOptions="Center"></Label>
 			<!--<BoxView BackgroundColor="Green" VerticalOptions="FillAndExpand"/>-->
 		</StackLayout>
   </ContentPage>
   <ContentPage>
 	  	<StackLayout>
 			<Label Text="Kaart Weggeven" HorizontalOptions="Center" />
-			<Image Source="@drawable/card3.png"></Image>
+			<Image Source="@drawable/instructie3.jpg" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
+			<Label Text="Pagina 3/4" VerticalOptions="End" HorizontalOptions="Center"></Label>
 			<!--<BoxView BackgroundColor="Blue" VerticalOptions="FillAndExpand"/>-->
 		</StackLayout>
   </ContentPage>
   <ContentPage>
 	  	<StackLayout>
 			<Label Text="Kaart Aanpassen" HorizontalOptions="Center" />
-			<Image Source="@drawable/card4.png"></Image>
+			<Image Source="@drawable/instructie1.jpg" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
+			<Label Text="Pagina 4/4" VerticalOptions="End" HorizontalOptions="Center"></Label>
 			<!--<BoxView BackgroundColor="Yellow" VerticalOptions="FillAndExpand"/>-->
 		</StackLayout>
   </ContentPage>
