@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace Lisa.Quartets.Mobile
 {
-	public partial class InstructionsPage : ContentPage
+	public partial class InstructionsPage
 	{
 		public InstructionsPage ()
 		{
