@@ -2,33 +2,49 @@
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Lisa.Quartets.Mobile.InstructionsPage">
   <ContentPage>
 	  	<StackLayout>
-			<Label Text="Start" HorizontalOptions="Center" />
-			<Image Source="@drawable/card1.png" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
-			<Label Text="Pagina 1/4" VerticalOptions="End" HorizontalOptions="Center"></Label>
+			<Label Text="Step 1" HorizontalOptions="CenterAndExpand"/>
+			<Image Source="@drawable/instructie1.png" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
+			<Label Text="Pagina 1/6" VerticalOptions="End" HorizontalOptions="Center"></Label>
+			<!--<BoxView BackgroundColor="Red" VerticalOptions="FillAndExpand"/>-->
+		</StackLayout>
+  </ContentPage>
+  <ContentPage>
+	  	<StackLayout>
+			<Label Text="Step 2" HorizontalOptions="CenterAndExpand"/>
+			<Image Source="@drawable/instructie2.png" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
+			<Label Text="Pagina 2/6" VerticalOptions="End" HorizontalOptions="Center"></Label>
+			<!--<BoxView BackgroundColor="Red" VerticalOptions="FillAndExpand"/>-->
+		</StackLayout>
+  </ContentPage>
+  <ContentPage>
+	  	<StackLayout>
+			<Label Text="Step 3" HorizontalOptions="CenterAndExpand"/>
+			<Image Source="@drawable/instructie3.png" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
+			<Label Text="Pagina 3/6" VerticalOptions="End" HorizontalOptions="Center"></Label>
 			<!--<BoxView BackgroundColor="Red" VerticalOptions="FillAndExpand"/>-->
 		</StackLayout>
   </ContentPage>
   <ContentPage>
 	  	<StackLayout>
 			<Label Text="Kaart Vragen" HorizontalOptions="Center" />
-			<Image Source="@drawable/instructie2.jpg" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
-			<Label Text="Pagina 2/4" VerticalOptions="End" HorizontalOptions="Center"></Label>
+			<Image Source="@drawable/instructie4.png" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
+			<Label Text="Pagina 4/6" VerticalOptions="End" HorizontalOptions="Center"></Label>
 			<!--<BoxView BackgroundColor="Green" VerticalOptions="FillAndExpand"/>-->
 		</StackLayout>
   </ContentPage>
   <ContentPage>
 	  	<StackLayout>
 			<Label Text="Kaart Weggeven" HorizontalOptions="Center" />
-			<Image Source="@drawable/instructie3.jpg" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
-			<Label Text="Pagina 3/4" VerticalOptions="End" HorizontalOptions="Center"></Label>
+			<Image Source="@drawable/instructie5.png" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
+			<Label Text="Pagina 5/6" VerticalOptions="End" HorizontalOptions="Center"></Label>
 			<!--<BoxView BackgroundColor="Blue" VerticalOptions="FillAndExpand"/>-->
 		</StackLayout>
   </ContentPage>
   <ContentPage>
 	  	<StackLayout>
 			<Label Text="Kaart Aanpassen" HorizontalOptions="Center" />
-			<Image Source="@drawable/instructie1.jpg" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
-			<Label Text="Pagina 4/4" VerticalOptions="End" HorizontalOptions="Center"></Label>
+			<Image Source="@drawable/instructie6.png" Aspect="AspectFit" VerticalOptions="FillAndExpand"></Image>
+			<Label Text="Pagina 6/6" VerticalOptions="End" HorizontalOptions="Center"></Label>
 			<!--<BoxView BackgroundColor="Yellow" VerticalOptions="FillAndExpand"/>-->
 		</StackLayout>
   </ContentPage>
