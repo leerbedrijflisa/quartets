@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Lisa.Quartets.Mobile.EndScreenView">
 	<ContentPage.Content>
 		<StackLayout x:Name="TappedLayout">
-			<Image x:Name = "card1" Rotation="0" Scale="0" HorizontalOptions="StartAndExpand"></Image>
-			<Image x:Name = "card2" Rotation="0" Scale="0" HorizontalOptions="CenterAndExpand"></Image>
-			<Image x:Name = "card3" Rotation="0" Scale="0" HorizontalOptions="EndAndExpand"></Image>
+			<Image x:Name = "card1" Rotation="0" Scale="0" HorizontalOptions="Start"></Image>
+			<Image x:Name = "card2" Rotation="0" Scale="0" HorizontalOptions="Center" VerticalOptions="Center"></Image>
+			<Image x:Name = "card3" Rotation="0" Scale="0" HorizontalOptions="Start" VerticalOptions="Start"></Image>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

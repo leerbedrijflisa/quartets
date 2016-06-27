@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-
 using Xamarin.Forms;
 
 namespace Lisa.Quartets.Mobile
@@ -12,57 +11,72 @@ namespace Lisa.Quartets.Mobile
 		{
 			InitializeComponent ();
 			Tapped ();
+			var cardListForAnimations = _database.RetrieveNonQuartetCardsInHand ();
+
+			var rndCard = new Random ();
+
+			int r = rndCard.Next (cardListForAnimations.Count);
+
+			card1.Source = cardListForAnimations [r].FileName;
 		}
 
-		private void OnTap (object sender, EventArgs args)
+		private void OnTap (object sender, EventArgs args) 
 		{
-			//Debug.WriteLine ("hello");
-			List<Card> quartet = _database.RetrieveNonQuartetCardsInHand ();
-			card1.Source = quartet [0].FileName;
-			card2.Source = quartet [1].FileName;
-			card3.Source = quartet [2].FileName;
+			int AnimationCount = 3;
+			var rndAnimation = new Random ((int) DateTime.UtcNow.Ticks);
+			int r = rndAnimation.Next (AnimationCount);
+			var RandomAnimationNumber = r;
+
+			switch (RandomAnimationNumber) 
+			{
+				case 1:
+					FirstAnimation ();
+					Debug.WriteLine ("First Animation is being displayed");
+					break;
+				case 2:
+					SecondAnimation ();
+					Debug.WriteLine ("Second Animation is being displayed");
+					break;
+				case 3: 
+					ThirdAnimation ();
+					Debug.WriteLine ("Third Animation is being displayed");
+					break;
+				default:
+					Debug.WriteLine ("No animation will be displayed");
+					break;
+			}
+
+		}
+		private void FirstAnimation ()
+		{
 			TappedLayout.Children.Add (card1);
-			TappedLayout.Children.Add (card2);
-			TappedLayout.Children.Add (card3);
-			//Debug.WriteLine (card1);
-			/*int x = 0;
-				for (int i = 0; i < 20; i++) {
-					card1.Scale = card1.Scale + 0.01;
-					card1.Rotation = card1.Rotation + 16;
-					x++;
-					if (x == 30)
-					{
-						Debug.WriteLine ("Stop");
-					}
-				}*/
+
 			card1.Scale = 0.8;
-			card2.Scale = 1.0;
-			card3.Scale = 1.5;
 
 			var width = Application.Current.MainPage.Width;
 			var height = Application.Current.MainPage.Height;
 
-			var storyboard = new Animation ();
-			/*var rotation = new Animation (callback: d => card1.Rotation = d,
-										  start: card1.Rotation,
-										  end: card1.Rotation + 480,
-										  easing: Easing.SinOut);*/
+			var storyboard1 = new Animation ();
+			var rotation = new Animation (callback: d => card1.Rotation = d,
+										  start: 0,
+										  end: card1.Rotation + 735,
+										  easing: Easing.CubicOut);
 
-			var exitRight = new Animation (callback: d => card1.TranslationY = d,
-										   start: 0,
-										   end: -height,
-										   easing: Easing.SinIn);
+			storyboard1.Add (0, 1, rotation);
+			/*storyboard1.Add (0, 0.5, exitRight);
+			storyboard1.Add (0.5, 1, enterLeft);*/
 
-			var enterLeft = new Animation (callback: d => card1.TranslationY = d,
-										   start: height,
-										   end: 0,
-										   easing: Easing.SinOut);
+			storyboard1.Commit (card1, "Loop", length: 3000);
+		}
 
-			//storyboard.Add (0, 1, rotation);
-			storyboard.Add (0, 0.5, exitRight);
-			storyboard.Add (0.5, 1, enterLeft);
+		private void SecondAnimation ()
+		{
+			TappedLayout.Children.Add (card2);
+	
+			card1.Scale = 0.9;
 
-			storyboard.Commit (card1, "Loop", length: 1400);
+			var width = Application.Current.MainPage.Width;
+			var height = Application.Current.MainPage.Height;
 
 			var storyboard2 = new Animation ();
 			/*var rotation2 = new Animation (callback: e => card2.Rotation = e,
@@ -70,13 +84,13 @@ namespace Lisa.Quartets.Mobile
 										  end: card2.Rotation + 370,
 										  easing: Easing.BounceOut);*/
 
-			var exitRight2 = new Animation (callback: e => card2.TranslationX = e,
+			var exitRight2 = new Animation (callback: e => card1.TranslationX = e,
 										   start: 0,
-										   end: Width,
+										   end: -width,
 										   easing: Easing.SpringIn);
 
-			var enterLeft2 = new Animation (callback: e => card2.TranslationX = e,
-										   start: -Width,
+			var enterLeft2 = new Animation (callback: e => card1.TranslationX = e,
+										   start: width,
 										   end: 0,
 										   easing: Easing.SpringOut);
 
@@ -84,19 +98,33 @@ namespace Lisa.Quartets.Mobile
 			storyboard2.Add (0, 0.5, exitRight2);
 			storyboard2.Add (0.5, 1, enterLeft2);
 
-			storyboard2.Commit (card2, "Loop", length: 1400 );
+			storyboard2.Commit (card1, "Loop", length: 1400);
+		}
+		private void ThirdAnimation () 
+		{
+			TappedLayout.Children.Add (card1);
+
+			card1.Scale = 1.5;
+			card1.VerticalOptions = LayoutOptions.Start;
+
+			var width = Application.Current.MainPage.Width;
+			var height = Application.Current.MainPage.Height;
 
 			var storyboard3 = new Animation ();
 
-			var rotation3 = new Animation (callback: f => card3.Rotation = f,
-										  start: card3.Rotation,
-										  end: card3.Rotation + 980,
-			                               easing: Easing.CubicOut);
+			var exitRight3 = new Animation (callback: f => card1.TranslationY = f,
+										   start: 0,
+										   end: height,
+										   easing: Easing.SpringIn);
 
-			storyboard3.Add (0, 1, rotation3);
+			var enterLeft3 = new Animation (callback: f => card1.TranslationY = f,
+										   start: -height,
+										   end: 0,
+										   easing: Easing.SpringOut);
 
+			storyboard3.Add (0, 1, enterLeft3);
 
-			storyboard3.Commit (card3, "Loop", length: 1400);
+			storyboard3.Commit (card1, "Loop", length: 3000);
 		}
 
 		public void Tapped ()
@@ -108,4 +136,3 @@ namespace Lisa.Quartets.Mobile
 		private CardDatabase _database = new CardDatabase ();
 	}
 }
-
