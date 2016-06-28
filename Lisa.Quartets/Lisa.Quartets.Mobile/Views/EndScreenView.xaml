@@ -3,8 +3,6 @@
 	<ContentPage.Content>
 		<StackLayout x:Name="TappedLayout">
 			<Image x:Name = "card1" Rotation="0" Scale="0" HorizontalOptions="Start"></Image>
-			<Image x:Name = "card2" Rotation="0" Scale="0" HorizontalOptions="Center" VerticalOptions="Center"></Image>
-			<Image x:Name = "card3" Rotation="0" Scale="0" HorizontalOptions="Start" VerticalOptions="Start"></Image>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
