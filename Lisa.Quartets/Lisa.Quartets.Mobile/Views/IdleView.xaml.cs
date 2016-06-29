@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace Lisa.Quartets.Mobile
 {
@@ -51,6 +52,7 @@ namespace Lisa.Quartets.Mobile
             if (!_sliderUnlocked)
             {
                 _sliderUnlocked = true;
+               
 
                 var action = await DisplayAlert("Waarschuwing", "Weet u zeker dat u het spel wilt herstarten?", "Ja", "Nee");
 
@@ -58,7 +60,9 @@ namespace Lisa.Quartets.Mobile
                 {
                     _database.ResetCards();   
                     Navigation.InsertPageBefore(new MainMenuView(), this);
-                    await Navigation.PopAsync();
+
+                    //We do not await this call, because it makes the app crash on iOS
+                    Navigation.PopAsync();
                 }
                 else
                 {
