@@ -11,8 +11,8 @@ namespace Lisa.Quartets
             TextColor = Color.White;
             BorderColor = Color.Black;
             BorderWidth = 1;
-            BorderRadius = 20;                
+            BorderRadius = 20;
+            FontSize = 40;
         }
     }
 }
-

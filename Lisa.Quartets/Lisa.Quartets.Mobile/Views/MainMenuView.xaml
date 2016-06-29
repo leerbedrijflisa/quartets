@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lisa.Quartets.Mobile.MainMenuView"
              xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets"
-             BackgroundImage="background.png">
-    <Grid Padding="20,10">
+             BackgroundImage="menuBackground.png">
+    <Grid Padding="20,20,20,20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*" />
             <ColumnDefinition Width="50*" />
@@ -25,6 +25,6 @@
             <local:FancyButton Text="Instructies" Clicked="InstructionsButtonClicked" />
             <local:FancyButton Text="Credits" Clicked="CreditsButtonClicked" />   
         </StackLayout>
-        <Label Grid.Row="2" Grid.Column="2" Text="Yrsa Kwartet v8" FontSize="10" VerticalOptions="End" HorizontalOptions="End" />
+        <Label Grid.Row="2" Grid.Column="2" Text="Yrsa Kwartet v10" FontSize="10" VerticalOptions="End" HorizontalOptions="End" />
     </Grid>
 </ContentPage>

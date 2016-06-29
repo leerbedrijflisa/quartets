@@ -160,6 +160,10 @@
     <BundleResource Include="Resources\thumb.png" />
     <BundleResource Include="Resources\button.png" />
     <BundleResource Include="Resources\title.png" />
+    <BundleResource Include="Resources\background.png" />
+    <BundleResource Include="Resources\logo.png" />
+    <BundleResource Include="Resources\main-background.png" />
+    <BundleResource Include="Resources\menuBackground.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

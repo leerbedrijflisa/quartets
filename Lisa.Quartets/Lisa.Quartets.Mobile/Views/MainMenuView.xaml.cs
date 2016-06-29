@@ -11,6 +11,8 @@ namespace Lisa.Quartets.Mobile
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+
+            BackgroundImage = "main-background.png";
         }
 
         private void StartButtonClicked(object sender, EventArgs args)

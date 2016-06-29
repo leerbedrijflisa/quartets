@@ -94,20 +94,20 @@ namespace Lisa.Quartets.Mobile
 
             // Create animations for all the images that are already on the screen.
             List<Task> tasks = new List<Task>();
-            ​
+
             for (int i = 0; i < _images.Count; i++)
             {
                 var image = _images[i];
                 double offset = CalculatePosition(i, _images.Count + 1, 100, Width);
                 tasks.Add(image.TranslateTo(offset, 0, 500, Easing.CubicInOut));
             }
-            ​
+
             // Create animation for the new image.
             tasks.Add(cardImage.TranslateTo(CalculatePosition(_images.Count, _images.Count + 1, 100, Width), 0, 500, Easing.CubicOut));
-            ​
+
             // Store the new image in the list of images already on the screen.
             _images.Add(cardImage);
-            ​
+
             // Run the animations.
             await Task.WhenAll(tasks.ToArray());
         }

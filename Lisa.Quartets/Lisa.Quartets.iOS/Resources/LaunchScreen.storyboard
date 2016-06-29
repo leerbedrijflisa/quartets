@@ -16,17 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Icon-60.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                                <rect key="frame" x="270" y="270" width="60" height="60"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="55" translatesAutoresizingMaskIntoConstraints="NO" image="main-background.png" fixedFrame="YES">
+                                <rect key="frame" x="499" y="121" width="160" height="240"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="58" translatesAutoresizingMaskIntoConstraints="NO" image="logo.png">
+                                <rect key="frame" x="255" y="439" width="160" height="240"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="97" y="71" width="551" height="555"/>
+                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39"/>
-                            <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" priority="1" id="41"/>
-                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="55"/>
+                                <exclude reference="58"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="55"/>
+                                <include reference="58"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <keyCommands/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,6 +51,64 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon-60.png" width="180" height="180"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-Portrait.png" width="768" height="1004"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="check.png" width="128" height="128"/>
+        <image name="slide.png" width="56" height="39"/>
+        <image name="card.png" width="161" height="246"/>
+        <image name="slingers.png" width="405" height="85"/>
+        <image name="card1.png" width="208" height="265"/>
+        <image name="card2.png" width="209" height="265"/>
+        <image name="card3.png" width="208" height="265"/>
+        <image name="card4.png" width="208" height="265"/>
+        <image name="card5.png" width="208" height="265"/>
+        <image name="card6.png" width="208" height="265"/>
+        <image name="card7.png" width="208" height="265"/>
+        <image name="card8.png" width="208" height="265"/>
+        <image name="card9.png" width="208" height="265"/>
+        <image name="card10.png" width="208" height="265"/>
+        <image name="card11.png" width="208" height="265"/>
+        <image name="card12.png" width="208" height="265"/>
+        <image name="card13.png" width="208" height="265"/>
+        <image name="card14.png" width="208" height="265"/>
+        <image name="card15.png" width="208" height="265"/>
+        <image name="card16.png" width="208" height="265"/>
+        <image name="card17.png" width="208" height="265"/>
+        <image name="card18.png" width="208" height="265"/>
+        <image name="card19.png" width="208" height="265"/>
+        <image name="card20.png" width="208" height="265"/>
+        <image name="card21.png" width="208" height="265"/>
+        <image name="card22.png" width="208" height="265"/>
+        <image name="card23.png" width="208" height="265"/>
+        <image name="card24.png" width="208" height="265"/>
+        <image name="card25.png" width="208" height="265"/>
+        <image name="card26.png" width="208" height="265"/>
+        <image name="card27.png" width="208" height="265"/>
+        <image name="card28.png" width="208" height="265"/>
+        <image name="card29.png" width="208" height="265"/>
+        <image name="card30.png" width="208" height="265"/>
+        <image name="card31.png" width="208" height="265"/>
+        <image name="card32.png" width="208" height="265"/>
+        <image name="card33.png" width="208" height="265"/>
+        <image name="card34.png" width="208" height="265"/>
+        <image name="card35.png" width="208" height="265"/>
+        <image name="card36.png" width="208" height="265"/>
+        <image name="opacity.png" width="208" height="265"/>
+        <image name="knop-test.png" width="164" height="164"/>
+        <image name="thumb.png" width="53" height="30"/>
+        <image name="button.png" width="339" height="346"/>
+        <image name="title.png" width="595" height="234"/>
+        <image name="background.png" width="640" height="960"/>
+        <image name="logo.png" width="487" height="322"/>
+        <image name="main-background.png" width="1536" height="2008"/>
+        <image name="menu-background.png" width="768" height="1004"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="iPad"/>
+    </simulatedMetricsContainer>
 </document>

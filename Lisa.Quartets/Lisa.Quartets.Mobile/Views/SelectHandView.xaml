@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lisa.Quartets.Mobile.SelectHandView"
-             xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets">
-    <Grid x:Name="grid">
+             xmlns:local="clr-namespace:Lisa.Quartets;assembly=Lisa.Quartets"
+             BackgroundImage="main-background.png">
+    <Grid x:Name="grid" Padding="60,20,60,60">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -19,7 +20,7 @@
             <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
 
-        <AbsoluteLayout x:Name="selectionOverview" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" />
+        <AbsoluteLayout x:Name="selectionOverview" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="White" />
 
         <local:CardImage x:Name="cardImage" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
         <local:FancyButton Text="7" Grid.Row="2" Grid.Column="0" Clicked="OnNumberClick"/>
