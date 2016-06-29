@@ -14,24 +14,8 @@ namespace Lisa.Quartets.Mobile
 			Tapped ();
 			BackgroundImage = "@drawable/endscreenbg.png";
 		}
-
-		//private double deviceWidth;
-		//private double deviceHeight;
-
-		/*protected override void OnSizeAllocated (double width, double height)
-		{
-			base.OnSizeAllocated (deviceWidth, deviceHeight);
-			if (deviceWidth != this.deviceWidth || deviceHeight != this.deviceHeight) {
-				this.deviceWidth = width;
-				this.deviceHeight = height;
-			}
-			if (deviceWidth > deviceHeight) 
-			{
-				
-			}
-		}*/
-
-		private void OnTap (object sender, EventArgs args) 
+		
+		private void OnTap (object sender, EventArgs args)
 		{
 			int AnimationCount = 7;
 			var rndAnimation = new Random ((int) DateTime.UtcNow.Ticks);
@@ -284,6 +268,7 @@ namespace Lisa.Quartets.Mobile
 			tapGestureRecognizer.Tapped += OnTap;
 			TappedLayout.GestureRecognizers.Add (tapGestureRecognizer);
 		}
+		
 		private CardDatabase _database = new CardDatabase ();
 	}
 }
