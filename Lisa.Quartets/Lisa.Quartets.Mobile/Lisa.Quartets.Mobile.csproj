@@ -12,8 +12,7 @@
     <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AssemblyName>Lisa.Quartets</AssemblyName>
   </PropertyGroup>
@@ -44,9 +43,9 @@
     <Compile Include="Models\Card.cs" />
     <Compile Include="Data\CardDatabase.cs" />
     <Compile Include="UnlockSlider.cs" />
-    <Compile Include="CardImage.cs" />
     <Compile Include="CardImageHolder.cs" />
     <Compile Include="CardLayout.cs" />
+    <Compile Include="CardImage.cs" />
     <Compile Include="Services\IAudio.cs" />
     <Compile Include="Views\QuartetView.xaml.cs">
       <DependentUpon>QuartetView.xaml</DependentUpon>
@@ -84,6 +83,7 @@
     <Compile Include="Views\SelectHandView.xaml.cs">
       <DependentUpon>SelectHandView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FancyButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite.Net">
